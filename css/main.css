@@ -617,25 +617,25 @@ color: var(--list-mark); /*アイコン色*/}
     color: #555;
     transition: ease-in-out, .2s;
 }
-.share-main li a .tweet a:hover {
-    color: #1DA1F2;
-}
-.share-main li a .facebook a:hover {
-    color: #1877f2;
-}
-.share-main li a .hatena a:hover {
-    color: #00A4DE;
-}
-.share-main li a .line a:hover {
-    color: #1dcd00;
-}
-.share-main li a .pocket a:hover {
-    color: #ee4056;
-}
 .share-main li a .fa-hatena:before {
     font-family: Verdana;
     font-weight: bold;
     content: 'B!';
+}
+.share-main .tweet a:hover {
+    color: #1DA1F2;
+}
+.share-main .facebook a:hover {
+    color: #1877f2;
+}
+.share-main .hatena a:hover {
+    color: #00A4DE;
+}
+.share-main .line a:hover {
+    color: #1dcd00;
+}
+.share-main .pocket a:hover {
+    color: #ee4056;
 }
 
 /* 個別記事下部 */
