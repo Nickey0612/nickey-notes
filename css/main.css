@@ -1187,20 +1187,20 @@ transform: translateY(0%);}
 .fa {
     font-family: var(--fa-style-family, "Font Awesome 6 Free");
     font-weight: var(--fa-style, 900); }
-  
-  .fa,
-  .fas,
-  .fa-solid,
-  .far,
-  .fa-regular,
-  .fal,
-  .fa-light,
-  .fat,
-  .fa-thin,
-  .fad,
-  .fa-duotone,
-  .fab,
-  .fa-brands {
+
+.fa,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fal,
+.fa-light,
+.fat,
+.fa-thin,
+.fad,
+.fa-duotone,
+.fab,
+.fa-brands {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: var(--fa-display, inline-block);
@@ -1208,7 +1208,22 @@ transform: translateY(0%);}
     font-variant: normal;
     line-height: 1;
     text-rendering: auto; }
-
+.fa-share-alt::before {
+    content: "\f1e0"; }
+.fa-twitter:before {
+    content: "\f099"; }
+.fa-facebook-f:before {
+    content: "\f39e"; }
+.fa-bold::before {
+    content: "\f032"; }
+.fa-get-pocket:before {
+    content: "\f265"; }
+.fa-line:before {
+    content: "\f3c0"; }
+.fa-chevron-circle-up::before {
+    content: "\f139"; }
+.fa-chevron-circle-down::before {
+    content: "\f13a"; }
 @font-face {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
