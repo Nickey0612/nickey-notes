@@ -1186,6 +1186,10 @@ transform: translateY(0%);}
 .fa {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;}
+.fab,
+.fa-brands {
+    font-family: 'Font Awesome 6 Brands';
+    font-weight: 400; }
 .fa,
 .fas,
 .fa-solid,
@@ -1206,6 +1210,8 @@ transform: translateY(0%);}
     font-variant: normal;
     line-height: 1;
     text-rendering: auto; }
+.fa-3x {
+    font-size: 3em; }
 .fa-share-alt::before {
     content: "\f1e0"; }
 .fa-twitter:before {
