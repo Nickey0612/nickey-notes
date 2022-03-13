@@ -428,7 +428,6 @@ opacity: 0.5;}
     background: var(--other-back);}
 
 /* 個別記事見出し */
-#singler-header{}
 #single-header-title{
     font-size: 2.3rem;
     font-weight: bold;}
@@ -895,47 +894,6 @@ color: var(--font-color);}
 .twitter-btn{color: #1DA1F2 !important}
 .mail-btn{color: #DB4437 !important}
 
-.prof-twitter,
-.prof-mail {
-padding:.5rem 1rem;
-overflow:hidden;
-position:relative;
-color:var(--brand-font);
-text-align:center;
-border-radius: 5px;
-cursor: pointer;
-display: inline-block;}
-.prof-twitter {
-background:#1DA1F2;}
-.prof-mail {
-background:#DB4437;}
-.prof-twitter i,
-.prof-mail i {
-position: relative;}
-.prof-twitter span,
-.prof-mail span {
-margin-left: .5rem;
-position:relative;
-z-index:1}
-.prof-twitter::before,
-.prof-mail::before {
-content:'';
-position:absolute;
-left:0;
-bottom:0;
-width:100%;
-height:100%;
-transform:translateX(-100%);
-background:#BB3956;
-transition:transform .2s ease-in-out;}
-.prof-twitter:hover,
-.prof-mail:hover {
-cursor:pointer;
-color:#fff;}
-.prof-twitter:hover::before,
-.prof-mail:hover::before {
-transform:translateX(0);}
-
 /* コメント欄 */
 /*アバター画像*/
 .avatar-image-container {
@@ -1030,6 +988,13 @@ font-weight: bold;
 margin: 0 10px;}
 .rc-time {
 color: #777;}
+
+/* 記事目次 */
+@media ( max-width : 768px ) {
+    #HTML3 {
+        display: none;
+    }
+}
 
 /* ページネーション */
 .pagination {
