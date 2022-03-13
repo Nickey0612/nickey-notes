@@ -272,31 +272,31 @@ border-radius: 5px;}
 font-size: larger;}
 .sp-sns-menu .share:hover.bottom .submenu li:nth-child(1) {
 opacity: 1;
-top: 41px;
+top: 42px;
 transform: rotate(0deg);
 border-top: 1px dashed #cccccc;
 transition-delay: 0.06s;}
 .sp-sns-menu .share:hover.bottom .submenu li:nth-child(2) {
 opacity: 1;
-top: 83px;
+top: 84px;
 transform: rotate(0deg);
 border-top: 1px dashed #cccccc;
 transition-delay: 0.12s;}
 .sp-sns-menu .share:hover.bottom .submenu li:nth-child(3) {
 opacity: 1;
-top: 124px;
+top: 126px;
 transform: rotate(0deg);
 border-top: 1px dashed #cccccc;
 transition-delay: 0.18s;}
 .sp-sns-menu .share:hover.bottom .submenu li:nth-child(4) {
 opacity: 1;
-top: 166px;
+top: 168px;
 transform: rotate(0deg);
 border-top: 1px dashed #cccccc;
 transition-delay: 0.24s;}
 .sp-sns-menu .share:hover.bottom .submenu li:nth-child(5) {
 opacity: 1;
-top: 208px;
+top: 210px;
 transform: rotate(0deg);
 border-top: 1px dashed #cccccc;
 transition-delay: 0.3s;}
@@ -436,8 +436,6 @@ opacity: 0.5;}
 #single-header-title{
     font-size: 2.3rem;
     font-weight: bold;}
-#single-header .single-share{
-    margin-top: 1em;}
 #single-header-category{
     display: flex;
     flex-wrap: wrap;
@@ -588,38 +586,60 @@ color: var(--list-mark); /*アイコン色*/}
 .post-meta .post-date:before{content:'\f017'}
 .post-meta .post-replies:before{content:'\f086'}
 
+/* SNS */
+.share-main {
+    width: 80%;
+    margin: auto;
+}
+.share-main ul {
+    margin: 0;
+    padding: 0 7rem;
+    list-style: none;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.share-main li {
+    width: 20%;
+    margin: 0;
+    margin-top: 15px;
+}
+.share-main li a {
+  font-size: 2rem;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    transition: ease-in-out, .2s;
+}
+.share-main li a .tweet a:hover {
+    color: #1DA1F2;
+}
+.share-main li a .facebook a:hover {
+    color: #1877f2;
+}
+.share-main li a .hatena a:hover {
+    color: #00A4DE;
+}
+.share-main li a .line a:hover {
+    color: #1dcd00;
+}
+.share-main li a .pocket a:hover {
+    color: #ee4056;
+}
+.share-main li a .fa-hatena:before {
+    font-family: Verdana;
+    font-weight: bold;
+    content: 'B!';
+}
+
 /* 個別記事下部 */
 #single-footer{}
-
-/* SNSボタン */
-#single-footer .single-share{
-    margin-top: 4em;
-    margin-bottom: 4em;}
-.single-share{
-    display: flex;
-    justify-content: center;}
-.single-share-facebook,
-.single-share-twitter,
-.single-share-hatena,
-.single-share-pocket,
-.single-share-line{
-    text-align: center;
-    font-weight: bold;
-    margin: 0 .3em;
-    border-radius: 3px;
-    display: block;
-    padding: .2em 1em;
-    color: white;}
-.single-share-facebook{
-    background: #3B5998;}
-.single-share-twitter{
-    background: #55acee;}
-.single-share-hatena{
-    background: #008fde;}
-.single-share-pocket{
-    background: #ef3f56;}
-.single-share-line{
-    background: #00B900;}
 
 /* 前後の記事 */
 #blog-pager{
