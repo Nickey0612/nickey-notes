@@ -354,11 +354,7 @@ margin: 0 8px;}
 *****************************************/
 #list{
     margin-top: 8px;
-margin-bottom: 15px;}
-#list a{
-    color: inherit;
-display: inline-block;
-padding: 0.5em;}
+    margin-bottom: 15px;}
 .list-item{
     display: flex;
     align-items: center;
@@ -387,24 +383,12 @@ padding: 0.5em;}
     object-fit: cover;}
 .list-item-inner{
     flex-grow: 1;
-    padding: .5em;}
-.list-item-category{
-    margin-top: .5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    font-size: 80%;
-    font-weight: bold;}
-.list-item-category-item{
-    display: block;
-    margin-top: .1em;
-    margin-left: .1em;
-    border-radius: 2px;
-    background: var(--brand-subcolor);
-    color: var(--brand-subfont);
-z-index: 3;}
+    padding-left: 2rem;}
 .list-item-title{
     font-weight: bold;}
+.list-item-inner span{
+    margin-right:1rem;
+}
 .list-item-link{
 position: relative;
 z-index: 1;
@@ -565,7 +549,8 @@ color: var(--list-mark); /*アイコン色*/}
 
 /* 投稿のヘッダ部 */
 .post-meta{font-size:13px;color:var(--brand-color);display:flex; margin-top:10px}
-.post-meta i{margin:0 10px 0 0}
+.post-meta span{margin-right:1rem;}
+.post-meta i{margin:0 .5rem 0 0}
 
 /* SNS */
 .share-main {
