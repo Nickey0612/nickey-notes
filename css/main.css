@@ -588,12 +588,16 @@ color: var(--list-mark); /*アイコン色*/}
 
 /* SNS */
 .share-main {
-    width: 80%;
+    width: 70%;
     margin: auto;
+}
+@media (max-width: 768px) {
+    .share-main {
+        width: 100%;
+    }
 }
 .share-main ul {
     margin: 0;
-    padding: 0 7rem;
     list-style: none;
     flex-wrap: wrap;
     display: -webkit-flex;
@@ -616,11 +620,6 @@ color: var(--list-mark); /*アイコン色*/}
     text-decoration: none;
     color: #555;
     transition: ease-in-out, .2s;
-}
-.share-main li a .fa-hatena:before {
-    font-family: Verdana;
-    font-weight: bold;
-    content: 'B!';
 }
 .share-main .tweet a:hover {
     color: #1DA1F2;
@@ -1255,14 +1254,23 @@ transform: translateY(0%);}
     font-variant: normal;
     line-height: 1;
     text-rendering: auto; }
+.fa-calendar-days::before {
+    content: "\f073"; }
+.fa-comments::before {
+    content: "\f086"; }
+.fa-tags::before {
+    content: "\f02c"; }
 .fa-share-alt::before {
     content: "\f1e0"; }
 .fa-twitter:before {
     content: "\f099"; }
 .fa-facebook-f:before {
     content: "\f39e"; }
-.fa-bold::before {
-    content: "\f032"; }
+.fa-hatena:before {
+    font-family: Verdana;
+    font-weight: bold;
+    content: 'B!';
+}
 .fa-get-pocket:before {
     content: "\f265"; }
 .fa-line:before {
