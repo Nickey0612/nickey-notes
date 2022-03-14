@@ -1122,7 +1122,8 @@ function encodeDate(dateStr) {
                           <span itemprop='name'><data:label.name/></span>
                         </a>
                         <meta content='2' itemprop='position'/>
-                      </span>, 
+                      </span>
+                      <div class="breadcrumb__separator2">,</div>
                   </b:loop>
                 <b:else/>
                     <span>その他</span>
