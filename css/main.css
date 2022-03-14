@@ -1231,13 +1231,13 @@ transform: translateY(0%);}
     font-variant: normal;
     line-height: 1;
     text-rendering: auto; }
-.fa-calendar-days::before {
-    content: "\f073"; }
+.fa-clock::before {
+    content: "\f017"; }
 .fa-comments::before {
     content: "\f086"; }
 .fa-tags::before {
     content: "\f02c"; }
-.fa-share-alt::before {
+.fa-share-nodes::before {
     content: "\f1e0"; }
 .fa-twitter:before {
     content: "\f099"; }
