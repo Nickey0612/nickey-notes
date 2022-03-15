@@ -554,8 +554,16 @@ color: var(--list-mark); /*アイコン色*/}
     margin-right: auto;}
 
 /* 投稿のヘッダ部 */
-.post-meta{font-size:13px;color:var(--brand-color);display:flex; margin-top:10px}
-.post-meta .post-date{margin-right:1.5rem;}
+.post-meta{font-size:100%;color:var(--brand-color);display:flex; margin-top:10px; flex-wrap:wrap;}
+.post-meta span{margin-right:1.5rem;}
+@media (max-width: 768px) {
+    .post-meta{
+        font-size:13px;
+    }
+    .post-meta .post-labels{
+        width: 100%;
+    }
+}
 .post-meta i{margin:0 .5rem 0 0}
 
 /* SNS */
