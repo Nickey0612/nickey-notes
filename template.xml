@@ -66,7 +66,17 @@
     </b:if>
     <meta content='summary_large_image' name='twitter:card'/>
 
-    <b:skin></b:skin>
+    <b:skin>
+    
+    #list {
+      background: var(--other-back);
+      padding: 1rem;
+    }
+    .list-item {
+      background: none !important;
+      z-index: 1;
+    }
+    </b:skin>
     <script>
     //<![CDATA[
     //mrp-v1.05
@@ -1186,12 +1196,12 @@ document.write(output);
                   <span class='post-date'><i class="fa-regular fa-clock"></i><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
                   <span class='post-replies'><i class="fa-regular fa-comments"></i><data:post.numComments/> <data:messages.comments/></span>
                 </div>
-
                 <div class='post-meta'>
                   <span class='post-labels'>
-                    <i class="fa-solid fa-tags"></i>
                     <b:loop values='data:post.labels' var='label'>
-                      <a class='label' expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>, 
+                      <span class="label-size">
+                        <a expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>
+                      </span>
                     </b:loop>
                   </span>
                 </div>
