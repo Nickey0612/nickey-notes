@@ -2312,7 +2312,7 @@ document.write(output);
     let html = &#39;&lt;div class=&quot;rc-note&quot;&gt;最新&#39; + maxnum + &#39;件を表示しています&#12290;&lt;/div&gt;&#39;;
     let i = 0;
     while (i &lt; maxnum &amp;&amp; i &lt; curls.length) {
-      html += &#39;&lt;a class=&quot;rc-block&quot; href=&quot;&#39; + curls[i] + &#39;&quot;&gt;&lt;div class=&quot;rc-head&quot;&gt;&lt;img loading=&quot;lazy&quot; alt=&quot;&quot; width=&quot;38&quot; height=&quot;38&quot; src=&quot;&#39; + a_imgs[i] + &#39;&quot;/&gt;&lt;div class=&quot;rc-author&quot;&gt;&#39; + a_names[i] + &#39;&lt;/div&gt;&lt;div class=&quot;rc-time&quot;&gt;&#39; + a_times[i] + &#39;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;rc-body&quot;&gt;&#39; + csums[i] + &#39;&lt;/div&gt;&lt;/a&gt;&#39;;
+      html += &#39;&lt;a class=&quot;rc-block&quot; href=&quot;&#39; + curls[i] + &#39;&quot;&gt;&lt;div class=&quot;rc-head&quot;&gt;&lt;img loading=&quot;lazy&quot; alt=&quot;&quot; width=&quot;38&quot; height=&quot;38&quot; src=&quot;&#39; + a_imgs[i] + &#39;&quot;/&gt;&lt;div/&gt;&lt;div class=&quot;rc-time&quot;&gt;&#39; + a_times[i] + &#39;&lt;/div&gt;&lt;div class=&quot;rc-author&quot;&gt;&#39; + a_names[i] + &#39;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;rc-body&quot;&gt;&#39; + csums[i] + &#39;&lt;/div&gt;&lt;/a&gt;&#39;;
       i++;
     }
     document.getElementById(&#39;recent-cmt&#39;).innerHTML = html;
