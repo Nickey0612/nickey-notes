@@ -363,11 +363,12 @@ margin-right: 1rem;}
     display: flex;
     align-items: center;
     z-index: 1;
+    position: relative;
     padding: 1em;}
 .list-item > article {
     display: flex;
 }
-.list-item-link:not(:last-child) .list-item:after{
+.list-item:not(:last-child):after{
     content:"";
     display: block;
     position: absolute;
