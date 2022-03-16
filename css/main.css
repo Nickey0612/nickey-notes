@@ -416,7 +416,7 @@ width: 100%;
 height: 100%;
 z-index: 2;
 transition: 0.2s;}
-.list-item > a:Hover{
+.list-item > a:Hover + .test{
 background: #fafafa;
 opacity: 0.5;}
 

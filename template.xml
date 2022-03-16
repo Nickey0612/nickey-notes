@@ -66,7 +66,31 @@
     </b:if>
     <meta content='summary_large_image' name='twitter:card'/>
 
-    <b:skin></b:skin>
+    <b:skin>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </b:skin>
     <script>
     //<![CDATA[
     //mrp-v1.05
@@ -1207,7 +1231,7 @@ document.write(output);
 
 
           <div class='list-item'>
-            <article>
+            <article class="test">
                 <div class='list-item-img-box'>
                   <b:if cond='data:post.thumbnailUrl'>
                     <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, "1:1")' height='150' width='150'/>
@@ -1241,6 +1265,10 @@ document.write(output);
             </article>
             <a expr:href='data:post.url'/>
           </div>
+
+
+          
+
 
 
         </b:includable>
