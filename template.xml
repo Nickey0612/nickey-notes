@@ -66,55 +66,7 @@
     </b:if>
     <meta content='summary_large_image' name='twitter:card'/>
 
-    <b:skin>
- .list-item > a{
-  align-items: center;
-  display: flex;
-  }
-    
- .list-item > a::before{
-	content:'';
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	background:var(--brand-color);
-	opacity:0;
-	transition:opacity 0.3s linear;
-}
-    
-.list-item > a::after{
-	content:'記事を読む';
-	position:absolute;
-	z-index:10;
-	left:150%;
-	display:block;
-	width:150px;
-	padding:10px 0;
-	margin-left:-75px;
-	border:3px solid #fff;
-	color:#fff;
-	text-align:center;
-	letter-spacing:2px;
-	font-size:13px;
-	opacity:0;
-	transition:all 0.3s ease-in;
-}
-
-.list-item > a:hover::before{
-	opacity:0.5;
-}
-.list-item > a:hover::after{
-	opacity:1;
-	left:50%;
-}
-    
-    
-    
-    
-    
-    </b:skin>
+    <b:skin></b:skin>
     <script>
     //<![CDATA[
     //mrp-v1.05
@@ -1212,48 +1164,6 @@ function encodeDate(dateStr) {
           </a>
         </b:includable>
         <b:includable id='post' var='post'>
-
-
-
-
-          <!-- <div class='list-item-link'>
-            <article class='list-item'>
-                <div class='list-item-img-box'>
-                  <b:if cond='data:post.thumbnailUrl'>
-                    <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, "1:1")' height='150' width='150'/>
-                  <b:else/>
-                    <script type='text/javascript'>
-var img_cnt = 10;
-var selectnum = Math.floor(1 + Math.random() * img_cnt);
-var ret = ( '00' + selectnum ).slice( -2 );
-var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.png&#39;;
-var output = &quot;<img class="list-item-img" alt='' border='0' height='150' src='&quot; + img_path + &quot;' width='150'/>&quot;;
-document.write(output);
-                    </script>
-                  </b:if>
-                </div>
-              <div class='list-item-inner'>
-                <h2 class='list-item-title'><data:post.title/></h2>
-                <div class='post-meta'>
-                  <span class='post-date'><i class="fa-regular fa-clock"></i><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
-                  <span class='post-replies'><i class="fa-regular fa-comments"></i><data:post.numComments/> <data:messages.comments/></span>
-                </div>
-                <div class='post-meta'>
-                  <span class='post-labels'>
-                    <b:loop values='data:post.labels' var='label'>
-                      <span class="label-size">
-                        <a expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>
-                      </span>
-                    </b:loop>
-                  </span>
-                </div>
-              </div>
-            </article>
-            <a expr:href='data:post.url'/>
-          </div> -->
-
-
-
           <div class='list-item'>
             <article>
                 <div class='list-item-img-box'>
@@ -1289,12 +1199,6 @@ document.write(output);
             </article>
             <a expr:href='data:post.url'/>
           </div>
-
-
-          
-
-
-
         </b:includable>
         <b:includable id='postAuthor'>
           <span class='byline post-author vcard'>

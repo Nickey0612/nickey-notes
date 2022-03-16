@@ -367,6 +367,7 @@ margin-right: 1rem;}
     padding: 1em;}
 .list-item > article {
     display: flex;
+    align-items: center;
 }
 .list-item:not(:last-child):after{
     content:"";
