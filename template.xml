@@ -67,24 +67,48 @@
     <meta content='summary_large_image' name='twitter:card'/>
 
     <b:skin>
+ .list-item > a{
+  align-items: center;
+  display: flex;
+  }
     
+ .list-item > a::before{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background:var(--brand-color);
+	opacity:0;
+	transition:opacity 0.3s linear;
+}
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+.list-item > a::after{
+	content:'記事を読む';
+	position:absolute;
+	z-index:10;
+	left:150%;
+	display:block;
+	width:150px;
+	padding:10px 0;
+	margin-left:-75px;
+	border:3px solid #fff;
+	color:#fff;
+	text-align:center;
+	letter-spacing:2px;
+	font-size:13px;
+	opacity:0;
+	transition:all 0.3s ease-in;
+}
+
+.list-item > a:hover::before{
+	opacity:0.5;
+}
+.list-item > a:hover::after{
+	opacity:1;
+	left:50%;
+}
     
     
     
@@ -1231,7 +1255,7 @@ document.write(output);
 
 
           <div class='list-item'>
-            <article class="test">
+            <article>
                 <div class='list-item-img-box'>
                   <b:if cond='data:post.thumbnailUrl'>
                     <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, "1:1")' height='150' width='150'/>
