@@ -872,18 +872,12 @@ font-size: 70%;
 margin-top: 1em;
 color: var(--brand-font);
 letter-spacing: 0;}
-#copyright:before{
-content:"Copyright \0a9 ";}
-#copyright:after{
-content:" All Rights Reserved.";}
 #designed-by{
 text-align: center;
 font-size: 70%;
 margin-bottom: 1em;
 color: var(--brand-font);
 letter-spacing: 0;}
-#designed-by:before{
-content:"designed by ";}
 .Attribution{
 color: var(--font-light);
 font-size: 70%;}
@@ -1296,6 +1290,8 @@ transform: translateY(0%);}
     font-weight: bold;
     content: 'B!';
 }
+.fa-blogger:before {
+    content: "\f37c"; }
 .fa-get-pocket:before {
     content: "\f265"; }
 .fa-line:before {

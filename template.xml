@@ -1174,7 +1174,7 @@ function encodeDate(dateStr) {
 var img_cnt = 10;
 var selectnum = Math.floor(1 + Math.random() * img_cnt);
 var ret = ( '00' + selectnum ).slice( -2 );
-var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.png&#39;;
+var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
 var output = &quot;<img class="list-item-img" alt='' border='0' height='150' src='&quot; + img_path + &quot;' width='150'/>&quot;;
 document.write(output);
                     </script>
@@ -1973,7 +1973,7 @@ if (window.goog && window.goog.comments) {
 var img_cnt = 10;
 var selectnum = Math.floor(1 + Math.random() * img_cnt);
 var ret = ( '00' + selectnum ).slice( -2 );
-var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.png&#39;;
+var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
 var output = &quot;<img alt='' border='0' height='72' src='&quot; + img_path + &quot;' width='78'/>&quot;;
 document.write(output);
                         </script>
@@ -2273,7 +2273,7 @@ document.write(output);
         }
         a_img = entry.author[0].gd$image.src;
         if (a_img.match(/blank.gif/)) {
-          a_img = &quot;https://1.bp.blogspot.com/-Xc-P96cU_Ns/YFIWbLeWHHI/AAAAAAAACxg/Q-at-Ii35l0rdqWTb9WY8Tp4xKPdVPsBQCLcBGAsYHQ/s35/user.png&quot;; //匿名画像
+          a_img = &quot;https://nickey0612.github.io/nickey-notes/img/user.webp&quot;; //匿名画像
         }
         a_time = new Date(entry.published.$t);
         a_time = a_time.getFullYear() + &#39;/&#39; + (&#39;0&#39; + (a_time.getMonth() + 1)).slice(-2) + &#39;/&#39; + (&#39;0&#39; + a_time.getDate()).slice(-2) + &#39; &#39; + (&#39;0&#39; + a_time.getHours()).slice(-2) + &#39;:&#39; + (&#39;0&#39; + a_time.getMinutes()).slice(-2);
@@ -2387,8 +2387,8 @@ document.write(output);
       </div>
       </div>
     </div>
-    <p id='copyright'><data:blog.title/></p>
-    <p id='designed-by'><a href='http://qooq.dododori.com' target='_blank'>QooQ</a></p>
+    <p id='copyright'>© 2013 Nickey</p>
+    <p id='designed-by'>Powered by <strong><a href='https://www.blogger.com/' target='_blank'>Blogger</a></strong> <i class='fab fa-blogger'/> | Designed by <strong><a href='http://qooq.dododori.com' target='_blank'>QooQ</a></strong></p>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
 
     <!-- ハンバーガーアイコン・メニュー -->
