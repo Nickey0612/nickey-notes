@@ -1194,6 +1194,12 @@ document.write(output);
                       </span>
                     </b:loop>
                   </span>
+                  <div class="read-more">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="div-text">記事を読む</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -1766,7 +1772,7 @@ if (window.goog && window.goog.comments) {
     </b:section>
    </div>
    <div id='sub-content'>
-    <b:section id='サイドバー'>
+    <b:section id='sidebar'>
       <b:widget id='HTML1' locked='false' title='プロフィール' type='HTML'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;b&gt;Nickey&lt;/b&gt;

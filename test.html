@@ -1,0 +1,208 @@
+<html>
+    <head>
+        <style type="text/css">
+
+            
+div.read-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+div.read-more {
+  width: 12rem;
+  height: auto;
+}
+div.read-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+div.read-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+div.read-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+div.read-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+div.read-more .div-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+div:hover .circle {
+  width: 100%;
+}
+div:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+div:hover .div-text {
+  color: #fff;
+}
+#container{
+    width: 500px;
+    height: 500px;
+    background: #ccc;
+}
+
+
+
+
+.list-item {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    padding: 1em;
+}
+.list-item > article {
+    display: flex;
+    align-items: center;
+}
+.list-item-img-box {
+    flex-shrink: 0;
+    flex-basis: 150px;
+}
+.list-item-img {
+    display: block;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.list-item-inner {
+    flex-grow: 1;
+    padding-left: 2rem;
+}
+.post-meta {
+    font-size: 100%;
+    color: var(--brand-color);
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.post-meta > span {
+    margin-right: 1.5rem;
+}
+.post-meta i {
+    margin: 0 0.5rem 0 0;
+}
+.list-item-inner .post-meta .post-labels {
+    width: 100%;
+}
+.label-size {
+    border-radius: 3px;
+    margin: 0.25rem;
+    background: var(--brand-subcolor);
+    color: var(--brand-subfont);
+    z-index: 3;
+    position: relative;
+    transition: all 0.2s ease 0s;
+}
+.label-size a {
+    color: inherit !important;
+    padding: 0.5em;
+    display: inline-block;
+}
+.list-item > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    display: flex;
+    transition: 0.2s;
+}
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="read-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="div-text">Learn More</span>
+            </div>
+          </div>
+
+
+
+
+<div class="list-item">
+    <article>
+        <div class="list-item-img-box">
+            <img class="list-item-img" height="150" src="https://4.bp.blogspot.com/-aOPMZxx34HY/WM9p0hscZ_I/AAAAAAAAPUI/3M27QH5_w5kq2O73BVcLQjfr9S-2XLNUgCLcB/w150-h150-p-k-no-nu/DSC03680.JPG" width="150">
+        </div>
+        <div class="list-item-inner">
+            <h2 class="list-item-title">【BMW X1】ドライブレコーダーを装着した。</h2>
+            <div class="post-meta">
+                <span class="post-date"><i class="fa-regular fa-clock"></i><time class="published" datetime="2019-05-01T09:02:00+09:00">2019/05/01</time></span>
+                <span class="post-replies"><i class="fa-regular fa-comments"></i>0 コメント</span>
+            </div>
+            <div class="post-meta">
+                <span class="post-labels">
+                    <span class="label-size">
+                        <a href="https://design-check-2013.blogspot.com/search/label/X1?max-results=10">X1</a>
+                    </span>
+                </span>
+                
+                <div class="read-more">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="div-text">Learn More</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    <a href="https://design-check-2013.blogspot.com/2019/05/bmw-x1.html"></a>
+</div>
+
+
+    </body>
+</html>
