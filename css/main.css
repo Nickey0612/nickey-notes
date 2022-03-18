@@ -515,6 +515,10 @@ margin-right: 1rem;}
 #single-header-title{
     font-size: 2.3rem;
     font-weight: bold;}
+#single-header .post-meta .post-labels {
+    margin-left: auto;
+    margin-right: unset;
+}
 
 /* 個別記事本文 */
 #single-content{
