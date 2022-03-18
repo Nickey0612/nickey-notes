@@ -115,7 +115,7 @@
 
     <!-- Header Start -->
     <b:section id='header' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Header1' locked='true' title='デザインチェック用 (Header)' type='Header' version='1'>
+      <b:widget id='Header1' locked='true' title='今日よりちょっと、いい明日へ (Header)' type='Header' version='1'>
         <b:widget-settings>
           <b:widget-setting name='displayUrl'/>
           <b:widget-setting name='displayHeight'>0</b:widget-setting>
