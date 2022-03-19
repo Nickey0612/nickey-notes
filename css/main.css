@@ -1002,12 +1002,12 @@ color: var(--font-color);}
 .twitter-btn:hover {
     background: var(--other-back);
     border: solid 2px #1DA1F2 !important;
-    color: #1DA1F2;
+    color: #1DA1F2 !important;
 }
 .mail-btn:hover {
     background: var(--other-back);
     border: solid 2px #DB4437 !important;
-    color: #DB4437;
+    color: #DB4437 !important;
 }
 
 /* コメント欄 */
