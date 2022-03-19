@@ -971,15 +971,6 @@ color: var(--font-color);}
 /* プロフィール */
 #HTML1 p {margin-top: 0;margin-bottom: 1rem;font-weight: normal;}
 .side-prof-sns{text-align:center}
-/* .twitter-btn,.mail-btn{background:#f9f9f9;border-radius:4px;display:inline-block;font-weight:bold;padding:.25em .5em;position:relative;text-align:center;text-decoration:none !important;transition:.4s}
-.twitter-btn:before,.mail-btn:before{padding:0 .4em 0 0}
-.icon-twitter:before,.twitter-btn:before{content:"\f099";font-family:"Font Awesome 5 Brands"}
-.icon-mail:before,.mail-btn:before{content:"\f0e0";font-family:"Font Awesome 5 Free"}
-.twitter-btn:hover{background:#1DA1F2;color:white !important}
-.mail-btn:hover{background:#DB4437;color:white !important}
-.twitter-btn{color: #1DA1F2 !important}
-.mail-btn{color: #DB4437 !important} */
-
 .twitter-btn, .mail-btn {
     border-radius: 3px;
     margin: .25rem;
@@ -992,6 +983,7 @@ color: var(--font-color);}
     padding:.5em;
     display:inline-block;
     text-decoration: none;
+    font-weight: 700;
 }
 .twitter-btn {
     background: #1DA1F2;
@@ -999,10 +991,14 @@ color: var(--font-color);}
 .mail-btn {
     background: #DB4437;
 }
+.twitter-btn > i, .mail-btn > i {
+    margin-right: 0.5rem;
+}
 .twitter-btn:hover {
     background: var(--other-back);
     border: solid 2px #1DA1F2 !important;
     color: #1DA1F2 !important;
+    text-decoration: none;
 }
 .mail-btn:hover {
     background: var(--other-back);
