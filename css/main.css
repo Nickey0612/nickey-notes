@@ -69,7 +69,7 @@ color: var(--brand-subfont);
 /* 記事本文、ガジェットの一部のリンクをアニメーション化 */
 #BlogArchive1 a,
 #HTML3 a,
-#single-content a:not(.sitemap-link) {
+#single-content a:not(.AmaQuick-btn, .sitemap-link) {
   text-decoration: none;
   background-image: linear-gradient(90deg, var(--font-link), var(--font-link));
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ color: var(--brand-subfont);
   background-size: 0 1px;
   transition: background-size 0.6s;
 }
-#BlogArchive1 a:not(.sitemap-link):hover,
+#BlogArchive1 a:not(.AmaQuick-btn, .sitemap-link):hover,
 #HTML3 a:hover,
 #single-content a:hover {
   background-size: 100% 1px;
@@ -715,6 +715,34 @@ color: var(--list-mark); /*アイコン色*/}
 }
 .share-main .pocket a:hover {
     color: #ee4056;
+}
+
+/* Amazonアフィリエイト */
+.AmaQuick-box {
+    background: var(--brand-font);
+    padding: 1rem;
+    margin: 3rem 0;
+}
+.AmaQuick-box .AmaQuick-btn{
+    background: #FF9900;
+    border-radius: 3px;
+    margin: 0.25rem;
+    z-index: 3;
+    position: relative;
+    transition: all 0.2s ease 0s;
+    text-align: center;
+    border: solid 2px rgba(0, 0, 0, 0);
+    color: #000 !important;
+    padding: 0.5em;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+}
+.AmaQuick-box .AmaQuick-btn:hover{
+    background: var(--brand-font);
+    border: solid 2px #FF9900 !important;
+    color: #FF9900 !important;
+    text-decoration: none;
 }
 
 /* 個別記事下部 */
