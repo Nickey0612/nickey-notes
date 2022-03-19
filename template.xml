@@ -64,9 +64,12 @@
     <!-- TODO: OGP画像のURLを差し替える
     <meta content='https://1.bp.blogspot.com/-ImxMab8MplM/X-dt402WwaI/AAAAAAAAUQ8/jbvrXfoaBEoYOpL_jTr8nqA1bvbPADLuwCLcBGAsYHQ/s560/ogimage.png' property='og:image'/> -->
     </b:if>
+    <meta content='iEMCDj_TmtGUrn__UnL7g_YPssHSEcFENrK2EmgBeo4' name='google-site-verification'/>
+    <meta content='@cln0612' name='twitter:site'/>
     <meta content='summary_large_image' name='twitter:card'/>
+    <meta content='545063505576016' property='fb:app_id'/>
 
-    <b:skin></b:skin>
+    <b:skin><![CDATA[]]></b:skin>
     <script>
     //<![CDATA[
     //mrp-v1.05
@@ -75,37 +78,30 @@
     </script>
     <b:include data='blog' name='google-analytics'/>
     <link href='https://nickey0612.github.io/nickey-notes/css/main.css' rel='stylesheet'/>
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com" />
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin='' />
-    <link rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap" />
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap"
-          media="print" onload="this.media='all'" />
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
+    <link as='style' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' rel='preload'/>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' media='print' onload='this.media=&apos;all&apos;' rel='stylesheet'/>
 
     <!-- [START] 目次作成プラグイン-->
-    <b:if cond='data:blog.pageType == "item"'>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
       <script>
         //以下のオプションを好みに合わせて変更して下さい
-        //オプションの詳しい説明は、(https://www.sukerou.com/2018/10/blogger-table-of-contents-javascript.html)を参照
+        //オプションの詳しい説明は&#12289;(https://www.sukerou.com/2018/10/blogger-table-of-contents-javascript.html)を参照
         var toc_options = {
-          target: ["h2", "h3", "h4"],
+          target: [&quot;h2&quot;, &quot;h3&quot;, &quot;h4&quot;],
           autoNumber:  false,
           condTargetCount: 2,
-          insertPosition: "firstHeadBefore",
+          insertPosition: &quot;firstHeadBefore&quot;,
           showToc: true,
-          marginTop: "20px",
-          marginBottom: "20px",
-          indent: "2rem",
-          postBodySelector: ".widget.Blog"
+          marginTop: &quot;20px&quot;,
+          marginBottom: &quot;20px&quot;,
+          indent: &quot;2rem&quot;,
+          postBodySelector: &quot;.widget.Blog&quot;
         };
 
         //これ以降のソースは編集しないでください
-        ;(function (window) { var id_seq= 0; document.addEventListener(&apos;DOMContentLoaded&apos;, function () { var rootElement= document.querySelector(toc_options.postBodySelector); if (rootElement== null || typeof rootElement=== &quot;undefined&quot;) { return;} if (toc_options.target.length== 0) return; rootContent= searchHeadLine(toc_options, rootElement); if (rootContent.children.length &gt;= toc_options.condTargetCount) { var wrap= createElement(rootContent); appendElement(wrap);}}); function searchHeadLine(toc_options, rootElement) { var count= toc_options.target.length; var fn= function (index, element, parentContent) { var currentTarget= toc_options.target[index]; var nextTarget= index &lt; count - 1 ? toc_options.target[index + 1] : &quot;&quot;; var id= &quot;toc_headline_&quot; + (++id_seq); var content= createItem(currentTarget, text(element), index + 1, id); parentContent.children.push(content); element.id= id; var el= next(element); if (nextTarget== &quot;&quot;) { return;} var prevTarget= &quot;&quot;; for(var i= index; i &gt;= 0; i--) { prevTarget += (toc_options.target[i] + &quot;,&quot;);} while (true) { if (el== null || typeof el=== &quot;undefined&quot;) break; if (tagName(el)== currentTarget) break; if (tagName(el)== nextTarget) { fn(index + 1, el, content);} else { var nextElements= el.querySelectorAll(prevTarget + nextTarget); var breakFlg= false; for (var i= 0; i &lt; nextElements.length; i++) { if (tagName(nextElements[i]) != nextTarget) { exitFlg= true; break;} fn(index + 1, nextElements[i], content);} if (breakFlg) break;} var el= next(el);}}; var rootContent= createItem(&quot;ROOT&quot;, &quot;&quot;, 0); var elements= rootElement.getElementsByTagName(toc_options.target[0]); for (var i= 0; i &lt; elements.length; i++) { fn(0, elements[i], rootContent, &quot;&quot;);} return rootContent;} function createElement(rootContent) { var wrap= document.createElement(&quot;div&quot;); wrap.classList.add(&quot;b-toc-container&quot;); var p= document.createElement(&quot;p&quot;); var span1= document.createElement(&quot;span&quot;);span1.innerText= &quot;目次&quot;;p.appendChild(span1);var ul= document.createElement(&quot;ul&quot;); ul.classList.add(&quot;toc-root-list&quot;); rootContent.children.forEach(function (content, index) { createContentItemElement(ul, content, (index + 1) + &quot;&quot;);}); wrap.appendChild(p); wrap.appendChild(ul); return wrap;} function createContentItemElement(ul, content, no) { var li= document.createElement(&quot;li&quot;); li.classList.add(&quot;toc-list-item&quot;); var a= document.createElement(&quot;a&quot;); a.href= &quot;#&quot; + content.id; smoothScroll(a); if (toc_options.autoNumber) { var spanNm= document.createElement(&quot;span&quot;); spanNm.classList.add(&quot;toc-number&quot;); spanNm.innerText= no + &quot;.&quot;;} var spanText= document.createElement(&quot;span&quot;); spanText.classList.add(&quot;toc-text&quot;); spanText.innerText= content.text; if (toc_options.autoNumber) a.appendChild(spanNm); a.appendChild(spanText); li.appendChild(a); ul.appendChild(li); if (content.children.length &gt; 0) { var childUl= document.createElement(&quot;ul&quot;); childUl.classList.add(&quot;toc-sub-list&quot;); li.appendChild(childUl); content.children.forEach(function (childContent, index) { createContentItemElement(childUl, childContent, no + &quot;.&quot; + (index + 1));});}} function smoothScroll(a) { a.addEventListener(&apos;click&apos;, (e)=&gt; { e.preventDefault(); let href= a.getAttribute(&apos;href&apos;); let targetElement= document.getElementById(href.replace(&apos;#&apos;, &apos;&apos;)); const rect= targetElement.getBoundingClientRect().top; const offset= window.pageYOffset; const target= rect + offset - 0; window.scrollTo({ top: target, behavior: &apos;smooth&apos;, });});} function appendElement(element) { var el= null; var rootElement= document.querySelector(toc_options.postBodySelector); if (toc_options.insertPosition== &quot;firstHeadBefore&quot; || toc_options.insertPosition== &quot;firstHeadAfter&quot;) { el= rootElement.querySelector(toc_options.target[0]); el2=document.querySelector('#HTML3 .widget-content');} else if (toc_options.insertPosition== &quot;top&quot;) { el= rootElement;} if (el== null) return; if (toc_options.insertPosition== &quot;firstHeadBefore&quot;) { before(el, element); inner(el2, element.cloneNode(true));} else if (toc_options.insertPosition== &quot;firstHeadAfter&quot;) { after(el, element);} else if (toc_options.insertPosition== &quot;top&quot;) { before(el, element);}} function createItem(tagName, text, nestLevel, id) { return { tagName: tagName, text: text, children: [], nestLevel: nestLevel, id: id
+        ;(function (window) { var id_seq= 0; document.addEventListener(&#39;DOMContentLoaded&#39;, function () { var rootElement= document.querySelector(toc_options.postBodySelector); if (rootElement== null || typeof rootElement=== &quot;undefined&quot;) { return;} if (toc_options.target.length== 0) return; rootContent= searchHeadLine(toc_options, rootElement); if (rootContent.children.length &gt;= toc_options.condTargetCount) { var wrap= createElement(rootContent); appendElement(wrap);}}); function searchHeadLine(toc_options, rootElement) { var count= toc_options.target.length; var fn= function (index, element, parentContent) { var currentTarget= toc_options.target[index]; var nextTarget= index &lt; count - 1 ? toc_options.target[index + 1] : &quot;&quot;; var id= &quot;toc_headline_&quot; + (++id_seq); var content= createItem(currentTarget, text(element), index + 1, id); parentContent.children.push(content); element.id= id; var el= next(element); if (nextTarget== &quot;&quot;) { return;} var prevTarget= &quot;&quot;; for(var i= index; i &gt;= 0; i--) { prevTarget += (toc_options.target[i] + &quot;,&quot;);} while (true) { if (el== null || typeof el=== &quot;undefined&quot;) break; if (tagName(el)== currentTarget) break; if (tagName(el)== nextTarget) { fn(index + 1, el, content);} else { var nextElements= el.querySelectorAll(prevTarget + nextTarget); var breakFlg= false; for (var i= 0; i &lt; nextElements.length; i++) { if (tagName(nextElements[i]) != nextTarget) { exitFlg= true; break;} fn(index + 1, nextElements[i], content);} if (breakFlg) break;} var el= next(el);}}; var rootContent= createItem(&quot;ROOT&quot;, &quot;&quot;, 0); var elements= rootElement.getElementsByTagName(toc_options.target[0]); for (var i= 0; i &lt; elements.length; i++) { fn(0, elements[i], rootContent, &quot;&quot;);} return rootContent;} function createElement(rootContent) { var wrap= document.createElement(&quot;div&quot;); wrap.classList.add(&quot;b-toc-container&quot;); var p= document.createElement(&quot;p&quot;); var span1= document.createElement(&quot;span&quot;);span1.innerText= &quot;目次&quot;;p.appendChild(span1);var ul= document.createElement(&quot;ul&quot;); ul.classList.add(&quot;toc-root-list&quot;); rootContent.children.forEach(function (content, index) { createContentItemElement(ul, content, (index + 1) + &quot;&quot;);}); wrap.appendChild(p); wrap.appendChild(ul); return wrap;} function createContentItemElement(ul, content, no) { var li= document.createElement(&quot;li&quot;); li.classList.add(&quot;toc-list-item&quot;); var a= document.createElement(&quot;a&quot;); a.href= &quot;#&quot; + content.id; smoothScroll(a); if (toc_options.autoNumber) { var spanNm= document.createElement(&quot;span&quot;); spanNm.classList.add(&quot;toc-number&quot;); spanNm.innerText= no + &quot;.&quot;;} var spanText= document.createElement(&quot;span&quot;); spanText.classList.add(&quot;toc-text&quot;); spanText.innerText= content.text; if (toc_options.autoNumber) a.appendChild(spanNm); a.appendChild(spanText); li.appendChild(a); ul.appendChild(li); if (content.children.length &gt; 0) { var childUl= document.createElement(&quot;ul&quot;); childUl.classList.add(&quot;toc-sub-list&quot;); li.appendChild(childUl); content.children.forEach(function (childContent, index) { createContentItemElement(childUl, childContent, no + &quot;.&quot; + (index + 1));});}} function smoothScroll(a) { a.addEventListener(&#39;click&#39;, (e)=&gt; { e.preventDefault(); let href= a.getAttribute(&#39;href&#39;); let targetElement= document.getElementById(href.replace(&#39;#&#39;, &#39;&#39;)); const rect= targetElement.getBoundingClientRect().top; const offset= window.pageYOffset; const target= rect + offset - 0; window.scrollTo({ top: target, behavior: &#39;smooth&#39;, });});} function appendElement(element) { var el= null; var rootElement= document.querySelector(toc_options.postBodySelector); if (toc_options.insertPosition== &quot;firstHeadBefore&quot; || toc_options.insertPosition== &quot;firstHeadAfter&quot;) { el= rootElement.querySelector(toc_options.target[0]); el2=document.querySelector(&#39;#HTML3 .widget-content&#39;);} else if (toc_options.insertPosition== &quot;top&quot;) { el= rootElement;} if (el== null) return; if (toc_options.insertPosition== &quot;firstHeadBefore&quot;) { before(el, element); inner(el2, element.cloneNode(true));} else if (toc_options.insertPosition== &quot;firstHeadAfter&quot;) { after(el, element);} else if (toc_options.insertPosition== &quot;top&quot;) { before(el, element);}} function createItem(tagName, text, nestLevel, id) { return { tagName: tagName, text: text, children: [], nestLevel: nestLevel, id: id
     };} function text(element) { return element.innerText;} function next(element) { return element.nextElementSibling;} function prev(element) { return element.previousElementSibling;} function tagName(element) { return element.tagName.toLowerCase();} function hasClass(element, className) { return element.classList.contains(className);} function parentElement(element) { return element.parentNode;} function inner(element, insertElement) { element.appendChild(insertElement);} function after(element, insertElement) { var parent= parentElement(element); var nextEl= next(element); if (parent != null &amp;&amp; nextEl != null) { parent.insertBefore(insertElement, nextEl);}} function before(element, insertElement) { var parent= parentElement(element); if (parent != null) { parent.insertBefore(insertElement, element);}} })(window); 
       </script>
     </b:if>
@@ -115,7 +111,7 @@
 
     <!-- Header Start -->
     <b:section id='header' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Header1' locked='true' title='今日よりちょっと、いい明日へ (Header)' type='Header' version='1'>
+      <b:widget id='Header1' locked='true' title='デザインチェック用 (Header)' type='Header' version='1'>
         <b:widget-settings>
           <b:widget-setting name='displayUrl'/>
           <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -138,11 +134,11 @@
               </div>
               <div class='site-header__end'>
                 <div class='pc-search'>
-                  <form role="search" method="get" id="searchform" class="searchform" action="/search">
+                  <form action='/search' class='searchform' id='searchform' method='get' role='search'>
                     <div>
-                      <label class="screen-reader-text" for="s">検索:</label>
-                      <input type="text" value="" name="q" id="s" />
-                      <input type="submit" id="searchsubmit" value="" />
+                      <label class='screen-reader-text' for='s'>検索:</label>
+                      <input id='s' name='q' type='text' value=''/>
+                      <input id='searchsubmit' type='submit' value=''/>
                     </div>
                   </form>
                 </div>
@@ -157,12 +153,12 @@
                 <ul>
                   <li><a expr:href='data:blog.homepageUrl'>ホーム</a></li>
                   <li><a href='/search/label/X1?max-results=10'>生活</a></li>
-                  <li><a href="#">雑記</a></li>
-                  <li><a href="#">趣味</a></li>
-                  <li><a href="#">旅行</a></li>
-                  <li><a href="#">レビュー</a></li>
-                  <li><a href="#">投資</a></li>
-                  <li><a href="/p/sitemap.html">サイトマップ</a></li>
+                  <li><a href='#'>雑記</a></li>
+                  <li><a href='#'>趣味</a></li>
+                  <li><a href='#'>旅行</a></li>
+                  <li><a href='#'>レビュー</a></li>
+                  <li><a href='#'>投資</a></li>
+                  <li><a href='/p/sitemap.html'>サイトマップ</a></li>
                 </ul>
               </div>
 
@@ -170,31 +166,31 @@
               </div>
             </div>
           </div>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class='hamburger'>
+            <span/>
+            <span/>
+            <span/>
           </div>
-          <div class="hamburger-bg" id="js-hamburger-bg"></div>
-          <nav class="globalMenuSp">
+          <div class='hamburger-bg' id='js-hamburger-bg'/>
+          <nav class='globalMenuSp'>
             <div class='mobile-search'>
-              <form role="search" method="get" id="searchform" class="searchform" action="/search">
+              <form action='/search' class='searchform' id='searchform' method='get' role='search'>
                 <div>
-                  <label class="screen-reader-text" for="s">検索:</label>
-                  <input type="text" value="" name="q" id="s" />
-                  <input type="submit" id="searchsubmit" value="" />
+                  <label class='screen-reader-text' for='s'>検索:</label>
+                  <input id='s' name='q' type='text' value=''/>
+                  <input id='searchsubmit' type='submit' value=''/>
                 </div>
               </form>
             </div>
             <ul>
               <li><a expr:href='data:blog.homepageUrl'>ホーム</a></li>
               <li><a href='/search/label/X1?max-results=10'>生活</a></li>
-              <li><a href="#">雑記</a></li>
-              <li><a href="#">趣味</a></li>
-              <li><a href="#">旅行</a></li>
-              <li><a href="#">レビュー</a></li>
-              <li><a href="#">投資</a></li>
-              <li><a href="/p/sitemap.html">サイトマップ</a></li>
+              <li><a href='#'>雑記</a></li>
+              <li><a href='#'>趣味</a></li>
+              <li><a href='#'>旅行</a></li>
+              <li><a href='#'>レビュー</a></li>
+              <li><a href='#'>投資</a></li>
+              <li><a href='/p/sitemap.html'>サイトマップ</a></li>
             </ul>
           </nav>
         </b:includable>
@@ -242,11 +238,11 @@
                 <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                 <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
                 <b:widget-setting name='showDateHeader'>true</b:widget-setting>
-                <b:widget-setting name='style.textcolor'>#bb3956</b:widget-setting>
+                <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
                 <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                <b:widget-setting name='style.urlcolor'>#999999</b:widget-setting>
+                <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
                 <b:widget-setting name='showAuthor'>false</b:widget-setting>
-                <b:widget-setting name='style.linkcolor'>#454545</b:widget-setting>
+                <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
                 <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
                 <b:widget-setting name='showLabels'>true</b:widget-setting>
                 <b:widget-setting name='postLabelsLabel'>カテゴリ</b:widget-setting>
@@ -274,12 +270,13 @@
                           <h1 id='single-header-title'><data:post.title/></h1>
                           <b:if cond='data:blog.pageType  == &quot;item&quot;'>
                             <div class='post-meta'>
-                              <span class='post-date'><i class="fa-regular fa-clock"></i><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
-                              <span class='post-replies'><i class="fa-regular fa-comments"></i><data:post.numComments/> <data:messages.comments/></span>
+                              <span class='post-date'><i class='fa-regular fa-clock'/><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
+                              <span class='post-replies'><i class='fa-regular fa-comments'/><data:post.numComments/> <data:messages.comments/></span>
                               <span class='post-labels'>
-                                <i class="fa-solid fa-tags"></i>
                                 <b:loop values='data:post.labels' var='label'>
-                                  <a class='label' expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>, 
+                                  <span class='label-size'>
+                                    <a expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>
+                                  </span>
                                 </b:loop>
                               </span>
                             </div>
@@ -314,7 +311,7 @@
                         </div>
                       </div>
                       <!-- post pager -->
-                      <b:if cond='data:blog.pageType == "item"'>
+                      <b:if cond='data:blog.pageType == &quot;item&quot;'>
                       <div id='post-pager'/>
                       <script type='text/javascript'>
 var topurl = &quot;<data:blog.homepageUrl/>&quot;;
@@ -641,7 +638,7 @@ function encodeDate(dateStr) {
                   </b:if>
                 </span>
               </b:includable>
-        <b:includable id='commentForm' var='post'>
+              <b:includable id='commentForm' var='post'>
           <div class='comment-form'>
             <a name='comment-form'/>
             <h4 id='comment-post-message'><data:messages.postAComment/></h4>
@@ -656,10 +653,10 @@ function encodeDate(dateStr) {
             </script>
           </div>
         </b:includable>
-        <b:includable id='commentFormIframeSrc' var='post'>
+              <b:includable id='commentFormIframeSrc' var='post'>
           <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
         </b:includable>
-        <b:includable id='commentItem' var='comment'>
+              <b:includable id='commentItem' var='comment'>
           <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
             <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
             <div class='comment-block'>
@@ -689,26 +686,26 @@ function encodeDate(dateStr) {
             </div>
           </div>
         </b:includable>
-        <b:includable id='commentList' var='comments'>
+              <b:includable id='commentList' var='comments'>
           <div id='comments-block'>
             <b:loop values='data:comments' var='comment'>
               <b:include data='comment' name='commentItem'/>
             </b:loop>
           </div>
         </b:includable>
-        <b:includable id='commentPicker' var='post'>
+              <b:includable id='commentPicker' var='post'>
           <b:if cond='data:post.showThreadedComments'>
             <b:include data='post' name='threadedComments'/>
           <b:else/>
             <b:include data='post' name='comments'/>
           </b:if>
         </b:includable>
-        <b:includable id='comment_count_picker' var='post'>
+              <b:includable id='comment_count_picker' var='post'>
           <a class='comment-link' expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>
             <data:post.commentLabelFull/>:
           </a>
         </b:includable>
-        <b:includable id='comment_picker' var='post'>
+              <b:includable id='comment_picker' var='post'>
           <b:if cond='data:post.commentSource == 1'>
             <b:include data='post' name='iframe_comments'/>
             <b:elseif cond='data:post.showThreadedComments'/>
@@ -717,7 +714,7 @@ function encodeDate(dateStr) {
             <b:include data='post' name='comments'/>
           </b:if>
         </b:includable>
-        <b:includable id='comments' var='post'>
+              <b:includable id='comments' var='post'>
           <div class='comments' id='comments'>
             <a name='comments'/>
             <b:if cond='data:post.allowComments'>
@@ -816,7 +813,7 @@ function encodeDate(dateStr) {
             </b:if>
           </div>
         </b:includable>
-        <b:includable id='commentsLink'>
+              <b:includable id='commentsLink'>
           <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
             <b:if cond='data:post.numberOfComments &gt; 0'>
               <b:message name='messages.numberOfComments'>
@@ -827,19 +824,19 @@ function encodeDate(dateStr) {
             </b:if>
           </a>
         </b:includable>
-        <b:includable id='commentsLinkIframe'>
+              <b:includable id='commentsLinkIframe'>
           <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
         </b:includable>
-        <b:includable id='commentsTitle'>
+              <b:includable id='commentsTitle'>
           <h3 class='title'><data:messages.comments/></h3>
         </b:includable>
-        <b:includable id='defaultAdUnit'>
+              <b:includable id='defaultAdUnit'>
           <ins class='adsbygoogle' data-ad-format='auto' expr:data-ad-client='data:adClientId ?: data:blog.adsenseClientId' expr:data-ad-host='data:blog.adsenseHostId' expr:data-analytics-uacct='data:blog.analyticsAccountNumber' expr:style='data:style ?: &quot;display: block;&quot;'/>
           <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
         </b:includable>
-        <b:includable id='emailPostIcon'>
+              <b:includable id='emailPostIcon'>
           <span class='byline post-icons'>
             <!-- email post links -->
             <span class='item-action'>
@@ -849,12 +846,12 @@ function encodeDate(dateStr) {
             </span>
           </span>
         </b:includable>
-        <b:includable id='facebookShare'>
+              <b:includable id='facebookShare'>
           <b:with value='&quot;window.open(this.href, \&quot;_blank\&quot;, \&quot;height=430,width=640\&quot;); return false;&quot;' var='onclick'>
             <b:include name='platformShare'/>
           </b:with>
         </b:includable>
-        <b:includable id='feedLinks'>
+              <b:includable id='feedLinks'>
           <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
             <b:if cond='data:feedLinks'>
               <div class='blog-feeds'>
@@ -869,7 +866,7 @@ function encodeDate(dateStr) {
             </div>
           </b:if>
         </b:includable>
-        <b:includable id='feedLinksBody' var='links'>
+              <b:includable id='feedLinksBody' var='links'>
           <div class='feed-links'>
           <data:feedLinksMsg/>
           <b:loop values='data:links' var='f'>
@@ -877,7 +874,7 @@ function encodeDate(dateStr) {
           </b:loop>
           </div>
         </b:includable>
-        <b:includable id='footerBylines'>
+              <b:includable id='footerBylines'>
           <b:if cond='data:widgets.Blog.first.footerBylines'>
             <b:loop index='i' values='data:widgets.Blog.first.footerBylines' var='region'>
               <b:if cond='not data:region.items.empty'>
@@ -890,12 +887,12 @@ function encodeDate(dateStr) {
             </b:loop>
           </b:if>
         </b:includable>
-        <b:includable id='googlePlusShare'>
+              <b:includable id='googlePlusShare'>
           <div class='goog-inline-block google-plus-share-container'>
             <g:plusone annotation='inline' expr:href='data:originalUrl.canonical.http' size='medium' source='blogger:blog:plusone'/>
           </div>
         </b:includable>
-        <b:includable id='headerByline'>
+              <b:includable id='headerByline'>
           <b:if cond='data:widgets.Blog.first.headerByline'>
             <div class='post-header'>
               <div class='post-header-line-1'>
@@ -906,18 +903,18 @@ function encodeDate(dateStr) {
             </div>
           </b:if>
         </b:includable>
-        <b:includable id='homePageLink'>
+              <b:includable id='homePageLink'>
           <a class='home-link' expr:href='data:blog.homepageUrl'>
             <data:messages.home/>
           </a>
         </b:includable>
-        <b:includable id='iframeComments' var='post'>
+              <b:includable id='iframeComments' var='post'>
           <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
         </b:includable>
-        <b:includable id='iframe_comments' var='post'>
+              <b:includable id='iframe_comments' var='post'>
           <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
         </b:includable>
-        <b:includable id='inlineAd' var='post'>
+              <b:includable id='inlineAd' var='post'>
           <b:if cond='!data:view.isPreview'>
             <b:if cond='data:this.adCode or data:this.adClientId or data:blog.adsenseClientId'>
               <!-- Ad -->
@@ -937,12 +934,12 @@ function encodeDate(dateStr) {
             </div>
           </b:if>
         </b:includable>
-        <b:includable id='linkShare'>
+              <b:includable id='linkShare'>
           <b:with value='&quot;window.prompt(\&quot;Copy to clipboard: Ctrl+C, Enter\&quot;, \&quot;&quot; + data:originalUrl + &quot;\&quot;); return false;&quot;' var='onclick'>
             <b:include name='platformShare'/>
           </b:with>
         </b:includable>
-        <b:includable id='mobile-index-post' var='post'>
+              <b:includable id='mobile-index-post' var='post'>
           <div class='mobile-date-outer date-outer'>
             <b:if cond='data:post.dateHeader'>
               <div class='date-header'>
@@ -975,7 +972,7 @@ function encodeDate(dateStr) {
             </div>
           </div>
         </b:includable>
-        <b:includable id='mobile-main' var='top'>
+              <b:includable id='mobile-main' var='top'>
           <!-- posts -->
           <div class='blog-posts hfeed'>
             <b:include data='top' name='status-message'/>
@@ -991,7 +988,7 @@ function encodeDate(dateStr) {
           </div>
           <b:include name='mobile-nextprev'/>
         </b:includable>
-        <b:includable id='mobile-nextprev'>
+              <b:includable id='mobile-nextprev'>
           <div class='blog-pager' id='blog-pager'>
             <b:if cond='data:newerPageUrl'>
               <div class='mobile-link-button' id='blog-pager-newer-link'>
@@ -1012,7 +1009,7 @@ function encodeDate(dateStr) {
           </div>
           <div class='clear'/>
         </b:includable>
-        <b:includable id='mobile-post' var='post'>
+              <b:includable id='mobile-post' var='post'>
           <div class='date-outer'>
             <b:if cond='data:post.dateHeader'>
               <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
@@ -1093,7 +1090,7 @@ function encodeDate(dateStr) {
             </div>
           </div>
         </b:includable>
-        <b:includable id='mrp' var='post'>
+              <b:includable id='mrp' var='post'>
           <div id='mrp-content'/>
           <b:loop values='data:post.labels' var='label'>
             <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=mrp_input&amp;max-results=10&quot;' type='text/javascript'/>
@@ -1104,7 +1101,7 @@ function encodeDate(dateStr) {
             mrp_output();
           </script>
         </b:includable>
-        <b:includable id='mybreadcrumb' var='posts'>
+              <b:includable id='mybreadcrumb' var='posts'>
           <div class='breadcrumbs' itemscope='itemscope' itemtype='http://schema.org/BreadcrumbList'>
             <span itemprop='itemListElement' itemscope='itemscope' itemtype='http://schema.org/ListItem'>
               <a expr:href='data:blog.homepageUrl' itemprop='item'>
@@ -1112,7 +1109,7 @@ function encodeDate(dateStr) {
               </a>
               <meta content='1' itemprop='position'/>
             </span>
-            <div class="breadcrumb__separator">/</div>
+            <div class='breadcrumb__separator'>/</div>
             <b:if cond='data:blog.pageType == &quot;item&quot;'>
               <b:loop values='data:posts' var='post'>
                 <b:if cond='data:post.labels'>
@@ -1123,7 +1120,7 @@ function encodeDate(dateStr) {
                         </a>
                         <meta content='2' itemprop='position'/>
                       </span>
-                      <div class="breadcrumb__separator2">,</div>
+                      <div class='breadcrumb__separator2'>,</div>
                   </b:loop>
                 <b:else/>
                     <span>その他</span>
@@ -1137,18 +1134,42 @@ function encodeDate(dateStr) {
                   </a>
                   <meta content='2' itemprop='position'/>
                 </span>
-                <div class="breadcrumb__separator">/</div>
+                <div class='breadcrumb__separator'>/</div>
               </b:if>
             </b:if>
           </div>
         </b:includable>
-        <b:includable id='nextPageLink'>
+              <b:includable id='nextPageLink'>
           <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
             <data:messages.olderPosts/>
           </a>
         </b:includable>
+              <b:includable id='nextprev'>
+  <div class='blog-pager' id='blog-pager'>
+    <b:if cond='data:newerPageUrl'>
+      <span id='blog-pager-newer-link'>
+      <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:newerPageTitle'><data:newerPageTitle/></a>
+      </span>
+    </b:if>
 
-        <b:includable id='otherSharingButton'>
+    <b:if cond='data:olderPageUrl'>
+      <span id='blog-pager-older-link'>
+      <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:olderPageTitle'><data:olderPageTitle/></a>
+      </span>
+    </b:if>
+
+    <a class='home-link' expr:href='data:blog.homepageUrl'><data:homeMsg/></a>
+
+    <b:if cond='data:mobileLinkUrl'>
+      <div class='blog-mobile-link'>
+        <a expr:href='data:mobileLinkUrl'><data:mobileLinkMsg/></a>
+      </div>
+    </b:if>
+
+  </div>
+  <div class='clear'/>
+</b:includable>
+              <b:includable id='otherSharingButton'>
           <span class='sharing-platform-button sharing-element-other' expr:aria-label='data:messages.shareToOtherApps.escaped' expr:data-url='data:originalUrl' expr:title='data:messages.shareToOtherApps.escaped' role='menuitem' tabindex='-1'>
             <b:with value='{key: &quot;sharingOther&quot;}' var='platform'>
               <b:include name='sharingPlatformIcon'/>
@@ -1156,26 +1177,26 @@ function encodeDate(dateStr) {
             <span class='platform-sharing-text'><data:messages.shareOtherApps.escaped/></span>
           </span>
         </b:includable>
-        <b:includable id='platformShare'>
+              <b:includable id='platformShare'>
           <a expr:class='&quot;goog-inline-block sharing-&quot; + data:platform.key' expr:data-url='data:originalUrl' expr:href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:onclick='data:onclick ? data:onclick : &quot;&quot;' expr:title='data:platform.shareMessage' target='_blank'>
             <span class='share-button-link-text'>
               <data:platform.shareMessage/>
             </span>
           </a>
         </b:includable>
-        <b:includable id='post' var='post'>
+              <b:includable id='post' var='post'>
           <div class='list-item'>
             <article>
                 <div class='list-item-img-box'>
                   <b:if cond='data:post.thumbnailUrl'>
-                    <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, "1:1")' height='150' width='150'/>
+                    <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, &quot;1:1&quot;)' height='150' width='150'/>
                   <b:else/>
                     <script type='text/javascript'>
 var img_cnt = 10;
 var selectnum = Math.floor(1 + Math.random() * img_cnt);
-var ret = ( '00' + selectnum ).slice( -2 );
+var ret = ( &#39;00&#39; + selectnum ).slice( -2 );
 var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
-var output = &quot;<img class="list-item-img" alt='' border='0' height='150' src='&quot; + img_path + &quot;' width='150'/>&quot;;
+var output = &quot;<img alt='' border='0' class='list-item-img' height='150' src='&quot; + img_path + &quot;' width='150'/>&quot;;
 document.write(output);
                     </script>
                   </b:if>
@@ -1183,22 +1204,22 @@ document.write(output);
               <div class='list-item-inner'>
                 <h2 class='list-item-title'><data:post.title/></h2>
                 <div class='post-meta'>
-                  <span class='post-date'><i class="fa-regular fa-clock"></i><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
-                  <span class='post-replies'><i class="fa-regular fa-comments"></i><data:post.numComments/> <data:messages.comments/></span>
+                  <span class='post-date'><i class='fa-regular fa-clock'/><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
+                  <span class='post-replies'><i class='fa-regular fa-comments'/><data:post.numComments/> <data:messages.comments/></span>
                 </div>
                 <div class='post-meta'>
                   <span class='post-labels'>
                     <b:loop values='data:post.labels' var='label'>
-                      <span class="label-size">
+                      <span class='label-size'>
                         <a expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>
                       </span>
                     </b:loop>
                   </span>
-                  <div class="read-more">
-                    <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
+                  <div class='read-more'>
+                    <span aria-hidden='true' class='circle'>
+                    <span class='icon arrow'/>
                     </span>
-                    <span class="div-text">記事を読む</span>
+                    <span class='div-text'>記事を読む</span>
                   </div>
                 </div>
               </div>
@@ -1206,7 +1227,7 @@ document.write(output);
             <a expr:href='data:post.url'/>
           </div>
         </b:includable>
-        <b:includable id='postAuthor'>
+              <b:includable id='postAuthor'>
           <span class='byline post-author vcard'>
             <span class='post-author-label'>
               <data:byline.label/>
@@ -1223,16 +1244,16 @@ document.write(output);
             </span>
           </span>
         </b:includable>
-        <b:includable id='postBody' var='post'>
+              <b:includable id='postBody' var='post'>
           <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
           <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
             <data:post.body/>
           </div>
         </b:includable>
-        <b:includable id='postBodySnippet' var='post'>
+              <b:includable id='postBodySnippet' var='post'>
           <b:include data='post' name='postBody'/>
         </b:includable>
-        <b:includable id='postCommentsAndAd' var='post'>
+              <b:includable id='postCommentsAndAd' var='post'>
           <article class='post-outer-container'>
             <!-- Post title and body -->
             <div class='post-outer'>
@@ -1246,20 +1267,20 @@ document.write(output);
           <!-- Show ad outside post container (between posts) for feed pages. -->
           <b:include cond='data:view.isMultipleItems and data:post.includeAd' data='post' name='inlineAd'/>
         </b:includable>
-        <b:includable id='postCommentsLink'>
+              <b:includable id='postCommentsLink'>
           <b:if cond='data:view.isMultipleItems'>
             <span class='byline post-comment-link container'>
               <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
             </span>
           </b:if>
         </b:includable>
-        <b:includable id='postFooter' var='post'>
+              <b:includable id='postFooter' var='post'>
           <div class='post-footer'>
             <b:include name='footerBylines'/>
             <b:include data='post' name='postFooterAuthorProfile'/>
           </div>
         </b:includable>
-        <b:includable id='postFooterAuthorProfile' var='post'>
+              <b:includable id='postFooterAuthorProfile' var='post'>
           <b:if cond='data:post.author.aboutMe and data:view.isPost'>
             <div class='author-profile'>
               <b:if cond='data:post.author.authorPhoto.url'>
@@ -1273,17 +1294,17 @@ document.write(output);
             </div>
           </b:if>
         </b:includable>
-        <b:includable id='postHeader' var='post'>
+              <b:includable id='postHeader' var='post'>
           <b:include name='headerByline'/>
         </b:includable>
-        <b:includable id='postJumpLink' var='post'>
+              <b:includable id='postJumpLink' var='post'>
           <div class='jump-link flat-button'>
             <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
               <b:eval expr='data:blog.jumpLinkMessage'/>
             </a>
           </div>
         </b:includable>
-        <b:includable id='postLabels'>
+              <b:includable id='postLabels'>
           <span class='byline post-labels'>
             <span class='byline-label'><data:byline.label/></span>
             <b:loop index='i' values='data:post.labels' var='label'>
@@ -1293,16 +1314,16 @@ document.write(output);
             </b:loop>
           </span>
         </b:includable>
-        <b:includable id='postLocation'>
+              <b:includable id='postLocation'>
           <span class='byline post-location'>
             <data:byline.label/>
             <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
           </span>
         </b:includable>
-                <b:includable id='postMeta' var='post'>
+              <b:includable id='postMeta' var='post'>
           <b:include data='post' name='postMetadataJSON'/>
         </b:includable>
-        <b:includable id='postMetadataJSONImage'>
+              <b:includable id='postMetadataJSONImage'>
           &quot;image&quot;: {
             &quot;@type&quot;: &quot;ImageObject&quot;,
             <b:if cond='data:post.featuredImage.isResizable'>
@@ -1316,7 +1337,7 @@ document.write(output);
             </b:if>
           },
         </b:includable>
-        <b:includable id='postMetadataJSONPublisher'>
+              <b:includable id='postMetadataJSONPublisher'>
         &quot;publisher&quot;: {
             &quot;@type&quot;: &quot;Organization&quot;,
             &quot;name&quot;: &quot;Blogger&quot;,
@@ -1328,14 +1349,14 @@ document.write(output);
             }
           },
         </b:includable>
-        <b:includable id='postPagination'>
+              <b:includable id='postPagination'>
           <div class='blog-pager container' id='blog-pager'>
             <b:include cond='data:newerPageUrl' name='previousPageLink'/>
             <b:include cond='data:olderPageUrl' name='nextPageLink'/>
             <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
           </div>
         </b:includable>
-        <b:includable id='postQuickEdit' var='post'>
+              <b:includable id='postQuickEdit' var='post'>
           <b:if cond='data:post.editUrl'>
             <span expr:class='&quot;item-control &quot; + data:post.adminClass'>
               <a expr:href='data:post.editUrl' expr:title='data:top.editPostMsg'>
@@ -1344,10 +1365,10 @@ document.write(output);
             </span>
           </b:if>
         </b:includable>
-        <b:includable id='postReactions'>
+              <b:includable id='postReactions'>
           <!-- Reaction feature no longer available. The includable is retained for backwards-compatibility. -->
         </b:includable>
-        <b:includable id='postShareButtons'>
+              <b:includable id='postShareButtons'>
           <div class='byline post-share-buttons goog-inline-block'>
             <b:with value='data:sharingId ?: ((data:widget.instanceId ?: &quot;sharing&quot;) + &quot;-&quot; + (data:regionName ?: &quot;byline&quot;) + &quot;-&quot; + data:post.id)' var='sharingId'>
               <!-- Note: 'sharingButtons' includable is from the default Sharing widget markup. -->
@@ -1355,7 +1376,7 @@ document.write(output);
             </b:with>
           </div>
         </b:includable>
-        <b:includable id='postTimestamp'>
+              <b:includable id='postTimestamp'>
           <span class='byline post-timestamp'>
             <data:byline.label/>
             <b:if cond='data:post.url'>
@@ -1368,7 +1389,7 @@ document.write(output);
             </b:if>
           </span>
         </b:includable>
-        <b:includable id='postTitle' var='post'>
+              <b:includable id='postTitle' var='post'>
           <a expr:name='data:post.id'/>
           <b:if cond='data:post.title != &quot;&quot;'>
             <h3 class='post-title entry-title'>
@@ -1380,73 +1401,73 @@ document.write(output);
             </h3>
           </b:if>
         </b:includable>
-        <b:includable id='previousPageLink'>
+              <b:includable id='previousPageLink'>
           <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
             <data:messages.newerPosts/>
           </a>
         </b:includable>
-        <b:includable id='shareButtons' var='post'>
+              <b:includable id='shareButtons' var='post'>
           <div class='share-main'>
             <ul>
               <!--ツイートボタン-->
               <li class='tweet'>
-                <a rel='nofollow noopener noreferrer' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' target='_blank' title='ツイッターでつぶやく'>
-                  <i class="fab fa-twitter"></i>
+                <a expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank' title='ツイッターでつぶやく'>
+                  <i class='fab fa-twitter'/>
                 </a>
               </li>
               <!--Facebookボタン-->
               <li class='facebook'>
-                <a rel='nofollow noopener noreferrer' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' target='_blank' title='フェイスブックでシェア'>
-                  <i class="fab fa-facebook-f"></i>
+                <a expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='フェイスブックでシェア'>
+                  <i class='fab fa-facebook-f'/>
                 </a>
               </li>
               <!--はてなボタン-->
               <li class='hatena'>
-                <a rel='nofollow noopener noreferrer' expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' target='_blank' title='はてなブックマークに追加する'>
-                  <i class="fa fa-hatena"></i>
+                <a expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='はてなブックマークに追加する'>
+                  <i class='fa fa-hatena'/>
               </a>
               </li>
               <!-- ポケット -->
               <li class='pocket'>
-                <a rel='nofollow noopener noreferrer' expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' target='_blank' title='Pocketに保存する'>
-                  <i class="fab fa-get-pocket"></i>
+                <a expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank' title='Pocketに保存する'>
+                  <i class='fab fa-get-pocket'/>
                 </a>
               </li>
               <!-- LINE -->
               <li class='line'>
-                <a rel='nofollow noopener noreferrer' expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' target='_blank' title='LINEで送る'>
-                  <i class="fab fa-line"></i>
+                <a expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='LINEで送る'>
+                  <i class='fab fa-line'/>
                 </a>
               </li>
             </ul>
           </div>
           </b:includable>
-          <b:includable id='shareButtonsMobile' var='post'>
-            <ul class="sp-sns-menu">
-              <li class="share bottom">
-                <i class="fa-solid fa-share-nodes"></i>
-                <ul class="submenu">
-                  <li><a rel='nofollow noopener noreferrer' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' target='_blank' class="share_twitter"><i class="fab fa-twitter"></i></a></li>
-                  <li><a rel='nofollow noopener noreferrer' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' target='_blank' class="share_facebook"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a rel='nofollow noopener noreferrer' expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' target='_blank' class="share_hateb"><i class="fa fa-hatena"></i></a></li>
-                  <li><a rel='nofollow noopener noreferrer' expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' target='_blank' class="share_pocket"><i class="fab fa-get-pocket"></i></a></li>
-                  <li><a rel='nofollow noopener noreferrer' expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' target='_blank' class="share_line"><i class="fab fa-line"></i></a></li>
+              <b:includable id='shareButtonsMobile' var='post'>
+            <ul class='sp-sns-menu'>
+              <li class='share bottom'>
+                <i class='fa-solid fa-share-nodes'/>
+                <ul class='submenu'>
+                  <li><a class='share_twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-twitter'/></a></li>
+                  <li><a class='share_facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-facebook-f'/></a></li>
+                  <li><a class='share_hateb' expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fa fa-hatena'/></a></li>
+                  <li><a class='share_pocket' expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-get-pocket'/></a></li>
+                  <li><a class='share_line' expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-line'/></a></li>
                 </ul>
               </li>
             </ul>
           </b:includable>
-        <b:includable id='sharingButton'>
+              <b:includable id='sharingButton'>
           <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
             <b:include name='sharingPlatformIcon'/>
             <span class='platform-sharing-text'><data:platform.name/></span>
           </span>
         </b:includable>
-        <b:includable id='sharingButtonContent'>
+              <b:includable id='sharingButtonContent'>
           <div class='flat-icon-button ripple'>
             <b:include name='shareIcon'/>
           </div>
         </b:includable>
-        <b:includable id='sharingButtons'>
+              <b:includable id='sharingButtons'>
           <div class='sharing' expr:aria-owns='&quot;sharing-popup-&quot; + data:sharingId' expr:data-title='data:shareTitle'>
             <button class='sharing-button touch-icon-button' expr:aria-controls='&quot;sharing-popup-&quot; + data:sharingId' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-button-&quot; + data:sharingId' role='button'>
               <b:include name='sharingButtonContent'/>
@@ -1454,7 +1475,7 @@ document.write(output);
             <b:include name='sharingButtonsMenu'/>
           </div>
         </b:includable>
-        <b:includable id='sharingButtonsMenu'>
+              <b:includable id='sharingButtonsMenu'>
           <div class='share-buttons-container'>
             <ul aria-hidden='true' class='share-buttons hidden' expr:aria-label='data:messages.share.escaped' expr:id='&quot;sharing-popup-&quot; + data:sharingId' role='menu'>
               <b:loop values='(data:platforms ?: data:blog.sharing.platforms) filter (p =&gt; p.key not in {&quot;blogThis&quot;})' var='platform'>
@@ -1468,10 +1489,10 @@ document.write(output);
             </ul>
           </div>
         </b:includable>
-        <b:includable id='sharingPlatformIcon'>
+              <b:includable id='sharingPlatformIcon'>
           <b:include data='{ iconClass: (&quot;touch-icon sharing-&quot; + data:platform.key) }' expr:name='data:platform.key + &quot;Icon&quot;'/>
         </b:includable>
-        <b:includable id='status-message'>
+              <b:includable id='status-message'>
           <b:if cond='data:navMessage'>
           <div class='status-msg-wrap'>
             <div class='status-msg-body'>
@@ -1486,7 +1507,7 @@ document.write(output);
           <div style='clear: both;'/>
           </b:if>
         </b:includable>
-        <b:includable id='threaded-comment-form' var='post'>
+              <b:includable id='threaded-comment-form' var='post'>
           <div class='comment-form'>
             <a name='comment-form'/>
             <b:if cond='data:mobile'>
@@ -1506,7 +1527,7 @@ document.write(output);
             </script>
           </div>
         </b:includable>
-        <b:includable id='threadedCommentForm' var='post'>
+              <b:includable id='threadedCommentForm' var='post'>
           <div class='comment-form'>
             <a name='comment-form'/>
             <h4 id='comment-post-message'><data:messages.postAComment/></h4>
@@ -1521,7 +1542,7 @@ document.write(output);
             </script>
           </div>
         </b:includable>
-        <b:includable id='threadedCommentJs' var='post'>
+              <b:includable id='threadedCommentJs' var='post'>
           <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
           <b:template-script inline='true' name='threaded_comments'/>
           <script type='text/javascript'>
@@ -1531,7 +1552,7 @@ document.write(output);
               <data:post.commentConfig/>);
           </script>
         </b:includable>
-        <b:includable id='threadedComments' var='post'>
+              <b:includable id='threadedComments' var='post'>
           <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
             <a name='comments'/>
             <b:include name='commentsTitle'/>
@@ -1561,7 +1582,7 @@ document.write(output);
             </b:if>
           </section>
         </b:includable>
-        <b:includable id='threaded_comment_js' var='post'>
+              <b:includable id='threaded_comment_js' var='post'>
           <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
           <script type='text/javascript'>
 (function() {
@@ -1741,7 +1762,7 @@ if (window.goog && window.goog.comments) {
 // ]]>
           </script>
         </b:includable>
-        <b:includable id='threaded_comments' var='post'>
+              <b:includable id='threaded_comments' var='post'>
           <div class='comments' id='comments'>
             <a name='comments'/>
             <h4><data:post.commentLabelFull/>:</h4>
@@ -1760,27 +1781,26 @@ if (window.goog && window.goog.comments) {
             </p>
             <b:if cond='data:showCmtPopup'>
               <div id='comment-popup'>
-                <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'></iframe>
+                <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'/>
               </div>
             </b:if>
             <div id='backlinks-container'>
-              <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'></div>
+              <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'/>
             </div>
           </div>
         </b:includable>
-      </b:widget>
-    </b:section>
+            </b:widget>
+          </b:section>
    </div>
    <div id='sub-content'>
     <b:section id='sidebar'>
-      <b:widget id='HTML1' locked='false' title='プロフィール' type='HTML'>
+      <b:widget id='HTML1' locked='false' title='プロフィール' type='HTML' version='1'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;b&gt;Nickey&lt;/b&gt;
 &lt;p&gt;趣味や旅行の記録&amp;#12289;雑記なんかをつらつらと&amp;#12290;文章書くのが大好きです&amp;#12290;&lt;/p&gt;
 &lt;p class=&#39;side-prof-sns&#39;&gt;
 &lt;a class=&#39;twitter-btn&#39; href=&#39;https://twitter.com/cln0612&#39;&gt;Twitter&lt;/a&gt; &lt;a class=&#39;mail-btn&#39; href=&#39;mailto:conlon0612@gmail.com&#39;&gt;Mail&lt;/a&gt;
-&lt;/p&gt;
-          </b:widget-setting>
+&lt;/p&gt;</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
           <!-- only display title if it's non-empty -->
@@ -1873,7 +1893,7 @@ if (window.goog && window.goog.comments) {
           </ul>
         </b:includable>
       </b:widget>
-      <b:widget id='BlogArchive1' locked='false' title='ブログ アーカイブ' type='BlogArchive'>
+      <b:widget id='BlogArchive1' locked='false' title='ブログ アーカイブ' type='BlogArchive' version='1'>
         <b:widget-settings>
           <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
           <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -1978,7 +1998,7 @@ if (window.goog && window.goog.comments) {
                         <script type='text/javascript'>
 var img_cnt = 10;
 var selectnum = Math.floor(1 + Math.random() * img_cnt);
-var ret = ( '00' + selectnum ).slice( -2 );
+var ret = ( &#39;00&#39; + selectnum ).slice( -2 );
 var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
 var output = &quot;<img alt='' border='0' height='72' src='&quot; + img_path + &quot;' width='78'/>&quot;;
 document.write(output);
@@ -2019,12 +2039,12 @@ document.write(output);
               <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
             </b:switch>
           </b:includable>
-          <b:includable id='bylineRegion' var='regionItems'>
+        <b:includable id='bylineRegion' var='regionItems'>
             <b:loop values='data:regionItems' var='byline'>
               <b:include data='byline' name='bylineByName'/>
             </b:loop>
           </b:includable>
-          <b:includable id='commentsLink'>
+        <b:includable id='commentsLink'>
             <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
               <b:if cond='data:post.numberOfComments &gt; 0'>
                 <b:message name='messages.numberOfComments'>
@@ -2035,10 +2055,10 @@ document.write(output);
               </b:if>
             </a>
           </b:includable>
-          <b:includable id='commentsLinkIframe'>
+        <b:includable id='commentsLinkIframe'>
             <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
           </b:includable>
-          <b:includable id='emailPostIcon'>
+        <b:includable id='emailPostIcon'>
             <span class='byline post-icons'>
               <!-- email post links -->
               <span class='item-action'>
@@ -2071,7 +2091,7 @@ document.write(output);
             <g:plusone annotation='inline' expr:href='data:originalUrl.canonical.http' size='medium' source='blogger:blog:plusone'/>
           </div>
         </b:includable>
-                <b:includable id='headerByline'>
+        <b:includable id='headerByline'>
           <b:if cond='data:widgets.Blog.first.headerByline'>
             <div class='post-header'>
               <div class='post-header-line-1'>
@@ -2250,10 +2270,9 @@ document.write(output);
           </div>
         </b:includable>
       </b:widget>
-      <b:widget id='HTML2' locked='false' title='最新コメント' type='HTML'>
+      <b:widget id='HTML2' locked='false' title='最新コメント' type='HTML' version='1'>
         <b:widget-settings>
-              <b:widget-setting name='content'>
-&lt;div id=&#39;recent-cmt&#39;&gt;&lt;/div&gt;
+          <b:widget-setting name='content'>&lt;div id=&#39;recent-cmt&#39;&gt;&lt;/div&gt;
 &lt;script type=&#39;text/javascript&#39;&gt;
   const maxnum = 10; //コメント数
   const maxstr = 140; //コメント文字数
@@ -2327,10 +2346,9 @@ document.write(output);
   const scr_rc = document.createElement(&#39;script&#39;);
   scr_rc.src = &#39;/feeds/comments/summary?alt=json-in-script&amp;max-results=&#39; + maxnum + &#39;&amp;callback=loadcmt&#39;;
   document.getElementById(&#39;recent-cmt&#39;).after(scr_rc);
-&lt;/script&gt;
-              </b:widget-setting>
-            </b:widget-settings>
-            <b:includable id='main'>
+&lt;/script&gt;</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
               <!-- only display title if it's non-empty -->
               <b:if cond='data:title != &quot;&quot;'>
                 <h2 class='title'><data:title/></h2>
@@ -2340,15 +2358,13 @@ document.write(output);
               </div>
               <b:include name='quickedit'/>
             </b:includable>
-          </b:widget>
-
-          <b:widget id='HTML3' locked='false' title='目次' type='HTML'>
-            <b:widget-settings>
-              <b:widget-setting name='content'>
-              </b:widget-setting>
-            </b:widget-settings>
-            <b:includable id='main'>
-              <b:if cond='data:blog.pageType == "item"'>
+      </b:widget>
+      <b:widget id='HTML3' locked='false' title='目次' type='HTML' version='1'>
+        <b:widget-settings>
+          <b:widget-setting name='content'/>
+        </b:widget-settings>
+        <b:includable id='main'>
+              <b:if cond='data:blog.pageType == &quot;item&quot;'>
                 <b:if cond='data:title != &quot;&quot;'>
                   <h2 class='title'><data:title/></h2>
                 </b:if>
@@ -2358,8 +2374,8 @@ document.write(output);
                 <b:include name='quickedit'/>
               </b:if>
             </b:includable>
-          </b:widget>
-        </b:section>
+      </b:widget>
+    </b:section>
         </div>
       </div>
     </div>
@@ -2371,21 +2387,7 @@ document.write(output);
           <b:section id='フッター1'/>
         </div>
         <div id='footer-item2'>
-          <b:section id='フッター2'>
-            <b:widget id='Attribution1' locked='false' title='' type='Attribution'>
-              <b:widget-settings>
-                <b:widget-setting name='copyright'/>
-              </b:widget-settings>
-              <b:includable id='main'>
-                <div class='widget-content' style='text-align: center;'>
-                  <b:if cond='data:attribution != &quot;&quot;'>
-                    <data:attribution/>
-                  </b:if>
-                </div>
-                <b:include name='quickedit'/>
-              </b:includable>
-            </b:widget>
-          </b:section>
+          <b:section id='フッター2'/>
         </div>
         <div id='footer-item3'>
           <b:section id='フッター3'/>
@@ -2393,40 +2395,40 @@ document.write(output);
       </div>
       </div>
     </div>
-    <p id='copyright'>© 2013 Nickey</p>
+    <p id='copyright'>&#169; 2013 Nickey</p>
     <p id='designed-by'>Powered by <strong><a href='https://www.blogger.com/' target='_blank'>Blogger</a></strong> <i class='fab fa-blogger'/> | Designed by <strong><a href='http://qooq.dododori.com' target='_blank'>QooQ</a></strong></p>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
 
-    <!-- ハンバーガーアイコン・メニュー -->
+    <!-- ハンバーガーアイコン&#12539;メニュー -->
     <script type='text/javascript'>
 $(function() {
-  $('.hamburger').click(function() {
-    $(this).toggleClass('active');
-    if ($(this).hasClass('active')) {
-      $('.globalMenuSp').addClass('active');
-      $('.hamburger-bg').addClass('hamburger-bg-active');
+  $(&#39;.hamburger&#39;).click(function() {
+    $(this).toggleClass(&#39;active&#39;);
+    if ($(this).hasClass(&#39;active&#39;)) {
+      $(&#39;.globalMenuSp&#39;).addClass(&#39;active&#39;);
+      $(&#39;.hamburger-bg&#39;).addClass(&#39;hamburger-bg-active&#39;);
     } else {
-      $('.globalMenuSp').removeClass('active');
-      $('.hamburger-bg').removeClass('hamburger-bg-active');
+      $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
+      $(&#39;.hamburger-bg&#39;).removeClass(&#39;hamburger-bg-active&#39;);
     } 
   });
-  $('.hamburger-bg').click(function() {
-    $('.hamburger').toggleClass('active');
-    if ($(this).hasClass('active')) {
-      $('.globalMenuSp').addClass('active');
-      $(this).addClass('hamburger-bg-active');
+  $(&#39;.hamburger-bg&#39;).click(function() {
+    $(&#39;.hamburger&#39;).toggleClass(&#39;active&#39;);
+    if ($(this).hasClass(&#39;active&#39;)) {
+      $(&#39;.globalMenuSp&#39;).addClass(&#39;active&#39;);
+      $(this).addClass(&#39;hamburger-bg-active&#39;);
     } else {
-      $('.globalMenuSp').removeClass('active');
-      $(this).removeClass('hamburger-bg-active');
+      $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
+      $(this).removeClass(&#39;hamburger-bg-active&#39;);
     } 
   });
 });
 //メニュー内を閉じておく
 $(function() {
-  $('.globalMenuSp a[href]').click(function() {
-    $('.hamburger-bg').removeClass('hamburger-bg-active');
-    $('.globalMenuSp').removeClass('active');
-    $('.hamburger').removeClass('active');
+  $(&#39;.globalMenuSp a[href]&#39;).click(function() {
+    $(&#39;.hamburger-bg&#39;).removeClass(&#39;hamburger-bg-active&#39;);
+    $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
+    $(&#39;.hamburger&#39;).removeClass(&#39;active&#39;);
   });
 });
 </script>
