@@ -69,7 +69,8 @@
     <meta content='summary_large_image' name='twitter:card'/>
     <meta content='545063505576016' property='fb:app_id'/>
 
-    <b:skin><![CDATA[]]></b:skin>
+    <b:skin>
+    </b:skin>
     <script>
     //<![CDATA[
     //mrp-v1.05
@@ -152,12 +153,12 @@
               <div class='site-header__middle'>
                 <ul>
                   <li><a expr:href='data:blog.homepageUrl'>ホーム</a></li>
-                  <li><a href='/search/label/X1?max-results=10'>生活</a></li>
-                  <li><a href='#'>雑記</a></li>
-                  <li><a href='#'>趣味</a></li>
-                  <li><a href='#'>旅行</a></li>
-                  <li><a href='#'>レビュー</a></li>
-                  <li><a href='#'>投資</a></li>
+                  <li><a href='/search/label/雑記?max-results=10'>雑記</a></li>
+                  <li><a href='/search/label/生活?max-results=10'>生活</a></li>
+                  <li><a href='/search/label/趣味?max-results=10'>趣味</a></li>
+                  <li><a href='/search/label/旅行?max-results=10'>旅行</a></li>
+                  <li><a href='/search/label/レビュー?max-results=10'>レビュー</a></li>
+                  <li><a href='/search/label/投資?max-results=10'>投資</a></li>
                   <li><a href='/p/sitemap.html'>サイトマップ</a></li>
                 </ul>
               </div>
@@ -184,12 +185,12 @@
             </div>
             <ul>
               <li><a expr:href='data:blog.homepageUrl'>ホーム</a></li>
-              <li><a href='/search/label/X1?max-results=10'>生活</a></li>
-              <li><a href='#'>雑記</a></li>
-              <li><a href='#'>趣味</a></li>
-              <li><a href='#'>旅行</a></li>
-              <li><a href='#'>レビュー</a></li>
-              <li><a href='#'>投資</a></li>
+              <li><a href='/search/label/雑記?max-results=10'>雑記</a></li>
+              <li><a href='/search/label/生活?max-results=10'>生活</a></li>
+              <li><a href='/search/label/趣味?max-results=10'>趣味</a></li>
+              <li><a href='/search/label/旅行?max-results=10'>旅行</a></li>
+              <li><a href='/search/label/レビュー?max-results=10'>レビュー</a></li>
+              <li><a href='/search/label/投資?max-results=10'>投資</a></li>
               <li><a href='/p/sitemap.html'>サイトマップ</a></li>
             </ul>
           </nav>
@@ -1799,7 +1800,7 @@ if (window.goog && window.goog.comments) {
           <b:widget-setting name='content'>&lt;b&gt;Nickey&lt;/b&gt;
 &lt;p&gt;趣味や旅行の記録&amp;#12289;雑記なんかをつらつらと&amp;#12290;文章書くのが大好きです&amp;#12290;&lt;/p&gt;
 &lt;p class=&#39;side-prof-sns&#39;&gt;
-&lt;a class=&#39;twitter-btn&#39; href=&#39;https://twitter.com/cln0612&#39;&gt;Twitter&lt;/a&gt; &lt;a class=&#39;mail-btn&#39; href=&#39;mailto:conlon0612@gmail.com&#39;&gt;Mail&lt;/a&gt;
+&lt;a class=&#39;twitter-btn&#39; href=&#39;https://twitter.com/cln0612&#39;&gt;&lt;i class=&#39;fab fa-twitter&#39;&gt;&lt;/i&gt;Twitter&lt;/a&gt; &lt;a class=&#39;mail-btn&#39; href=&#39;mailto:conlon0612@gmail.com&#39;&gt;&lt;i class=&#39;fa-solid fa-envelope&#39;&gt;&lt;/i&gt;Mail&lt;/a&gt;
 &lt;/p&gt;</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
