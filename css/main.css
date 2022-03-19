@@ -939,30 +939,18 @@ color: var(--brand-subfont);
 z-index: 3;
 position: relative;
 transition: all 0.2s ease 0s;
-
-
-
-display: block;
-width: 240px;
-height: 60px;
-line-height: 60px;
-margin: 0 auto;
-font-size: 18px;
 text-align: center;
-letter-spacing: .2em;
-text-indent: .2em;
 text-decoration: none;
-background: var(--brand-subcolor);
-color: var(--brand-font);
 border: solid 2px rgba(0, 0, 0, 0);
 }
 .label-size a{
 color: inherit !important;
 padding:.5em;
 display:inline-block;
+text-decoration: none;
 }
 .label-size:hover {
-	background: var(--brand-font);
+	background: var(--other-back);
 	color: var(--brand-subcolor);
 	border: solid 2px var(--brand-subcolor);
 transform: translateY(-0.1875em);}
