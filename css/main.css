@@ -935,25 +935,24 @@ letter-spacing: 0;}
 border-radius: 3px;
 margin: .25rem;
 background: var(--brand-subcolor);
-color: var(--brand-subfont);
 z-index: 3;
 position: relative;
 transition: all 0.2s ease 0s;
 text-align: center;
-text-decoration: none;
 border: solid 2px rgba(0, 0, 0, 0);
 }
 .label-size a{
-color: inherit !important;
+color: var(--brand-subfont);
 padding:.5em;
 display:inline-block;
 text-decoration: none;
 }
 .label-size:hover {
 	background: var(--other-back);
+	border: solid 2px var(--brand-subcolor);}
+.label-size:hover a{
 	color: var(--brand-subcolor);
-	border: solid 2px var(--brand-subcolor);
-transform: translateY(-0.1875em);}
+}
 .widget h2{
 font-size: 110%;}
 .widget h2,
