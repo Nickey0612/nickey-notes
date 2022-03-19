@@ -1349,6 +1349,8 @@ transform: translateY(0%);}
     font-variant: normal;
     line-height: 1;
     text-rendering: auto; }
+.fa-envelope::before {
+    content: "\f0e0"; }
 .fa-clock::before {
     content: "\f017"; }
 .fa-comments::before {
