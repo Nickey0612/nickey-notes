@@ -951,7 +951,7 @@ text-decoration: none;
 	background: var(--other-back);
 	border: solid 2px var(--brand-subcolor) !important;}
 .label-size:hover a{
-	color: var(--brand-subcolor);
+	color: var(--brand-subcolor) !important;;
 }
 .widget h2{
 font-size: 110%;}
