@@ -785,15 +785,8 @@ top: 126px;
 
 /* フッターカテゴリ */
 #single-footer-category{
+    text-align: center;
     margin-top: 2em;}
-.single-footer-category-item{
-    display: table;
-    margin: 1em auto 0 auto;
-    padding: 1em;
-    font-weight: bold;
-    border-radius: 3px;
-    background: var(--brand-color);
-    color: var(--brand-font);}
 
 /* 関連記事 */
 #related-posts {
