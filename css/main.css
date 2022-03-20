@@ -772,7 +772,8 @@ text-align: right;}
 display: table;
 width: 100%;
 font-size: 95%;
-color: #444 !important;
+color: var(--font-color);
+background: var(--other-back);
 text-decoration: none;
 transition: 0.3s ease;}
 .pager-link:hover {
@@ -1418,6 +1419,15 @@ transform: translateY(0%);}
     content: "\f139"; }
 .fa-chevron-circle-down::before {
     content: "\f13a"; }
+.fa-amazon:before {
+    content: "\f270"; }
+.fa-angle-left::before {
+    content: "\f104"; }
+.fa-angle-right::before {
+    content: "\f105"; }
+.fa-home::before {
+    content: "\f015"; }
+
 @font-face {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
