@@ -439,6 +439,14 @@ top: 126px;
 #single-header .post-meta .post-labels {
     margin-left: auto;
     margin-right: unset;}
+@media ( max-width : 480px ) {
+    #single{
+        padding: 1.5em 1em 1em 1em;}
+    #single-header-title{
+        font-size: 1.9rem;}
+    #single-content h2,
+    #single-content h3{
+        font-size: 1.9rem;}}
 
 /* 個別記事本文 */
 #single-content{
@@ -658,7 +666,6 @@ top: 126px;
     color: var(--brand-subfont);}
 
 /* 個別記事のページネーション */
-
 .adjacent-nav {
     display: flex;
     width: 100%;
@@ -692,7 +699,6 @@ top: 126px;
     text-decoration: none;
     font-size: 1.1rem;
     margin: 0;}
-
 .adjacent-nav-next, .adjacent-nav-next-none {
     margin-left: .5%;}
 .adjacent-nav-prev, .adjacent-nav-prev-none {
@@ -781,77 +787,56 @@ top: 126px;
     color: var(--brand-font);}
 
 /* 関連記事 */
-
 #related-posts {
-    margin-top: 3em;
-  }
-  .related-text {
+    margin-top: 3em;}
+.related-text {
     font-size: 1.35em;
     font-weight: 700;
     text-align: center;
     background: #eee;
     padding: 10px 14px;
     border-bottom: 2px solid #ddd;
-    margin-bottom: 1em;
-  }
-  .p-container {
+    margin-bottom: 1em;}
+.p-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .p-container:after {
+    flex-wrap: wrap;}
+.p-container:after {
     display: block;
     content: "";
-    width: 32%;
-  }
-  #related-posts a {
+    width: 32%;}
+#related-posts a {
     display: block;
     width: 32%;
     min-height: 200px;
-    color: #444;
     border: solid 1px #ccc;
     border-radius: 3px;
     box-sizing: border-box;
     margin-bottom: 2em;
-    transition: all .3s ease;
-  }
-  .related-img {
+    transition: all .3s ease;}
+.related-img {
     height: 120px;
     margin: 0;
-    overflow: hidden;
-  }
-  .related-img img {
+    overflow: hidden;}
+.related-img img {
     display: block;
     width: 100%;
     height: 100%;
     border-radius: 3px 3px 0 0;
     object-fit: cover;
-    transition: .3s
-  }
-  .related-title {
+    transition: .3s}
+.related-title {
     font-size: 90%;
     font-weight: 700;
-    padding: 10px;
-  }
-  #related-posts a:hover {
+    padding: 10px;}
+#related-posts a:hover {
     text-decoration: none;
-  }
-  #related-posts a:hover .related-img img {
-    transform: scale(1.1);
-  }
-  @media screen and (max-width:519px) {
+    background: var(--brand-color);}
+#related-posts a:hover .related-img img {
+    transform: scale(1.1);}
+@media screen and (max-width:519px) {
     #related-posts a {
-      width: 49%;
-    }
-  }
-@media ( max-width : 480px ) {
-    #single{
-        padding: 1.5em 1em 1em 1em;}
-    #single-header-title{
-        font-size: 1.9rem;}
-    #single-content h2,
-    #single-content h3{
-        font-size: 1.9rem;}}
+        width: 49%;}}
 
 /****************************************
         サイドバー
