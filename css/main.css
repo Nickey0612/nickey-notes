@@ -23,6 +23,215 @@ body{
 a:hover {
     text-decoration: underline;}
 
+/* blogger標準CSSからの移植 */
+.content-outer,
+.header-outer,
+.tabs-outer,
+.main-outer,
+.main-inner,
+.footer-outer,
+.post,.comments,
+.widget,
+.date-header,
+.inline-ad{
+  position:relative;
+  min-height:0;
+  _position:static;
+  _height:1%}
+.widget {
+    line-height: 1.4;
+    margin: 30px 0;
+}
+.widget ul {
+    padding: 0 0 0 1.25em;
+    margin: 0;
+    line-height: 1.2;
+}
+.widget li, .BlogArchive #ArchiveList ul.flat li {
+    padding: 0.25em 0;
+    margin: 0;
+    text-indent: 0;
+}
+.widget .post-body ul {
+    padding: 0 2.5em;
+    margin: 0.5em 0;
+    line-height: 1.4;
+}
+.widget .post-body li {
+    margin-bottom: 0.25em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.section:last-child .widget:last-child {
+    margin-bottom: 0;
+}
+.section:first-child .widget:first-child {
+    margin-top: 0;
+}
+.PopularPosts .item-thumbnail {
+    float: left;
+    margin: 0 5px 5px 0;
+}
+.PopularPosts .item-title {
+    padding-bottom: 0.2em;
+}
+#ArchiveList .toggle{
+  cursor:pointer;font-family:Arial,sans-serif}
+#ArchiveList .toggle-open{
+  _font-size:1.7em;line-height:.6em}
+#ArchiveList{
+  text-align:left}
+#ArchiveList a.post-count-link,
+#ArchiveList a.post-count-link:link,
+#ArchiveList a.post-count-link:visited{
+  text-decoration:none}
+#ArchiveList a.toggle,
+#ArchiveList a.toggle:link,
+#ArchiveList a.toggle:visited,
+#ArchiveList a.toggle:hover{
+  color:inherit;text-decoration:none}
+.BlogArchive #ArchiveList ul li{
+  background:none;
+  list-style:none;
+  list-style-image:none;
+  list-style-position:outside;
+  border-width:0;
+  padding-left:15px;
+  text-indent:-15px;
+  margin:.25em 0;
+  background-image:none}
+.BlogArchive #ArchiveList ul ul li{
+  padding-left:1.2em}
+.BlogArchive #ArchiveList ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  list-style-image:none;
+  border-width:0}
+.BlogArchive #ArchiveList ul.posts li{
+  padding-left:1.3em}
+#ArchiveList .collapsed ul{
+  display:none}
+.label-size {
+    line-height: 1.2;
+}
+.PopularPosts img {
+    padding-right: 0.4em;
+}
+.comments{
+  clear:both;
+  margin-top:10px;
+  margin-bottom:0}
+.comments .comments-content{
+  margin-bottom:16px}
+.comments .comment .comment-actions a{
+  padding-right:5px;
+  padding-top:5px}
+.comments .comment .comment-actions a:hover{
+  text-decoration:underline}
+.comments .comments-content .comment-thread ol{
+  list-style-type:none;
+  padding:0;
+  text-align:left}
+.comments .comments-content .inline-thread{
+  padding:.5em 1em}
+.comments .comments-content .comment-thread{
+  margin:8px 0}
+.comments .comments-content .comment-thread:empty{
+  display:none}
+.comments .comments-content .comment-replies{
+  margin-left:36px;
+  margin-top:1em}
+.comments .comments-content .comment{
+  margin-bottom:16px;
+  padding-bottom:8px}
+.comments .comments-content .comment:first-child{
+  padding-top:16px}
+.comments .comments-content .comment:last-child{
+  border-bottom:0;
+  padding-bottom:0}
+.comments .comments-content .comment-body{
+  position:relative}
+.comments .comments-content .user{
+  font-style:normal;
+  font-weight:bold}
+.comments .comments-content .icon.blog-author{
+  display:inline-block;
+  height:18px;
+  margin:0 0 -4px 6px;
+  width:18px}
+.comments .comments-content .datetime{
+  margin-left:6px}
+.comments .comments-content .comment-header,.comments .comments-content .comment-content{
+  margin:0 0 8px}
+.comments .comments-content .comment-content{
+  text-align:justify}
+.comments .comments-content .owner-actions{
+  position:absolute;
+  right:0;top:0}
+.comments .comments-replybox{
+  border:none;
+  height:250px;
+  width:100%}
+.comments .comment-replybox-single{
+  margin-left:48px;
+  margin-top:5px}
+.comments .comment-replybox-thread{
+  margin-top:5px}
+.comments .comments-content .loadmore a{
+  display:block;
+  padding:10px 16px;
+  text-align:center}
+.comments .thread-toggle{
+  cursor:pointer;
+  display:inline-block}
+.comments .continue{
+  cursor:pointer}
+.comments .continue a{
+  display:block;
+  font-weight:bold;
+  padding:.5em}
+.comments .comments-content .loadmore{
+  cursor:pointer;
+  margin-top:3em;
+  max-height:3em}
+.comments .comments-content .loadmore.loaded{
+  max-height:0;
+  opacity:0
+  ;overflow:hidden}
+.comments .thread-chrome.thread-collapsed{
+  display:none}
+.comments .thread-toggle{
+  display:inline-block}
+.comments .thread-toggle .thread-arrow{
+  display:inline-block;
+  height:6px;
+  margin:.3em;
+  overflow:visible;
+  padding-right:4px;
+  width:7px}
+.comments .thread-expanded .thread-arrow{
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") no-repeat scroll 0 0 transparent}
+.comments .thread-collapsed .thread-arrow{
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAJUlEQVR42mNgAILy8vL/DLgASBKnApgkVgXIkhgKiNKJ005s4gDLbCZBiSxfygAAAABJRU5ErkJggg==") no-repeat scroll 0 0 transparent}
+.comments .avatar-image-container{
+  float:left;
+  max-height:36px;
+  overflow:hidden;
+  width:36px}
+.comments .avatar-image-container img{
+  max-width:36px}
+.comments .comment-block{
+  margin-left:48px;
+  position:relative}
+.comments .hidden{
+  display:none}
+@media screen and (max-device-width:480px){
+  .comments .comments-content .comment-replies{
+    margin-left:0}}
+
+
+
 /* 選択時の色 */
 ::selection {
     background: var(--brand-subcolor);
@@ -572,11 +781,10 @@ top: 126px;
 
 /* Youtube */
 iframe[title="YouTube video player"] {
-    width: 100%;}
-@media ( max-width : 768px ) {
-  iframe[title="YouTube video player"] {
-    width:100vw;
-    height:calc(900vw / 16);}}
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 3rem 0;}
 
 /* 投稿のヘッダ部 */
 .post-meta{
