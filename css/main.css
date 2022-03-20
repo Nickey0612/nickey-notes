@@ -340,7 +340,6 @@ top: 126px;
     font-weight: bold;}
 .list-item-link{
     position: relative;
-    z-index: 1;
     width: 100%;
     display: grid;}
 .list-item > a{
@@ -571,9 +570,22 @@ top: 126px;
     margin-left: auto;
     margin-right: auto;}
 
+/* Youtube */
+iframe[title="YouTube video player"] {
+    width: 100%;}
+@media ( max-width : 768px ) {
+  iframe[title="YouTube video player"] {
+    width:100vw;
+    height:calc(900vw / 16);}}
+
 /* 投稿のヘッダ部 */
 .post-meta{
-    width:100%;font-size:100%;color:var(--brand-color);display:flex;align-items: center; margin-top:10px; flex-wrap:wrap;}
+    width: 100%;
+    font-size:100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;}
 .post-meta > span{
     margin-right:1.5rem;}
 @media (max-width: 768px) {
@@ -908,18 +920,15 @@ top: 126px;
     border-radius: 3px;
     margin: .25rem;
     background: var(--brand-subcolor);
-    z-index: 3;
     position: relative;
     transition: all 0.2s ease 0s;
     text-align: center;
-    border: solid 2px rgba(0, 0, 0, 0);
-    }
+    border: solid 2px rgba(0, 0, 0, 0);}
 .label-size a{
     color: var(--brand-subfont) !important;
-    padding:.5em;
+    padding:.5rem;
     display:inline-block;
-    text-decoration: none;
-    }
+    text-decoration: none;}
 .label-size:hover {
     background: var(--other-back);
     border: solid 2px var(--brand-subcolor) !important;}
@@ -948,7 +957,6 @@ input.gsc-input{
 .twitter-btn, .mail-btn {
     border-radius: 3px;
     margin: .25rem;
-    z-index: 3;
     position: relative;
     transition: all 0.2s ease 0s;
     text-align: center;
