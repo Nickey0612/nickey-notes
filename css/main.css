@@ -787,23 +787,22 @@ top: 126px;
     left: 0;
     content: ' ';
     z-index: 1;}
-.prev-label {
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-    font-style: italic;
+.prev-label, .next-label {
+    margin: 0.5rem;
     color: var(--brand-font);
     z-index: 2;
     position: absolute;
-    top: 0;
+    top: 0;}
+.prev-label {
     left: 0;}
 .next-label {
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
     text-align: right;
-    font-style: italic;
-    color: var(--brand-font);
-    z-index: 2;
-    position: absolute;
-    top: 0;
     right: 0;}
+@media ( max-width : 480px ) {
+    .prev-label, .next-label {
+        font-size: 70%;
+    }
+}
 .adjacent-right {
     width: 65%;
     position: relative;}
