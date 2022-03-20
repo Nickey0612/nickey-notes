@@ -699,16 +699,22 @@ top: 126px;
     text-decoration: none;
     font-size: 1.1rem;
     margin: 0;}
-.adjacent-nav-next, .adjacent-nav-next-none {
+.adjacent-nav-next,
+.adjacent-nav-next-none {
     margin-left: .5%;}
-.adjacent-nav-prev, .adjacent-nav-prev-none {
+.adjacent-nav-prev,
+.adjacent-nav-prev-none {
     margin-right: .5%;}
-.adjacent-nav-prev, .adjacent-nav-next, .adjacent-nav-prev-none, .adjacent-nav-next-none {
+.adjacent-nav-prev,
+.adjacent-nav-next,
+.adjacent-nav-prev-none,
+.adjacent-nav-next-none {
     width: 49.5%;
     height: auto;
     display: block;
     background-color: var(--other-back);}
-.adjacent-nav-prev a, .adjacent-nav-next a {
+.adjacent-nav-prev a,
+.adjacent-nav-next a {
     flex: 1;
     height: 100%;
     display: flex;
@@ -739,7 +745,8 @@ top: 126px;
     left: 0;
     content: ' ';
     z-index: 1;}
-.prev-label, .next-label {
+.prev-label,
+.next-label {
     margin: 0.5rem;
     color: var(--brand-font);
     z-index: 2;
@@ -751,12 +758,14 @@ top: 126px;
     text-align: right;
     right: 0;}
 @media ( max-width : 480px ) {
-    .prev-label, .next-label {
+    .prev-label,
+    .next-label {
         font-size: 70%;}}
 .adjacent-right {
     width: 65%;
     position: relative;}
-.adjacent-right .prev-title, .adjacent-right .next-title {
+.adjacent-right .prev-title,
+.adjacent-right .next-title {
     padding: 0 5%;
     font-size: 80%;
     position: absolute;
@@ -789,13 +798,12 @@ top: 126px;
 /* 関連記事 */
 #related-posts {
     margin-top: 3em;}
-.related-text {
-    font-size: 1.35em;
-    font-weight: 700;
+.related-text,
+.comment-text {
     text-align: center;
-    background: #eee;
+    background: var(--brand-color);
+    color: var(--brand-font);
     padding: 10px 14px;
-    border-bottom: 2px solid #ddd;
     margin-bottom: 1em;}
 .p-container {
     display: flex;
@@ -831,7 +839,7 @@ top: 126px;
     padding: 10px;}
 #related-posts a:hover {
     text-decoration: none;
-    background: var(--brand-color);}
+    background: var(--brand-font);}
 #related-posts a:hover .related-img img {
     transform: scale(1.1);}
 @media screen and (max-width:519px) {
