@@ -738,11 +738,19 @@ color: var(--list-mark); /*アイコン色*/}
     text-decoration: none;
     font-weight: 700;
 }
+.AmaQuick-box .AmaQuick-btn > i{
+    margin-right: 0.5rem;
+}
 .AmaQuick-box .AmaQuick-btn:hover{
     background: var(--brand-font);
     border: solid 2px #FF9900 !important;
     color: #FF9900 !important;
     text-decoration: none;
+}
+@media ( max-width : 480px ) {
+    .AmaQuick-image img {
+        width: 100px;
+    }
 }
 
 /* 個別記事下部 */
@@ -761,59 +769,134 @@ color: var(--list-mark); /*アイコン色*/}
     color: var(--brand-subfont);}
 
 /* 個別記事のページネーション */
-#post-pager {
-margin-top: 2em;}
-.pager-div {
-word-break: break-all;
-margin-bottom: 13px;}
-.prev-post {
-text-align: right;}
-.pager-link {
-display: table;
-width: 100%;
-font-size: 95%;
-color: var(--font-color);
-background: var(--other-back);
-text-decoration: none;
-transition: 0.3s ease;}
-.pager-link:hover {
-opacity: 0.6;
-text-decoration: none;}
-.pager-link i {
-font-size: 30px;
-padding: 5px 10px;}
-.pager-img {
-position: relative;
-display: table-cell;
-width: 68px;
-vertical-align: middle;
-text-align: center;
-padding: 0 14px;
-box-sizing: border-box;}
-.pager-img img {
-width: 100%;
-height: 40px;
-object-fit: cover;
-vertical-align: top;}
-.pager-title {
-display: table-cell;
-vertical-align: middle;}
-.next-post .pager-img:before {
-position: absolute;
-left: 0;
-content: '\f104';
-font-family: 'Font Awesome 5 Free';
-font-weight: 900;
-line-height: 40px;
-padding: 0 3px;}
-.prev-post .pager-img:after {
-position: absolute;
-right: 0;
-content: '\f105';
-font-family: 'Font Awesome 5 Free';
-font-weight: 900;
-line-height: 40px;
-padding: 0 3px;}
+
+.adjacent-nav {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    margin-top: 4rem;
+}
+.adjacent-nav-next-none {
+    text-align: center;
+    display: block;
+    align-items: center;
+}
+.adjacent-nav-next-none a {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: ease-in-out, .2s;
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.adjacent-nav-next-none a:hover,
+.adjacent-nav-next a:hover,
+.adjacent-nav-prev a:hover {
+  background: #FFF;
+}
+.adjacent-nav-next-none a p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.adjacent-nav-next, .adjacent-nav-next-none {
+    margin-left: .5%;
+}
+.adjacent-nav-prev, .adjacent-nav-prev-none {
+    margin-right: .5%;
+}
+.adjacent-nav-prev, .adjacent-nav-next, .adjacent-nav-prev-none, .adjacent-nav-next-none {
+    width: 49.5%;
+    height: auto;
+    display: block;
+    background-color: var(--other-back);
+}
+.adjacent-nav-prev a, .adjacent-nav-next a {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+.prev-next-img {
+    height: 100%;
+    width: 35%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+}
+.prev-next-img::before {
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    z-index: 1;
+}
+.prev-label {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    /* background-color: #a5e2ff; */
+    font-style: italic;
+    color: #fff;
+    font-family: 'Open Sans',"Helvetica Neue","Helvetica",'Avenir','Avenir Next Condensed', sans-serif;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.next-label {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    /* background-color: #a5e2ff; */
+    text-align: right;
+    font-style: italic;
+    color: #fff;
+    font-family: 'Open Sans',"Helvetica Neue","Helvetica",'Avenir','Avenir Next Condensed', sans-serif;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.adjacent-right {
+    width: 65%;
+    position: relative;
+}
+.adjacent-right .prev-title, .adjacent-right .next-title {
+    padding: 0 5%;
+    font-size: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 90%;
+    text-align: left;
+    color: #454545;
+    line-height: 1.7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* コメント */
 #comments{
@@ -1421,12 +1504,6 @@ transform: translateY(0%);}
     content: "\f13a"; }
 .fa-amazon:before {
     content: "\f270"; }
-.fa-angle-left::before {
-    content: "\f104"; }
-.fa-angle-right::before {
-    content: "\f105"; }
-.fa-home::before {
-    content: "\f015"; }
 
 @font-face {
     font-family: 'Font Awesome 6 Free';
