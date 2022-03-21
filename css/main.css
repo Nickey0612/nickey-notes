@@ -718,16 +718,19 @@ a:hover {
     color: #888888;
     font-size: 0.9em;}
 
-.table-wrapper {
-    overflow-x: scroll;}
-#single-content table {
-    border-collapse: collapse;}
-#single-content table,
-#single-content tr,
-#single-content td,
-#single-content th {
+@media (max-width: 768px) {
+    .table-wrapper {
+        overflow-x: scroll;}}
+.table-wrapper table {
+    border-collapse: collapse;
+    margin: auto;}
+.table-wrapper table,
+.table-wrapper tr,
+.table-wrapper td,
+.table-wrapper th {
     border: 1px solid black;
-    padding: 1rem;}
+    padding: 1rem;
+    font-size: 90%;}
 
 /* 記事中のリストのデザイン */
 #single-content ol {

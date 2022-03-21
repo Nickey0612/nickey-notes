@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0' name='viewport'/>
 
@@ -69,26 +69,20 @@
     <meta content='summary_large_image' name='twitter:card'/>
     <meta content='545063505576016' property='fb:app_id'/>
 
-    <b:skin>
-    </b:skin>
+    <b:skin></b:skin>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-561YJSEKZ5"></script>
     <script>
-    //<![CDATA[
-    //mrp-v1.05
-    var relatedAry=new Array;function mrp_input(e){for(var t=0;t<e.feed.entry.length;t++){var r=new Object,n=e.feed.entry[t];r.title=n.title.$t;r.date=n.published.$t.substr(0,10).replace(/-/g, "/");try{r.thumbnail=n.media$thumbnail.url.replace(/\/s[0-9]+(-c)?/, "/s300").replace(/\=s[0-9]+(-c)?/, "=s300")}catch(e){r.thumbnail="https://1.bp.blogspot.com/-4C9tiSPXKDE/X75OMYszMTI/AAAAAAAAT8o/2W5jbkLzAmUJfv_oY6b14N0RlN7F6K53gCLcBGAsYHQ/s300/noimage.png"}for(var l=0;l<n.link.length;l++)if("alternate"==n.link[l].rel){r.link=n.link[l].href;break}for(var i=0,m=0;m<relatedAry.length;m++)if(r.link==relatedAry[m].link){i=1;break}i||relatedAry.push(r)}}function mrp_output(e){for(var t,r,n,l,a,i=mrpMax<relatedAry.length?mrpMax:relatedAry.length,d=document.getElementById("mrp-content"),m=[],s=0;m.push(s++)<relatedAry.length;);if(m=m.sort(function(){return Math.random()-.5}),relatedAry.length<=1)(a=document.createElement("p")).textContent="関連する記事はありません。",d.appendChild(a);else for(var p=0;p<i;p++)t=relatedAry[m[p]],mrpPosturl!=t.link&&((r=document.createElement("div")).setAttribute("class","mrp-post"),"noneImage"!=t.thumbnail&&((n=document.createElement("img")).setAttribute("src",t.thumbnail),n.setAttribute("class","mrp-post-img"),n.setAttribute("height","200"),n.setAttribute("width","300"),n.setAttribute("loading","lazy"),n.setAttribute("width","72"),n.setAttribute("height","72"),r.appendChild(n)),(a=document.createElement("p")).setAttribute("class","mrp-post-title"),a.textContent=t.title,r.appendChild(a),(b=document.createElement("div")).setAttribute("class","mrp-post-date"),b.textContent=t.date,r.appendChild(b),(l=document.createElement("a")).setAttribute("href",t.link),l.setAttribute("class","mrp-post-link"),r.appendChild(l),d.appendChild(r))}
-    //]]>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-561YJSEKZ5');
     </script>
-    <b:include data='blog' name='google-analytics'/>
-    <link href='https://nickey0612.github.io/nickey-notes/css/main.css' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com' rel='preconnect'/>
-    <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
-    <link as='style' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' rel='preload'/>
-    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' media='print' onload='this.media=&apos;all&apos;' rel='stylesheet'/>
 
     <!-- [START] 目次作成プラグイン-->
     <b:if cond='data:blog.pageType == &quot;item&quot;'>
       <script>
-        //以下のオプションを好みに合わせて変更して下さい
-        //オプションの詳しい説明は&#12289;(https://www.sukerou.com/2018/10/blogger-table-of-contents-javascript.html)を参照
+        // www.sukerou.com/2018/10/blogger-table-of-contents-javascript.html
         var toc_options = {
           target: [&quot;h2&quot;, &quot;h3&quot;, &quot;h4&quot;],
           autoNumber:  false,
@@ -100,19 +94,49 @@
           indent: &quot;2rem&quot;,
           postBodySelector: &quot;.widget.Blog&quot;
         };
-
-        //これ以降のソースは編集しないでください
         ;(function (window) { var id_seq= 0; document.addEventListener(&#39;DOMContentLoaded&#39;, function () { var rootElement= document.querySelector(toc_options.postBodySelector); if (rootElement== null || typeof rootElement=== &quot;undefined&quot;) { return;} if (toc_options.target.length== 0) return; rootContent= searchHeadLine(toc_options, rootElement); if (rootContent.children.length &gt;= toc_options.condTargetCount) { var wrap= createElement(rootContent); appendElement(wrap);}}); function searchHeadLine(toc_options, rootElement) { var count= toc_options.target.length; var fn= function (index, element, parentContent) { var currentTarget= toc_options.target[index]; var nextTarget= index &lt; count - 1 ? toc_options.target[index + 1] : &quot;&quot;; var id= &quot;toc_headline_&quot; + (++id_seq); var content= createItem(currentTarget, text(element), index + 1, id); parentContent.children.push(content); element.id= id; var el= next(element); if (nextTarget== &quot;&quot;) { return;} var prevTarget= &quot;&quot;; for(var i= index; i &gt;= 0; i--) { prevTarget += (toc_options.target[i] + &quot;,&quot;);} while (true) { if (el== null || typeof el=== &quot;undefined&quot;) break; if (tagName(el)== currentTarget) break; if (tagName(el)== nextTarget) { fn(index + 1, el, content);} else { var nextElements= el.querySelectorAll(prevTarget + nextTarget); var breakFlg= false; for (var i= 0; i &lt; nextElements.length; i++) { if (tagName(nextElements[i]) != nextTarget) { exitFlg= true; break;} fn(index + 1, nextElements[i], content);} if (breakFlg) break;} var el= next(el);}}; var rootContent= createItem(&quot;ROOT&quot;, &quot;&quot;, 0); var elements= rootElement.getElementsByTagName(toc_options.target[0]); for (var i= 0; i &lt; elements.length; i++) { fn(0, elements[i], rootContent, &quot;&quot;);} return rootContent;} function createElement(rootContent) { var wrap= document.createElement(&quot;div&quot;); wrap.classList.add(&quot;b-toc-container&quot;); var p= document.createElement(&quot;p&quot;); var span1= document.createElement(&quot;span&quot;);span1.innerText= &quot;目次&quot;;p.appendChild(span1);var ul= document.createElement(&quot;ul&quot;); ul.classList.add(&quot;toc-root-list&quot;); rootContent.children.forEach(function (content, index) { createContentItemElement(ul, content, (index + 1) + &quot;&quot;);}); wrap.appendChild(p); wrap.appendChild(ul); return wrap;} function createContentItemElement(ul, content, no) { var li= document.createElement(&quot;li&quot;); li.classList.add(&quot;toc-list-item&quot;); var a= document.createElement(&quot;a&quot;); a.href= &quot;#&quot; + content.id; smoothScroll(a); if (toc_options.autoNumber) { var spanNm= document.createElement(&quot;span&quot;); spanNm.classList.add(&quot;toc-number&quot;); spanNm.innerText= no + &quot;.&quot;;} var spanText= document.createElement(&quot;span&quot;); spanText.classList.add(&quot;toc-text&quot;); spanText.innerText= content.text; if (toc_options.autoNumber) a.appendChild(spanNm); a.appendChild(spanText); li.appendChild(a); ul.appendChild(li); if (content.children.length &gt; 0) { var childUl= document.createElement(&quot;ul&quot;); childUl.classList.add(&quot;toc-sub-list&quot;); li.appendChild(childUl); content.children.forEach(function (childContent, index) { createContentItemElement(childUl, childContent, no + &quot;.&quot; + (index + 1));});}} function smoothScroll(a) { a.addEventListener(&#39;click&#39;, (e)=&gt; { e.preventDefault(); let href= a.getAttribute(&#39;href&#39;); let targetElement= document.getElementById(href.replace(&#39;#&#39;, &#39;&#39;)); const rect= targetElement.getBoundingClientRect().top; const offset= window.pageYOffset; const target= rect + offset - 0; window.scrollTo({ top: target, behavior: &#39;smooth&#39;, });});} function appendElement(element) { var el= null; var rootElement= document.querySelector(toc_options.postBodySelector); if (toc_options.insertPosition== &quot;firstHeadBefore&quot; || toc_options.insertPosition== &quot;firstHeadAfter&quot;) { el= rootElement.querySelector(toc_options.target[0]); el2=document.querySelector(&#39;#HTML3 .widget-content&#39;);} else if (toc_options.insertPosition== &quot;top&quot;) { el= rootElement;} if (el== null) return; if (toc_options.insertPosition== &quot;firstHeadBefore&quot;) { before(el, element); inner(el2, element.cloneNode(true));} else if (toc_options.insertPosition== &quot;firstHeadAfter&quot;) { after(el, element);} else if (toc_options.insertPosition== &quot;top&quot;) { before(el, element);}} function createItem(tagName, text, nestLevel, id) { return { tagName: tagName, text: text, children: [], nestLevel: nestLevel, id: id
     };} function text(element) { return element.innerText;} function next(element) { return element.nextElementSibling;} function prev(element) { return element.previousElementSibling;} function tagName(element) { return element.tagName.toLowerCase();} function hasClass(element, className) { return element.classList.contains(className);} function parentElement(element) { return element.parentNode;} function inner(element, insertElement) { element.appendChild(insertElement);} function after(element, insertElement) { var parent= parentElement(element); var nextEl= next(element); if (parent != null &amp;&amp; nextEl != null) { parent.insertBefore(insertElement, nextEl);}} function before(element, insertElement) { var parent= parentElement(element); if (parent != null) { parent.insertBefore(insertElement, element);}} })(window); 
       </script>
     </b:if>
     <!-- [END] 目次作成プラグイン-->
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:0; height:0; display:none;">
+      <!--
+      This SVG is used in combination with some of the following libraries:
+      Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
+      License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+      -->
+      <defs>
+        <symbol id="fa-search" viewBox="0 0 512 512"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></symbol>
+        <symbol id="fa-envelope" viewBox="0 0 512 512"><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"/></symbol>
+        <symbol id="fa-clock" viewBox="0 0 512 512"><path d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z"/></symbol>
+        <symbol id="fa-comments" viewBox="0 0 512 512"><path d="M256 32C114.6 32 .0272 125.1 .0272 240c0 47.63 19.91 91.25 52.91 126.2c-14.88 39.5-45.87 72.88-46.37 73.25c-6.625 7-8.375 17.25-4.625 26C5.818 474.2 14.38 480 24 480c61.5 0 109.1-25.75 139.1-46.25C191.1 442.8 223.3 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32zM256.1 400c-26.75 0-53.12-4.125-78.38-12.12l-22.75-7.125l-19.5 13.75c-14.25 10.12-33.88 21.38-57.5 29c7.375-12.12 14.37-25.75 19.88-40.25l10.62-28l-20.62-21.87C69.82 314.1 48.07 282.2 48.07 240c0-88.25 93.25-160 208-160s208 71.75 208 160S370.8 400 256.1 400z"/></symbol>
+        <symbol id="fa-share-nodes" viewBox="0 0 448 512"><path d="M448 127.1C448 181 405 223.1 352 223.1C326.1 223.1 302.6 213.8 285.4 197.1L191.3 244.1C191.8 248 191.1 251.1 191.1 256C191.1 260 191.8 263.1 191.3 267.9L285.4 314.9C302.6 298.2 326.1 288 352 288C405 288 448 330.1 448 384C448 437 405 480 352 480C298.1 480 256 437 256 384C256 379.1 256.2 376 256.7 372.1L162.6 325.1C145.4 341.8 121.9 352 96 352C42.98 352 0 309 0 256C0 202.1 42.98 160 96 160C121.9 160 145.4 170.2 162.6 186.9L256.7 139.9C256.2 135.1 256 132 256 128C256 74.98 298.1 32 352 32C405 32 448 74.98 448 128L448 127.1zM95.1 287.1C113.7 287.1 127.1 273.7 127.1 255.1C127.1 238.3 113.7 223.1 95.1 223.1C78.33 223.1 63.1 238.3 63.1 255.1C63.1 273.7 78.33 287.1 95.1 287.1zM352 95.1C334.3 95.1 320 110.3 320 127.1C320 145.7 334.3 159.1 352 159.1C369.7 159.1 384 145.7 384 127.1C384 110.3 369.7 95.1 352 95.1zM352 416C369.7 416 384 401.7 384 384C384 366.3 369.7 352 352 352C334.3 352 320 366.3 320 384C320 401.7 334.3 416 352 416z"/></symbol>
+        <symbol id="fa-twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></symbol>
+        <symbol id="fa-facebook-f" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></symbol>
+        <symbol id="fa-hatena" viewBox="0 0 24 24"><path d="M20.47 0C22.42 0 24 1.58 24 3.53v16.94c0 1.95-1.58 3.53-3.53 3.53H3.53C1.58 24 0 22.42 0 20.47V3.53C0 1.58 1.58 0 3.53 0h16.94zm-3.705 14.47c-.78 0-1.41.63-1.41 1.41s.63 1.414 1.41 1.414 1.41-.645 1.41-1.425-.63-1.41-1.41-1.41zM8.61 17.247c1.2 0 2.056-.042 2.58-.12.526-.084.976-.222 1.32-.412.45-.232.78-.564 1.02-.99s.36-.915.36-1.48c0-.78-.21-1.403-.63-1.87-.42-.48-.99-.734-1.74-.794.66-.18 1.156-.45 1.456-.81.315-.344.465-.824.465-1.424 0-.48-.103-.885-.3-1.26-.21-.36-.493-.645-.883-.87-.345-.195-.735-.315-1.215-.405-.464-.074-1.29-.12-2.474-.12H5.654v10.486H8.61zm.736-4.185c.705 0 1.185.088 1.44.262.27.18.39.495.39.93 0 .405-.135.69-.42.855-.27.18-.765.254-1.44.254H8.31v-2.297h1.05zm8.656.706v-7.06h-2.46v7.06H18zM8.925 9.08c.71 0 1.185.08 1.432.24.245.16.367.435.367.83 0 .38-.13.646-.39.804-.265.154-.747.232-1.452.232h-.57V9.08h.615z"/></symbol>
+        <symbol id="fa-get-pocket" viewBox="0 0 448 512"><path d="M407.6 64h-367C18.5 64 0 82.5 0 104.6v135.2C0 364.5 99.7 464 224.2 464c124 0 223.8-99.5 223.8-224.2V104.6c0-22.4-17.7-40.6-40.4-40.6zm-162 268.5c-12.4 11.8-31.4 11.1-42.4 0C89.5 223.6 88.3 227.4 88.3 209.3c0-16.9 13.8-30.7 30.7-30.7 17 0 16.1 3.8 105.2 89.3 90.6-86.9 88.6-89.3 105.5-89.3 16.9 0 30.7 13.8 30.7 30.7 0 17.8-2.9 15.7-114.8 123.2z"/></symbol>
+        <symbol id="fa-line" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></symbol>
+        <symbol id="fa-amazon" viewBox="0 0 448 512"><path d="M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 10.2 35.4 37.5 45.3 46.8l56.8-56S341 288.9 341 261.4V114.3C341 89 316.5 32 228.7 32 140.7 32 94 87 94 136.3l73.5 6.8c16.3-49.5 54.2-49.5 54.2-49.5 40.7-.1 35.5 29.8 35.5 69.1zm0 86.8c0 80-84.2 68-84.2 17.2 0-47.2 50.5-56.7 84.2-57.8v40.6zm136 163.5c-7.7 10-70 67-174.5 67S34.2 408.5 9.7 379c-6.8-7.7 1-11.3 5.5-8.3C88.5 415.2 203 488.5 387.7 401c7.5-3.7 13.3 2 5.5 12zm39.8 2.2c-6.5 15.8-16 26.8-21.2 31-5.5 4.5-9.5 2.7-6.5-3.8s19.3-46.5 12.7-55c-6.5-8.3-37-4.3-48-3.2-10.8 1-13 2-14-.3-2.3-5.7 21.7-15.5 37.5-17.5 15.7-1.8 41-.8 46 5.7 3.7 5.1 0 27.1-6.5 43.1z"/></symbol>
+        <symbol id="fa-chevron-circle-up" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM390.6 310.6c-12.5 12.5-32.75 12.5-45.25 0L256 221.3L166.6 310.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l112-112C239.6 147.1 247.8 144 256 144s16.38 3.125 22.62 9.375l112 112C403.1 277.9 403.1 298.1 390.6 310.6z"/></symbol>
+        <symbol id="fa-chevron-circle-down" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM390.6 246.6l-112 112C272.4 364.9 264.2 368 256 368s-16.38-3.125-22.62-9.375l-112-112c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L256 290.8l89.38-89.38c12.5-12.5 32.75-12.5 45.25 0S403.1 234.1 390.6 246.6z"/></symbol>
+        <symbol id="fa-blogger" viewBox="0 0 448 512"><path d="M162.4 196c4.8-4.9 6.2-5.1 36.4-5.1 27.2 0 28.1.1 32.1 2.1 5.8 2.9 8.3 7 8.3 13.6 0 5.9-2.4 10-7.6 13.4-2.8 1.8-4.5 1.9-31.1 2.1-16.4.1-29.5-.2-31.5-.8-10.3-2.9-14.1-17.7-6.6-25.3zm61.4 94.5c-53.9 0-55.8.2-60.2 4.1-3.5 3.1-5.7 9.4-5.1 13.9.7 4.7 4.8 10.1 9.2 12 2.2 1 14.1 1.7 56.3 1.2l47.9-.6 9.2-1.5c9-5.1 10.5-17.4 3.1-24.4-5.3-4.7-5-4.7-60.4-4.7zm223.4 130.1c-3.5 28.4-23 50.4-51.1 57.5-7.2 1.8-9.7 1.9-172.9 1.8-157.8 0-165.9-.1-172-1.8-8.4-2.2-15.6-5.5-22.3-10-5.6-3.8-13.9-11.8-17-16.4-3.8-5.6-8.2-15.3-10-22C.1 423 0 420.3 0 256.3 0 93.2 0 89.7 1.8 82.6 8.1 57.9 27.7 39 53 33.4c7.3-1.6 332.1-1.9 340-.3 21.2 4.3 37.9 17.1 47.6 36.4 7.7 15.3 7-1.5 7.3 180.6.2 115.8 0 164.5-.7 170.5zm-85.4-185.2c-1.1-5-4.2-9.6-7.7-11.5-1.1-.6-8-1.3-15.5-1.7-12.4-.6-13.8-.8-17.8-3.1-6.2-3.6-7.9-7.6-8-18.3 0-20.4-8.5-39.4-25.3-56.5-12-12.2-25.3-20.5-40.6-25.1-3.6-1.1-11.8-1.5-39.2-1.8-42.9-.5-52.5.4-67.1 6.2-27 10.7-46.3 33.4-53.4 62.4-1.3 5.4-1.6 14.2-1.9 64.3-.4 62.8 0 72.1 4 84.5 9.7 30.7 37.1 53.4 64.6 58.4 9.2 1.7 122.2 2.1 133.7.5 20.1-2.7 35.9-10.8 50.7-25.9 10.7-10.9 17.4-22.8 21.8-38.5 3.2-10.9 2.9-88.4 1.7-93.9z"/></symbol>
+        <symbol id="fa-sort" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></symbol>
+      </defs>
+    </svg>
+
+    <style>body{color:#202020}:root{--font-color: #454545;--font-link: #BB3956;--font-light: #999999;--brand-color: #364956;--brand-font: #ffffff;--brand-subcolor: #646F7F;--brand-subfont: #ffffff;--list-line: #646F7F;--list-mark: #646F7F;--header-color: #1F5A70;--other-topback: #748D97;--other-back: #E4E5E3;--other-border: #17141B}article,body,div,form,h1,h2,html,img,li,nav,p,span,ul{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}article,nav{display:block}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%}body{text-align:left;word-wrap:break-word;overflow-wrap:break-word;font-size:1.7rem;font-weight:500;line-height:1.2;letter-spacing:.02em;min-width:960px}.container{margin:auto;width:86%;min-width:960px;max-width:1180px}a{text-decoration:none;color:inherit}img{height:auto;vertical-align:bottom}img{max-width:100%}.section{margin:0}.widget ul{padding:0}.Header h1{margin-bottom:0}@media (max-width:768px){body{font-size:1.6rem;min-width:0}.container{width:96%;min-width:0}}@media (max-width:480px){#main.width-100 .container{width:100%}.width-100 .breadcrumbs{width:96%;margin-right:auto;margin-left:auto}}body{font-family:Inter,"noto sans jp",游ゴシック,YuGothic,"ヒラギノ角ゴ pro w3","hiragino kaku gothic pro",Verdana,メイリオ,Meiryo,Osaka,"ＭＳ Ｐゴシック","ms pgothic",sans-serif;background:var(--other-topback);color:var(--font-color)}.widget{position:relative;min-height:0;_position:static;_height:1%}.widget{line-height:1.4;margin:30px 0}.widget ul{padding:0 0 0 1.25em;margin:0;line-height:1.2}.widget li{padding:0.25em 0;margin:0;text-indent:0}.section:last-child .widget:last-child{margin-bottom:0}.section:first-child .widget:first-child{margin-top:0}#main-inner{display:flex}#main-content{margin-right:30px;width:calc(100% - 346px);flex-shrink:0}@media (max-width:768px){#main-inner{display:block}#main-content{margin-right:0;width:100%}}.widget:last-child{position:sticky;top:0}#Header1{z-index:1;margin:0}#header-title{font-size:150%;font-weight:bold}@media (max-width:768px){#header-title{font-size:130%}}#header-text{font-size:80%}.site-header__top{color:var(--brand-font);background-color:var(--brand-color)}.site-header__top .site-header__start{display:none}.site-header__bottom{position:relative;color:var(--brand-subfont);background-color:var(--brand-subcolor)}@media (max-width:768px){.site-header__bottom .site-header__end{order:-1}}.site-header__bottom .site-header__start{height:1.5em}.site-header__bottom .site-header__middle{margin:auto}.site-header__bottom .site-header__middle li{padding:0 15px;display:inline}.site-header__bottom .site-header__middle li a{display:inline-block;position:relative}.site-header__bottom .site-header__middle li a::after{content:'';position:absolute;left:50%;bottom:-3px;width:60%;height:3px;opacity:0;background-color:var(--brand-subfont);transform:translate(-50%,0)}.site-header__wrapper{display:flex;justify-content:space-between}.site-header__wrapper{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0}.site-header__top .site-header__wrapper{padding:2rem 0}.site-header__top .site-header__middle{width:87%}.site-header__top .site-header__end{width:100%;display:flex;justify-content:flex-end}@media (max-width:768px){.site-header__top .site-header__end{display:none}}@media (max-width:768px){.site-header__bottom{display:none}}.searchform{position:relative;padding:0;margin:0 10px 0 0;width:200px}.searchbox{line-height:23px;padding:5px 45px 5px 13px;font-size:14px;width:100%;box-sizing:border-box;border:none;font-weight:bold;border-radius:100px;outline:none;background:var(--other-back)}.searchsubmit{position:absolute;right:5px;top:5px;background:none;border:none}.search-svg{width:20px;height:20px;fill:var(--brand-color)}.mobile-search{margin:2rem}.mobile-search .searchform{margin:auto}#header ul{z-index:2;list-style:none}.breadcrumbs{align-items:center;display:flex;color:var(--brand-font);margin:5px 0}.breadcrumb__separator{margin:0 1rem}#list{margin-top:8px;margin-bottom:15px;background:var(--other-back)}.list-item{display:flex;align-items:center;z-index:1;position:relative;padding:1em}.list-item>article{display:flex;align-items:center;width:100%}.list-item:not(:last-child):after{content:"";display:block;position:absolute;width:90%;height:1px;border-bottom:dashed 1px var(--other-border);left:5%;bottom:0}.list-item-img-box{flex-shrink:0;flex-basis:150px}@media screen and (max-width:768px){.list-item .list-item-img-box{flex-basis:80px}.list-item .list-item-img-box .list-item-img{width:80px;height:80px}}.list-item-img{display:block;border-radius:50%;width:150px;height:150px;object-fit:cover}.list-item-inner{flex-grow:1;display:flex;flex-wrap:wrap;padding-left:2rem}.list-item-title{font-weight:bold}.post-meta{width:100%;font-size:100%;display:flex;align-items:center;margin-top:10px;flex-wrap:wrap}@media (max-width:768px){.post-meta{font-size:13px}}.widget h2{font-size:110%}.widget h2{font-weight:bold}.hamburger{display:block;position:fixed;z-index:5;right:5px;top:20px;width:42px;height:42px;text-align:center;background:var(--brand-color);border-radius:5px;opacity:.7}@media screen and (min-width:769px){.hamburger,.hamburger-bg,.globalMenuSp{display:none}}.hamburger span{display:block;position:absolute;width:30px;height:2px;left:6px;background:#ddd}.hamburger span:nth-child(1){top:10px}.hamburger span:nth-child(2){top:20px}.hamburger span:nth-child(3){top:30px}.hamburger-bg{position:fixed;left:0;top:0;width:100vw;height:100vh;z-index:2;background:#333;opacity:0;visibility:hidden}nav.globalMenuSp{position:fixed;z-index:4;top:0;left:0;color:#fff;background:var(--brand-subcolor);text-align:center;width:100%;transform:translateY(-100%)}nav.globalMenuSp ul{margin:0 auto;padding:0;width:100%}nav.globalMenuSp ul li{list-style-type:none;padding:0;width:100%;display:flex}nav.globalMenuSp ul li:last-child{padding-bottom:0}nav.globalMenuSp ul li a{color:#fff;padding:1em 0;width:100%;text-align:center}.post-meta svg{height:1.5rem;width:1.5rem;fill:currentColor;margin-right:.5rem}</style>
+    <link href="https://nickey0612.github.io/nickey-notes/css/main-min.css" rel="stylesheet" media="print" onload="this.media='all'"/>
+    <link href='https://fonts.googleapis.com' rel='preconnect'/>
+    <link crossorigin='' href='https://fonts.gstatic.com' rel='preconnect'/>
+    <link as='style' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' rel='preload'/>
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap' media='print' onload='this.media=&apos;all&apos;' rel='stylesheet'/>
   </head>
   <body>
 
     <!-- Header Start -->
     <b:section id='header' maxwidgets='1' showaddelement='no'>
-      <b:widget id='Header1' locked='true' title='デザインチェック用 (Header)' type='Header' version='1'>
+      <b:widget id='Header1' locked='true' title='今日よりちょっと、いい明日へ (Header)' type='Header' version='1'>
         <b:widget-settings>
           <b:widget-setting name='displayUrl'/>
           <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -135,12 +159,9 @@
               </div>
               <div class='site-header__end'>
                 <div class='pc-search'>
-                  <form action='/search' class='searchform' id='searchform' method='get' role='search'>
-                    <div>
-                      <label class='screen-reader-text' for='s'>検索:</label>
-                      <input id='s' name='q' type='text' value=''/>
-                      <input id='searchsubmit' type='submit' value=''/>
-                    </div>
+                  <form class='searchform' id='searchform' expr:action='data:blog.searchUrl'>
+                      <input aria-label='記事を検索' class="searchbox" autocomplete='off' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' placeholder='記事を検索' required='required' title='search' type='text'/>
+                      <button aria-label='検索' class='searchsubmit' type='submit'><svg class="search-svg"><use href="#fa-search"></use></svg></button>
                   </form>
                 </div>
               </div>
@@ -175,12 +196,9 @@
           <div class='hamburger-bg' id='js-hamburger-bg'/>
           <nav class='globalMenuSp'>
             <div class='mobile-search'>
-              <form action='/search' class='searchform' id='searchform' method='get' role='search'>
-                <div>
-                  <label class='screen-reader-text' for='s'>検索:</label>
-                  <input id='s' name='q' type='text' value=''/>
-                  <input id='searchsubmit' type='submit' value=''/>
-                </div>
+              <form class='searchform' id='searchform' expr:action='data:blog.searchUrl'>
+                  <input aria-label='記事を検索' class="searchbox" autocomplete='off' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q' placeholder='記事を検索' required='required' title='search' type='text'/>
+                  <button aria-label='検索' class='searchsubmit' type='submit'><svg class="search-svg"><use href="#fa-search"></use></svg></button>
               </form>
             </div>
             <ul>
@@ -194,6 +212,20 @@
               <li><a href='/p/sitemap.html'>サイトマップ</a></li>
             </ul>
           </nav>
+          <b:if cond='data:blog.pageType == &quot;item&quot;'>
+            <ul class='sp-sns-menu'>
+              <li class='share'>
+                <svg class='open'><use href='#fa-share-nodes' /></svg>
+                <ul class='submenu'>
+                  <li><a class="sp-sns-btn" expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:blog.url + &quot;&amp;text=&quot; + data:blog.pageTitle'><svg class='fa-twitter'><use href='#fa-twitter' /></svg></a></li>
+                  <li><a class="sp-sns-btn" expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:blog.url'><svg class='fa-facebook-f'><use href='#fa-facebook-f' /></svg></a></li>
+                  <li><a class="sp-sns-btn" expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:blog.url'><svg class='fa-hatena'><use href='#fa-hatena' /></svg></a></li>
+                  <li><a class="sp-sns-btn" expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:blog.url + &quot;&amp;title=&quot; + data:blog.pageTitle'><svg class='fa-get-pocket'><use href='#fa-get-pocket' /></svg></a></li>
+                  <li><a class="sp-sns-btn" expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:blog.url'><svg class='fa-line'><use href='#fa-line' /></svg></a></li>
+                </ul>
+              </li>
+            </ul>
+          </b:if>
         </b:includable>
         <b:includable id='description'>
           <b:if cond='data:description'>
@@ -271,8 +303,8 @@
                           <h1 id='single-header-title'><data:post.title/></h1>
                           <b:if cond='data:blog.pageType  == &quot;item&quot;'>
                             <div class='post-meta'>
-                              <span class='post-date'><i class='fa-regular fa-clock'/><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
-                              <span class='post-replies'><i class='fa-regular fa-comments'/><data:post.numComments/> <data:messages.comments/></span>
+                              <span class='post-date'><svg><use href="#fa-clock"></use></svg><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
+                              <span class='post-replies'><svg><use href="#fa-comments"></use></svg><data:post.numComments/> <data:messages.comments/></span>
                               <span class='post-labels'>
                                 <b:loop values='data:post.labels' var='label'>
                                   <span class='label-size'>
@@ -282,7 +314,6 @@
                               </span>
                             </div>
                             <b:include cond='data:post.sharePostUrl' data='post' name='shareButtons'/>
-                            <b:include cond='data:post.sharePostUrl' data='post' name='shareButtonsMobile'/>
                           </b:if>
                         </div>
                         <div class='post-body' id='single-content'>
@@ -295,16 +326,99 @@
                             <b:if cond='data:top.showPostLabels and data:post.labels'>
                               <div id='single-footer-category'>
                                 <b:loop values='data:post.labels' var='label'>
-                                  <a class='single-footer-category-item' expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/><data:postLabelsLabel/></a>
+                                  <span class='label-size'>
+                                    <a expr:href='data:label.url params {max-results: &quot;10&quot;}'><data:label.name/></a>
+                                  </span>
                                 </b:loop>
                               </div>
                             </b:if>
-                            <b:if cond='data:skin.vars.mrp_enable == &quot;true&quot;'>
-                              <div id='mrp-wrapper'>
-                                <p id='mrp-title'><data:skin.vars.mrp_title/></p>
-                                <b:include data='post' name='mrp'/>
-                              </div>
-                            </b:if>
+                            <div id='related-posts'></div>
+                            <script>
+    const currentposturl = "<data:post.url/>";
+    const maxpost = 6; // 表示記事数
+    const rphead = "関連記事"; // タイトル
+    
+    //<![CDATA[
+    let rpurl = [];
+    let rptitle = [];
+    let rpthumb = [];
+    let items = [];
+
+    function loadrp(json) {
+      // フィードデータ取得
+      function getData() {
+        let entry, posturl, posttitle, postimg;
+        for (let i = 0; i < json.feed.entry.length; i++) {
+          entry = json.feed.entry[i];
+          for (let j = 0; j < entry.link.length; j++) {
+            if (entry.link[j].rel == 'alternate') {
+              posturl = entry.link[j].href;
+              break;
+            }
+          }
+          posttitle = entry.title.$t;
+          if ("media$thumbnail" in entry) {
+            postimg = entry.media$thumbnail.url;
+            if (postimg.match(/s72-c/)) {
+              postimg = postimg.replace('s72-c', 's250');
+            } else if (postimg.match(/default.jpg/)) {
+              postimg = postimg.replace('default.jpg', 'mqdefault.jpg');
+            }
+          } else {
+            postimg = "https://lh3.googleusercontent.com/gOUrtHeipHB99xATQmDBqQImdCbjt7RuBe93nz1mQp-f5J6_0wWA9_5jFxV8KY7Q7Dl-VOpGR9Z5SrFE8id9aoU9yYa7JTSgb6HVJ11Ifn9yORWmjSOsiOeZm1nW9HoooCUVxV-whg=s250";
+          }
+          rpurl.push(posturl);
+          rptitle.push(posttitle);
+          rpthumb.push(postimg);
+        }
+        // 現在の投稿を除外
+        for (let k = 0; k < rpurl.length; k++) {
+          if (rpurl[k] == currentposturl) {
+            rpurl.splice(k, 1);
+            rptitle.splice(k, 1);
+            rpthumb.splice(k, 1);
+            break;
+          }
+        }
+      }
+      getData();
+      randomize();
+      displayrp();
+    }
+
+    // ランダムインデックス生成
+    function randomize() {
+      let idx;
+      let a = [...Array(rpurl.length).keys()];
+      while (a.length > 0) {
+        idx = Math.floor(Math.random() * a.length);
+        items.push(a[idx]);
+        a.splice(idx, 1);
+      }
+    }
+
+    // 関連記事の書き込み
+    function displayrp() {
+      let rpHTML;
+      let i = 0;
+      console.log(items);
+      if (items.length > 0) {
+        rpHTML = '<div class="related-text">' + rphead + '</div><div class="p-container">';
+        while (i < items.length && i < maxpost) {
+          rpHTML += '<a href="' + rpurl[items[i]] + '"><figure class="related-img"><img loading="lazy" alt="" src="' + rpthumb[items[i]] + '"/></figure><div class="related-title">' + rptitle[items[i]] + '</div></a>';
+          i++;
+        }
+        rpHTML += '</div>';
+        document.getElementById("related-posts").innerHTML = rpHTML;
+      }
+    }
+    //]]>
+                            </script>
+                            <b:loop values='data:post.labels' var='label'>
+                              <b:if cond='data:label.name == data:post.labels.last.name'>
+                                <script defer='defer' expr:src='"/feeds/posts/summary/-/" + data:label.name + "?alt=json&amp;max-results=10&amp;callback=loadrp"'/>
+                              </b:if>
+                            </b:loop>
                           </b:if>
                           <b:if cond='data:post.allowComments'>
                             <b:include data='post' name='comment_picker'/>
@@ -313,8 +427,8 @@
                       </div>
                       <!-- post pager -->
                       <b:if cond='data:blog.pageType == &quot;item&quot;'>
-                      <div id='post-pager'/>
-                      <script type='text/javascript'>
+                        <nav class="adjacent-nav" id="adjacent-nav" />
+                        <script>
 var topurl = &quot;<data:blog.homepageUrl/>&quot;;
 var currenturl = &quot;<data:post.url/>&quot;;
 //<![CDATA[
@@ -358,37 +472,35 @@ function displayPager() {
       current = i;
     }
   }
-  if (current > 0) {
-    // 次の投稿へのリンク
-    pagerHTML += '<div class="next-post pager-div"><a class="pager-link" href="' + postUrl[current-1] + '">';
-    pagerHTML += '<figure class="pager-img"><img loading="lazy" src="' + postImg[current-1] + '"/></figure>';
-    pagerHTML += '<span class="pager-title">' + postTitle[current-1] + '</span>';
-    pagerHTML += '</a></div>';
-  } else {
-    // トップへのリンク
-    pagerHTML += '<div class="next-post pager-div"><a class="pager-link" href="' + topurl + '">';
-    pagerHTML += '<figure class="pager-img"><i class="fas fa-home"></i></figure>';
-    pagerHTML += '<span class="pager-title">トップページへ</span>';
-    pagerHTML += '</a></div>';
-  }
   if (current < postTitle.length - 1) {
     // 前の投稿へのリンク
-    pagerHTML += '<div class="prev-post pager-div"><a class="pager-link" href="' + postUrl[current+1] + '">';
-    pagerHTML += '<span class="pager-title">' + postTitle[current+1] + '</span>';
-    pagerHTML += '<figure class="pager-img"><img loading="lazy" src="' + postImg[current+1] + '"/></figure>';
+    pagerHTML += '<div class="adjacent-nav-prev"><a href="' + postUrl[current+1] + '">';
+    pagerHTML += '<div class="prev-next-img" style="background-image: url(' + postImg[current+1] + ')"><div class="prev-label">前の記事</div></div>';
+    pagerHTML += '<div class="adjacent-right"><p class="prev-title">' + postTitle[current+1] + '</p></div>';
     pagerHTML += '</a></div>';
   } else {
     // トップへのリンク
-    pagerHTML += '<div class="prev-post pager-div"><a class="pager-link" href="' + topurl + '">';
-    pagerHTML += '<span class="pager-title">トップページへ</span>';
-    pagerHTML += '<figure class="pager-img"><i class="fas fa-home"></i></figure>';
+    pagerHTML += '<div class="adjacent-nav-next-none"><a href="' + topurl + '">';
+    pagerHTML += '<p>ホームへ</p>';
     pagerHTML += '</a></div>';
   }
-  document.getElementById("post-pager").innerHTML = pagerHTML;
+  if (current > 0) {
+    // 次の投稿へのリンク
+    pagerHTML += '<div class="adjacent-nav-next"><a href="' + postUrl[current-1] + '">';
+    pagerHTML += '<div class="adjacent-right"><p class="next-title">' + postTitle[current-1] + '</p></div>';
+    pagerHTML += '<div class="prev-next-img" style="background-image: url(' + postImg[current-1] + ')"><div class="next-label">次の記事</div></div>';
+    pagerHTML += '</a></div>';
+  } else {
+    // トップへのリンク
+    pagerHTML += '<div class="adjacent-nav-next-none"><a href="' + topurl + '">';
+    pagerHTML += '<p>ホームへ</p>';
+    pagerHTML += '</a></div>';
+  }
+  document.getElementById("adjacent-nav").innerHTML = pagerHTML;
 }
 //]]>
-                      </script>
-                      <script expr:src='&quot;https://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default?max-results=500&amp;alt=json-in-script&amp;callback=loadpager&quot;' type='text/javascript'/>
+                        </script>
+                        <script expr:src='&quot;https://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default?max-results=500&amp;alt=json-in-script&amp;callback=loadpager&quot;'/>
                       </b:if>
                     </b:loop>
                   <b:else/>
@@ -400,7 +512,7 @@ function displayPager() {
                 <!-- ページネーション -->
                 <b:if cond='data:blog.pageType == &quot;index&quot;'>
                   <div class='pagination'/>
-                  <script type='text/javascript'>
+                  <script>
 const blogUrl = &quot;<data:blog.homepageUrl.canonical/>&quot;
 const label = &quot;<b:eval expr='data:blog.searchLabel'/>&quot;
 const query = &quot;<b:eval expr='data:blog.searchQuery'/>&quot;
@@ -616,7 +728,7 @@ function encodeDate(dateStr) {
                     <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
                   </b:if>
                   <data:post.cmtfpIframe/>
-                  <script type='text/javascript'>
+                  <script>
                     BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
                   </script>
                 </div>
@@ -649,7 +761,7 @@ function encodeDate(dateStr) {
             <b:include data='post' name='commentFormIframeSrc'/>
             <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
             <data:post.cmtfpIframe/>
-            <script type='text/javascript'>
+            <script>
               BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
             </script>
           </div>
@@ -706,16 +818,17 @@ function encodeDate(dateStr) {
             <data:post.commentLabelFull/>:
           </a>
         </b:includable>
-              <b:includable id='comment_picker' var='post'>
+        <b:includable id='comment_picker' var='post'>
+          <div class="comment-text">コメント</div>
           <b:if cond='data:post.commentSource == 1'>
             <b:include data='post' name='iframe_comments'/>
-            <b:elseif cond='data:post.showThreadedComments'/>
+          <b:elseif cond='data:post.showThreadedComments'/>
             <b:include data='post' name='threaded_comments'/>
-            <b:else/>
+          <b:else/>
             <b:include data='post' name='comments'/>
           </b:if>
         </b:includable>
-              <b:includable id='comments' var='post'>
+        <b:includable id='comments' var='post'>
           <div class='comments' id='comments'>
             <a name='comments'/>
             <b:if cond='data:post.allowComments'>
@@ -1091,17 +1204,6 @@ function encodeDate(dateStr) {
             </div>
           </div>
         </b:includable>
-              <b:includable id='mrp' var='post'>
-          <div id='mrp-content'/>
-          <b:loop values='data:post.labels' var='label'>
-            <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=mrp_input&amp;max-results=10&quot;' type='text/javascript'/>
-          </b:loop>
-          <script type='text/javascript'>
-            var mrpPosturl=&quot;<data:post.canonicalUrl/>&quot;;
-            var mrpMax=6;
-            mrp_output();
-          </script>
-        </b:includable>
               <b:includable id='mybreadcrumb' var='posts'>
           <div class='breadcrumbs' itemscope='itemscope' itemtype='http://schema.org/BreadcrumbList'>
             <span itemprop='itemListElement' itemscope='itemscope' itemtype='http://schema.org/ListItem'>
@@ -1192,21 +1294,14 @@ function encodeDate(dateStr) {
                   <b:if cond='data:post.thumbnailUrl'>
                     <img class='list-item-img' expr:src='resizeImage(data:post.thumbnailUrl, 150, &quot;1:1&quot;)' height='150' width='150'/>
                   <b:else/>
-                    <script type='text/javascript'>
-var img_cnt = 10;
-var selectnum = Math.floor(1 + Math.random() * img_cnt);
-var ret = ( &#39;00&#39; + selectnum ).slice( -2 );
-var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
-var output = &quot;<img alt='' border='0' class='list-item-img' height='150' src='&quot; + img_path + &quot;' width='150'/>&quot;;
-document.write(output);
-                    </script>
+                    <img class='list-item-img' src='https://nickey0612.github.io/nickey-notes/img/04.webp' height='150' width='150'/>
                   </b:if>
                 </div>
               <div class='list-item-inner'>
                 <h2 class='list-item-title'><data:post.title/></h2>
                 <div class='post-meta'>
-                  <span class='post-date'><i class='fa-regular fa-clock'/><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
-                  <span class='post-replies'><i class='fa-regular fa-comments'/><data:post.numComments/> <data:messages.comments/></span>
+                  <span class='post-date'><svg><use href="#fa-clock"></use></svg><time class='published' expr:datetime='data:post.date.iso8601'><data:post.date/></time></span>
+                  <span class='post-replies'><svg><use href="#fa-comments"></use></svg><data:post.numComments/> <data:messages.comments/></span>
                 </div>
                 <div class='post-meta'>
                   <span class='post-labels'>
@@ -1412,50 +1507,36 @@ document.write(output);
             <ul>
               <!--ツイートボタン-->
               <li class='tweet'>
-                <a expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank' title='ツイッターでつぶやく'>
-                  <i class='fab fa-twitter'/>
+                <a expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:blog.url + &quot;&amp;text=&quot; + data:blog.pageTitle' title='ツイッターでつぶやく'>
+                  <svg><use href="#fa-twitter"></use></svg>
                 </a>
               </li>
               <!--Facebookボタン-->
               <li class='facebook'>
-                <a expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='フェイスブックでシェア'>
-                  <i class='fab fa-facebook-f'/>
+                <a expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:blog.url' title='フェイスブックでシェア'>
+                  <svg><use href="#fa-facebook-f"></use></svg>
                 </a>
               </li>
               <!--はてなボタン-->
               <li class='hatena'>
-                <a expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='はてなブックマークに追加する'>
-                  <i class='fa fa-hatena'/>
+                <a expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:blog.url' title='はてなブックマークに追加する'>
+                  <svg><use href="#fa-hatena"></use></svg>
               </a>
               </li>
               <!-- ポケット -->
               <li class='pocket'>
-                <a expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank' title='Pocketに保存する'>
-                  <i class='fab fa-get-pocket'/>
+                <a expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:blog.url + &quot;&amp;title=&quot; + data:blog.pageTitle' title='Pocketに保存する'>
+                  <svg><use href="#fa-get-pocket"></use></svg>
                 </a>
               </li>
               <!-- LINE -->
               <li class='line'>
-                <a expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank' title='LINEで送る'>
-                  <i class='fab fa-line'/>
+                <a expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:blog.url' title='LINEで送る'>
+                  <svg><use href="#fa-line"></use></svg>
                 </a>
               </li>
             </ul>
           </div>
-          </b:includable>
-              <b:includable id='shareButtonsMobile' var='post'>
-            <ul class='sp-sns-menu'>
-              <li class='share bottom'>
-                <i class='fa-solid fa-share-nodes'/>
-                <ul class='submenu'>
-                  <li><a class='share_twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.canonicalUrl + &quot;&amp;text=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-twitter'/></a></li>
-                  <li><a class='share_facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-facebook-f'/></a></li>
-                  <li><a class='share_hateb' expr:href='&quot;http://b.hatena.ne.jp/add?mode=confirm&amp;url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fa fa-hatena'/></a></li>
-                  <li><a class='share_pocket' expr:href='&quot;https://getpocket.com/edit?url=&quot; + data:post.canonicalUrl + &quot;&amp;title=&quot; + data:post.title + &quot;%20%7C%20&quot; + data:blog.title' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-get-pocket'/></a></li>
-                  <li><a class='share_line' expr:href='&quot;https://social-plugins.line.me/lineit/share?url=&quot; + data:post.canonicalUrl' rel='nofollow noopener noreferrer' target='_blank'><i class='fab fa-line'/></a></li>
-                </ul>
-              </li>
-            </ul>
           </b:includable>
               <b:includable id='sharingButton'>
           <span expr:aria-label='data:platform.shareMessage' expr:class='&quot;sharing-platform-button sharing-element-&quot; + data:platform.key' expr:data-href='data:shareUrl + &quot;&amp;target=&quot; + data:platform.target' expr:data-url='data:originalUrl' expr:title='data:platform.shareMessage' role='menuitem' tabindex='-1'>
@@ -1523,7 +1604,7 @@ document.write(output);
               <iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
             </b:if>
             <data:post.cmtfpIframe/>
-            <script type='text/javascript'>
+            <script>
               BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
             </script>
           </div>
@@ -1538,15 +1619,15 @@ document.write(output);
             <b:include data='post' name='commentFormIframeSrc'/>
             <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'/>
             <data:post.cmtfpIframe/>
-            <script type='text/javascript'>
+            <script>
               BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
             </script>
           </div>
         </b:includable>
               <b:includable id='threadedCommentJs' var='post'>
-          <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
+          <script async='async' expr:src='data:post.commentSrc'/>
           <b:template-script inline='true' name='threaded_comments'/>
-          <script type='text/javascript'>
+          <script>
             blogger.widgets.blog.initThreadedComments(
               <data:post.commentJso/>,
               <data:post.commentMsgs/>,
@@ -1584,8 +1665,8 @@ document.write(output);
           </section>
         </b:includable>
               <b:includable id='threaded_comment_js' var='post'>
-          <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
-          <script type='text/javascript'>
+          <script async='async' expr:src='data:post.commentSrc'/>
+          <script>
 (function() {
   var items = <data:post.commentJso/>;
   var msgs = <data:post.commentMsgs/>;
@@ -1670,7 +1751,6 @@ var paginator = function(callback) {
     }
     url += '&callback=bloggercomments';
     var script = document.createElement('script');
-    script.type = 'text/javascript';
     script.src = url;
     document.getElementsByTagName('head')[0].appendChild(script);
   }
@@ -1800,7 +1880,7 @@ if (window.goog && window.goog.comments) {
           <b:widget-setting name='content'>&lt;b&gt;Nickey&lt;/b&gt;
 &lt;p&gt;趣味や旅行の記録&amp;#12289;雑記なんかをつらつらと&amp;#12290;文章書くのが大好きです&amp;#12290;&lt;/p&gt;
 &lt;p class=&#39;side-prof-sns&#39;&gt;
-&lt;a class=&#39;twitter-btn&#39; href=&#39;https://twitter.com/cln0612&#39;&gt;&lt;i class=&#39;fab fa-twitter&#39;&gt;&lt;/i&gt;Twitter&lt;/a&gt; &lt;a class=&#39;mail-btn&#39; href=&#39;mailto:conlon0612@gmail.com&#39;&gt;&lt;i class=&#39;fa-solid fa-envelope&#39;&gt;&lt;/i&gt;Mail&lt;/a&gt;
+&lt;a class=&#39;twitter-btn&#39; href=&#39;https://twitter.com/cln0612&#39;&gt;&lt;svg&gt;&lt;use href=&#39;#fa-twitter&#39;&gt;&lt;/use&gt;&lt;/svg&gt;Twitter&lt;/a&gt; &lt;a class=&#39;mail-btn&#39; href=&#39;mailto:conlon0612@gmail.com&#39;&gt;&lt;svg&gt;&lt;use href=&#39;#fa-envelope&#39;&gt;&lt;/use&gt;&lt;/svg&gt;Mail&lt;/a&gt;
 &lt;/p&gt;</b:widget-setting>
         </b:widget-settings>
         <b:includable id='main'>
@@ -1985,27 +2065,18 @@ if (window.goog && window.goog.comments) {
           <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
           <div class='widget-content popular-posts'>
             <b:loop values='data:posts' var='post'>
-              <a class='rc-block' expr:href='data:post.href' target='_blank'>
+              <a class='rc-block' expr:href='data:post.href'>
                 <div class='list-item-link'>
                   <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
-                    <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
-                      <div class='item-thumbnail'>
+                    <div class='item-thumbnail'>
+                      <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
                         <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 150, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
                           <img alt='' border='0' expr:src='data:image' height='72' width='78'/>
                         </b:with>
-                      </div>
-                    <b:else/>
-                      <div class='item-thumbnail'>
-                        <script type='text/javascript'>
-var img_cnt = 10;
-var selectnum = Math.floor(1 + Math.random() * img_cnt);
-var ret = ( &#39;00&#39; + selectnum ).slice( -2 );
-var img_path = &#39;https://nickey0612.github.io/nickey-notes/img/&#39; + ret + &#39;.webp&#39;;
-var output = &quot;<img alt='' border='0' height='72' src='&quot; + img_path + &quot;' width='78'/>&quot;;
-document.write(output);
-                        </script>
-                      </div>
-                    </b:if>
+                      <b:else/>
+                        <img alt='' border='0' src='https://nickey0612.github.io/nickey-notes/img/04.webp' height='72' width='78'/>
+                      </b:if>
+                    </div>
                     <div class='item-title'><data:post.title/></div>
                     <b:if cond='data:showSnippets'>
                       <div class='item-snippet'><data:post.snippet/></div>
@@ -2274,7 +2345,7 @@ document.write(output);
       <b:widget id='HTML2' locked='false' title='最新コメント' type='HTML' version='1'>
         <b:widget-settings>
           <b:widget-setting name='content'>&lt;div id=&#39;recent-cmt&#39;&gt;&lt;/div&gt;
-&lt;script type=&#39;text/javascript&#39;&gt;
+&lt;script&gt;
   const maxnum = 10; //コメント数
   const maxstr = 140; //コメント文字数
   let a_names = [];
@@ -2397,46 +2468,48 @@ document.write(output);
       </div>
     </div>
     <p id='copyright'>&#169; 2013 Nickey</p>
-    <p id='designed-by'>Powered by <strong><a href='https://www.blogger.com/' target='_blank'>Blogger</a></strong> <i class='fab fa-blogger'/> | Designed by <strong><a href='http://qooq.dododori.com' target='_blank'>QooQ</a></strong></p>
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
+    <p id='designed-by'>Powered by <strong><a href='https://www.blogger.com/' target='_blank'>Blogger</a></strong> <svg><use href="#fa-blogger"></use></svg> | Designed by <strong><a href='http://qooq.dododori.com' target='_blank'>QooQ</a></strong></p>
 
-    <!-- ハンバーガーアイコン&#12539;メニュー -->
-    <script type='text/javascript'>
-$(function() {
-  $(&#39;.hamburger&#39;).click(function() {
-    $(this).toggleClass(&#39;active&#39;);
-    if ($(this).hasClass(&#39;active&#39;)) {
-      $(&#39;.globalMenuSp&#39;).addClass(&#39;active&#39;);
-      $(&#39;.hamburger-bg&#39;).addClass(&#39;hamburger-bg-active&#39;);
+    <!-- 上下ボタン -->
+    <p id='pagetop'><span><svg><use href="#fa-chevron-circle-up"></use></svg></span></p>
+    <p id='pagebottom'><span><svg><use href="#fa-chevron-circle-down"></use></svg></span></p>
+
+    <script>
+//<![CDATA[
+// ハンバーガーアイコンメニュー
+window.addEventListener('DOMContentLoaded', function(){
+  $('.hamburger').click(function() {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $('.globalMenuSp').addClass('active');
+      $('.hamburger-bg').addClass('hamburger-bg-active');
     } else {
-      $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
-      $(&#39;.hamburger-bg&#39;).removeClass(&#39;hamburger-bg-active&#39;);
+      $('.globalMenuSp').removeClass('active');
+      $('.hamburger-bg').removeClass('hamburger-bg-active');
     } 
   });
-  $(&#39;.hamburger-bg&#39;).click(function() {
-    $(&#39;.hamburger&#39;).toggleClass(&#39;active&#39;);
-    if ($(this).hasClass(&#39;active&#39;)) {
-      $(&#39;.globalMenuSp&#39;).addClass(&#39;active&#39;);
-      $(this).addClass(&#39;hamburger-bg-active&#39;);
+  $('.hamburger-bg').click(function() {
+    $('.hamburger').toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $('.globalMenuSp').addClass('active');
+      $(this).addClass('hamburger-bg-active');
     } else {
-      $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
-      $(this).removeClass(&#39;hamburger-bg-active&#39;);
+      $('.globalMenuSp').removeClass('active');
+      $(this).removeClass('hamburger-bg-active');
     } 
   });
 });
 //メニュー内を閉じておく
-$(function() {
-  $(&#39;.globalMenuSp a[href]&#39;).click(function() {
-    $(&#39;.hamburger-bg&#39;).removeClass(&#39;hamburger-bg-active&#39;);
-    $(&#39;.globalMenuSp&#39;).removeClass(&#39;active&#39;);
-    $(&#39;.hamburger&#39;).removeClass(&#39;active&#39;);
+window.addEventListener('DOMContentLoaded', function(){
+  $('.globalMenuSp a[href]').click(function() {
+    $('.hamburger-bg').removeClass('hamburger-bg-active');
+    $('.globalMenuSp').removeClass('active');
+    $('.hamburger').removeClass('active');
   });
 });
-</script>
-<!--上下にジャンプボタン-->
-<script>
-//<![CDATA[
-$(function() {
+
+// 上下にジャンプボタン
+window.addEventListener('DOMContentLoaded', function(){
   var pagetop = $('#pagetop');
   var pagebottom = $('#pagebottom');
   var toTop = 1000;//最上部ヘの到達時間(ミリ秒)
@@ -2460,9 +2533,15 @@ $(function() {
       $('body, html').animate({ scrollTop: $(document).height()}, toBottom);
   });
 });
+// 外部サイトへのリンクにnoopener noreferrerを設定する
+const add_noopener_to_external_link = () => {
+  Array.from(document.getElementsByTagName("a"))
+    .filter((a) => a.host !== window.location.host) // サイト内遷移ははじく
+    .forEach((a) => a.setAttribute('rel', 'noopener noreferrer'))
+}
+document.addEventListener('DOMContentLoaded', add_noopener_to_external_link, false);
 //]]>
     </script>
-    <p id='pagetop'><span><i class='fas fa-chevron-circle-up'/></span></p>
-    <p id='pagebottom'><span><i class='fas fa-chevron-circle-down'/></span></p>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
   </body>
 </html>
