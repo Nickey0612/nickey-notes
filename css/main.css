@@ -435,7 +435,7 @@ a:hover {
     transform: rotate(0deg);
     border-top: 1px dashed #cccccc;
     transition-delay: 0.32s;}
-.sp-sns-menu .share2:hover .submenu li:nth-child(5) {
+.sp-sns-menu .share:hover .submenu li:nth-child(5) {
     opacity: 1;
     top: 210px;
     transform: rotate(0deg);
@@ -462,6 +462,8 @@ a:hover {
     transform: rotateX(135deg);}
 .sp-sns-menu .submenu li:nth-child(4) {
     transform: rotateX(180deg);}
+.sp-sns-menu .submenu li:nth-child(5) {
+    transform: rotateX(225deg);}
 
 
 /****************************************
