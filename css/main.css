@@ -708,7 +708,6 @@ a:hover {
     background-size: contain;
     background-position: center;}
 
-
 #single-content blockquote p {
     padding: 0;
     margin: 7px 0;
@@ -718,6 +717,17 @@ a:hover {
     text-align: right;
     color: #888888;
     font-size: 0.9em;}
+
+.table-wrapper {
+    overflow-x: scroll;}
+#single-content table {
+    border-collapse: collapse;}
+#single-content table,
+#single-content tr,
+#single-content td,
+#single-content th {
+    border: 1px solid black;
+    padding: 1rem;}
 
 /* 記事中のリストのデザイン */
 #single-content ol {
@@ -1145,13 +1155,6 @@ iframe[title="YouTube video player"] {
     font-weight: bold;}
 .post-summary h3 a{
     color: var(--font-color) !important;}
-table.gsc-search-box{
-    border: solid 1px var(--other-border);}
-input.gsc-search-button{
-    background: var(--brand-subcolor);
-    color: var(--brand-subfont);}
-input.gsc-input{
-    color: var(--font-color);}
 
 /* プロフィール */
 #HTML1 p {
