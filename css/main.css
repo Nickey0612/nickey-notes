@@ -1007,6 +1007,12 @@ iframe[title="YouTube video player"] {
     line-height: 1.7;
     overflow: hidden;
     text-overflow: ellipsis;}
+@media ( max-width : 480px ) {
+    .adjacent-right .prev-title,
+    .adjacent-right .next-title {
+        font-size: 70%;
+        line-height: inherit;
+        padding: 0;}}
 
 /* コメント */
 #comments{
