@@ -742,6 +742,11 @@ a:hover {
     padding: 1rem;
     font-size: 90%;}
 
+/* caution */
+.note {
+    background-color:lightgoldenrodyellow;
+    padding:1em}
+
 /* 記事中のリストのデザイン */
 #single-content ol {
     counter-reset:number;
