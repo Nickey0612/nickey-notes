@@ -1173,6 +1173,12 @@ iframe[title="YouTube video player"] {
     padding:.5rem;
     display:inline-block;
     text-decoration: none;}
+.label-size > span {
+    color: var(--brand-subcolor);
+    background: var(--other-back);
+    padding: 0.5rem;
+    display: inline-block;
+}
 .label-size:hover {
     background: var(--other-back);
     border: solid 2px var(--brand-subcolor) !important;}
@@ -1363,7 +1369,8 @@ iframe[title="YouTube video player"] {
 .pagination {
     display: flex;
     justify-content: center;}
-.pagination-link, .pagination-ellipsis {
+.pagination-link,
+.pagination-ellipsis {
     display: flex;
     justify-content: center;
     width: 40px;
@@ -1383,7 +1390,7 @@ iframe[title="YouTube video player"] {
     color: var(--brand-font) !important;
     background: var(--brand-color);}
 .pagination-ellipsis {
-    color: #999;
+    color: #000;
     pointer-events: none;}
 
 /* スクロールボタン */
