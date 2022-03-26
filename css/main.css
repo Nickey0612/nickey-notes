@@ -50,7 +50,6 @@ a:hover {
     margin: 0;
     text-indent: 0;}
 .widget .post-body ul {
-    padding: 0 2.5em;
     margin: 0.5em 0;
     line-height: 1.4;}
 .widget .post-body li {
@@ -708,6 +707,17 @@ a:hover {
     background-size: contain;
     background-position: center;}
 
+.imageRow {
+    text-align: center;}
+.imagesRow {
+    text-align: center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1em;}
+@media (max-width: 768px) {
+    .imagesRow {
+        grid-template-columns:unset;}}
+
 #single-content blockquote p {
     padding: 0;
     margin: 7px 0;
@@ -1006,7 +1016,11 @@ iframe[title="YouTube video player"] {
     text-align: left;
     line-height: 1.7;
     overflow: hidden;
-    text-overflow: ellipsis;}
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+
+}
 @media ( max-width : 480px ) {
     .adjacent-right .prev-title,
     .adjacent-right .next-title {
@@ -1495,8 +1509,7 @@ nav.globalMenuSp.active {
     transform: translateY(0%);}
 
 /* font awesome */
-.post-meta svg,
-#designed-by svg {
+.post-meta svg {
   height: 1.5rem;
   width: 1.5rem;
   fill: currentColor;
