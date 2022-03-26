@@ -688,6 +688,7 @@ a:hover {
 #single-content blockquote {
     position: relative;
     padding: 35px 15px 10px 15px;
+    margin-bottom: 1em;
     box-sizing: border-box;
     font-style: italic;
     background: #f5f5f5;
