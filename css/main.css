@@ -1339,14 +1339,25 @@ iframe[title="YouTube video player"] {
     margin:0;
     padding:0 0 0 2rem;
     list-style:none}
-.b-toc-container ul li:after,
-.b-toc-container ul li:before{
-    background:0;
-    border-radius:0;
-    content:""}
-.b-toc-container ul li:before{
-    content:"└";
-    padding-right:.5rem}
+.b-toc-container > ul > li:before {
+    content: "";
+    padding-right: 0.5rem;}
+.b-toc-container > ul > li li:before {
+    position: inherit;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 1rem;}
+.b-toc-container > ul > li > a {
+    font-weight:bold;}
+.b-toc-container > ul > li > ul > li > a {
+    font-size: 90%;}
+.b-toc-container > ul > li > ul > li > ul > li > a {
+    font-size: 80%;}
 .b-toc-container ul li a{
     align-items:flex-start;
     flex-wrap:nowrap}
