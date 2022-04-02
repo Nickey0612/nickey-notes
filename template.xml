@@ -69,7 +69,8 @@
     <meta content='summary_large_image' name='twitter:card'/>
     <meta content='545063505576016' property='fb:app_id'/>
 
-    <b:skin></b:skin>
+    <b:skin>
+    </b:skin>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-561YJSEKZ5"></script>
     <script>
@@ -499,7 +500,7 @@ function displayPager() {
 }
 //]]>
                       </script>
-                      <script expr:src='&quot;https://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default?max-results=500&amp;alt=json-in-script&amp;callback=loadpager&quot;'/>
+                      <!-- <script expr:src='&quot;https://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default?max-results=500&amp;alt=json-in-script&amp;callback=loadpager&quot;'/> -->
                     </b:if>
                   </b:loop>
                 <b:else/>
@@ -1581,11 +1582,6 @@ function encodeDate(dateStr) {
             <div class='status-msg-body'>
               <data:navMessage/>
             </div>
-            <div class='status-msg-border'>
-              <div class='status-msg-bg'>
-                <div class='status-msg-hidden'><data:navMessage/></div>
-              </div>
-            </div>
           </div>
           <div style='clear: both;'/>
           </b:if>
@@ -2543,6 +2539,9 @@ const add_noopener_to_external_link = () => {
 document.addEventListener('DOMContentLoaded', add_noopener_to_external_link, false);
 //]]>
     </script>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+      <script expr:src='&quot;https://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default?max-results=500&amp;alt=json-in-script&amp;callback=loadpager&quot;'/>
+    </b:if>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
   </body>
 </html>
