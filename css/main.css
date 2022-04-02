@@ -259,7 +259,7 @@ a:hover {
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 0 1px;}
-#BlogArchive1 a:not(.AmaQuick-btn, .sitemap-link):hover,
+#BlogArchive1 a:not(.AmaQuick-btn, .sitemap-link, .toggle):hover,
 #HTML3 a:hover,
 #single-content a:hover {
   background-size: 100% 1px;}
