@@ -2534,7 +2534,7 @@ window.addEventListener('DOMContentLoaded', function(){
 const add_noopener_to_external_link = () => {
   Array.from(document.getElementsByTagName("a"))
     .filter((a) => a.host !== window.location.host) // サイト内遷移ははじく
-    .forEach((a) => a.setAttribute('rel', 'noopener noreferrer'))
+    .forEach((a) => {a.setAttribute('rel', 'noopener noreferrer'); a.setAttribute('target', '_blank')})
 }
 document.addEventListener('DOMContentLoaded', add_noopener_to_external_link, false);
 //]]>
