@@ -1344,6 +1344,7 @@ iframe[title="YouTube video player"] {
     padding-right: 0.5rem;}
 .b-toc-container > ul > li li:before {
     position: inherit;
+    display: inline-block;
     content: "";
     width: 1rem;
     height: 1rem;
@@ -1351,7 +1352,7 @@ iframe[title="YouTube video player"] {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    margin-right: 1rem;}
+    margin-right: .5rem;}
 .b-toc-container > ul > li > a {
     font-weight:bold;}
 .b-toc-container > ul > li > ul > li > a {
