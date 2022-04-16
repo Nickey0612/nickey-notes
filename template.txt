@@ -1,0 +1,112 @@
+<!-- テンプレート-->
+
+スマホでは改行を無効にする  <br class="d-none d-sm-block">
+
+<!-- Amazonアフェリエイトリンク -->
+
+<div class="card amazon-card mb-2"><div class="row no-gutters"><div class="col-3 text-center">
+<img src="【画像URL（小で作成する事）】" height="100%" class="img-fluid" />
+</div><div class="col-9 card-body position-static">
+<div class="card-title">【商品名】</div>
+<div class="card-text">【商品アピール文】</div>
+<a href="【アフェリエイトURL】" class="stretched-link"></a>
+<img src="【謎の画像URL】" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+</div></div></div>
+
+<!-- 画像（２枚以上の場合） -->
+
+<div class="row text-center">
+<figure class="col-md-6 col-12">
+<a href="【画像URL（s1600にすること）】" class="d-block md-6">
+<img class="img-fluid img-thumbnail" src="【画像URL（s320にすること）】"/>
+</a>
+<figcaption>【説明文】</figcaption>
+</figure>
+<figure class="col-md-6 col-12">
+<a href="【画像URL（s1600にすること）】" class="d-block md-6">
+<img class="img-fluid img-thumbnail" src="【画像URL（s320にすること）】"/>
+</a>
+<figcaption>【説明文】</figcaption>
+</figure>
+</div>
+
+<!-- 画像（１枚の場合） -->
+<div class="row text-center">
+<figure class="col-12">
+<a href="【画像URL（s1600にすること）】">
+<img class="img-fluid img-thumbnail" src="【画像URL（s640にすること）】"/>
+</a>
+</figure>
+</div>
+
+<!-- 動画 -->
+<!-- 参考： https://cccabinet.jpn.org/bootstrap4/utilities/embed -->
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item lozad" data-src="【Youtube URL】" allowfullscreen></iframe>
+</div>
+
+<!-- 引用文 -->
+<blockquote>
+<p>
+【文章】
+</p>
+<cite><a href="【引用元URL】">【引用元タイトル】</a></cite>
+</blockquote>
+
+<!-- 注釈 -->
+<p class="note"><small>
+【注釈文】
+</small></p>
+
+<!-- テーブル -->
+<div class="table-responsive">
+<table class="table table-striped table-bordered table-hover table-sm text-nowrap">
+<caption>テーブル名</caption>
+<thead><tr><th>カラム名</th><th>カラム名</th></tr></thead>
+<tbody>
+<tr>
+<td>データ</td>
+<td>データ</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- 週間成績 -->
+<div class="table-responsive">
+<table class="table table-striped table-bordered table-hover table-sm text-nowrap report-table">
+<caption>【9999/99/99】週の損益まとめ</caption>
+<thead><tr><th>ブローカー</th><th>pips</th><th>損益</th><th>累計損益</th><th>残高</th></tr></thead>
+<tbody>
+<tr>
+<td>Forex Exchange</td>
+<td class='pip'>【Pips】</td>
+<td>【損益】</td>
+<td>【累計損益】</td>
+<td>【残高】</td>
+</tr>
+<tr>
+<td>XM(nano口座)</td>
+<td class='pip'>【Pips】</td>
+<td>【損益】</td>
+<td>【累計損益】</td>
+<td>【残高】</td>
+</tr>
+</tbody></table></div>
+
+<!-- EAごとの週間成績 -->
+<div class="table-responsive">
+<table class="table table-striped table-bordered table-hover table-sm text-nowrap report-table sortable-table">
+<caption>【9999/99/99】週のEA別成績</caption>
+<thead><tr><th>EA</th><th>通貨</th><th>週間pip</th><th>通算pip</th><th>備考</th></tr></thead>
+<tbody>
+<tr>
+<td class="position-relative"><a href="【アフェリエイトURL】" class="stretched-link">【EA名】</a></td>
+<td>【通貨】</td>
+<td class='pip'>【週間Pips】</td>
+<td class='pip'>【通算Pips】</td>
+<td>【開始年月日99/99/99】開始<br>【設定名など】</td>
+</tr>
+</tbody>
+</table>
+</div>
