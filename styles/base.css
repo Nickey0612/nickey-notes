@@ -1,0 +1,49 @@
+/* 全体の基礎設定と共通変数 */
+/* Base settings and shared tokens */
+
+:root {
+  --bg: #eee;
+  --surface: #fff;
+  --text: #222;
+  --line: #ddd;
+  --site-header-height: 80px;
+  --backdrop: rgb(32 32 32 / 30%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (width > 720px) {
+  /* メニュー表示前後のスクロールバー幅確保 */
+  /* Scrollbar gutter for menu open-close */
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+a,
+button,
+label,
+summary {
+  touch-action: manipulation;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
