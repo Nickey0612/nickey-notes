@@ -3,11 +3,9 @@
 
 .menu-extras {
   grid-template-rows: auto auto minmax(0, 1fr) auto;
-  gap: 16px;
-  padding-block-end: 24px;
 
   .menu-header {
-    min-height: 64px;
+    min-height: 82px;
   }
 
   .menu-search {
