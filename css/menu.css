@@ -1,9 +1,7 @@
 /* dialogとメニュー共通部品 */
-/* Shared dialog and menu parts */
 
 body:has(dialog[open]) {
   /* ダイアログ表示時の背景スクロール停止 */
-  /* Background scroll lock while dialog is open */
   overflow: hidden;
 }
 
@@ -12,7 +10,6 @@ body:has(dialog[open]) {
 
   position: fixed;
   /* [open]外のレイアウト指定 */
-  /* Layout outside [open] */
   display: grid;
   gap: 16px;
   max-width: none;
@@ -75,20 +72,16 @@ body:has(dialog[open]) {
 
 .menu-list {
   /* リスト側スクロール */
-  /* List-owned scrolling */
   display: grid;
   align-content: start;
-  gap: 12px;
   min-height: 0;
   overflow-y: auto;
   /* スクロール連鎖の内側管理 */
-  /* Inner scroll containment */
   overscroll-behavior-y: contain;
 
   a,
   summary {
     cursor: pointer;
-    font-weight: bold;
   }
 
   > a,

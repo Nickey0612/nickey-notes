@@ -19,8 +19,9 @@
   }
 
   &[open] {
-    opacity: 1;
+    opacity: .95;
     translate: 0 0;
+    background: var(--brand-subcolor);
 
     @starting-style {
       opacity: 0;
@@ -31,6 +32,7 @@
   .menu-list {
     overflow: visible;
     overscroll-behavior-y: auto;
+    text-align: center;
   }
 
   .menu-header {

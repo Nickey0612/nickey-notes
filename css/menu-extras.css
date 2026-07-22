@@ -22,12 +22,8 @@
 
     a {
       min-height: 56px;
-      font-size: 2rem;
+      font-size: 1rem;
       line-height: 1.1;
-
-      @media (width <= 568px) {
-        font-size: 1.75rem;
-      }
     }
   }
 }
