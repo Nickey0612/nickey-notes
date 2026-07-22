@@ -6,7 +6,6 @@
   grid-template-rows: var(--site-header-height) minmax(0, 1fr);
   gap: 0;
   width: 100%;
-  height: 100dvh;
   overflow-y: auto;
   padding-block: 0;
   padding-inline: 24px;
@@ -15,7 +14,7 @@
   translate: 0 -24px;
 
   &::backdrop {
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   &[open] {
@@ -37,7 +36,7 @@
 
   .menu-header {
     min-height: var(--site-header-height);
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
 

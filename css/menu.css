@@ -86,7 +86,7 @@ body:has(dialog[open]) {
 
   > a,
   summary {
-    display: flex;
+    display: grid;
     align-items: center;
     min-height: 48px;
     padding-inline: 16px;

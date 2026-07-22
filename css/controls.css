@@ -21,7 +21,8 @@
   inline-size: 42px;
   block-size: 42px;
   border: 0;
-  background: transparent;
+  background: var(--brand-color);
+  opacity: .7;
   border-radius: 5px;
   cursor: pointer;
 
@@ -40,7 +41,7 @@
     width: 20px;
     height: 2px;
     border-radius: 20px;
-    background: currentColor;
+    background: #ddd;
     content: "";
   }
 }
@@ -51,10 +52,10 @@
     width: 21px;
     height: 2px;
     border-radius: 20px;
-    background: currentColor;
+    background: #ddd;
     box-shadow:
-      0 -6px 0 currentColor,
-      0 6px 0 currentColor;
+      0 -6px 0 #ddd,
+      0 6px 0 #ddd;
   }
 
   &::after {
