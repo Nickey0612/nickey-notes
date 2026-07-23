@@ -17,7 +17,7 @@ body:has(dialog[open]) {
   margin: 0;
   padding: 16px 24px;
   border: 0;
-  background: var(--surface);
+  background: #fff;
   interactivity: inert;
   pointer-events: none;
   transition:
@@ -88,9 +88,7 @@ body:has(dialog[open]) {
   summary {
     display: grid;
     align-items: center;
-    min-height: 48px;
-    padding-inline: 16px;
-    border-radius: 8px;
+    min-height: 42px;
     transition: background-color 0.2s;
 
     @media (any-hover: hover) {

@@ -1,7 +1,7 @@
-/* ƒRƒ“ƒpƒNƒgpopoverƒƒjƒ…[ */
+/* ï¿½Rï¿½ï¿½ï¿½pï¿½Nï¿½gpopoverï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[ */
 /* Compact popover menu */
 
-.menu-compact {
+.menu-share {
   inset: calc(var(--site-header-height) + 8px) 24px auto auto;
   display: block;
   width: 320px;
