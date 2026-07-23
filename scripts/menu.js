@@ -27,13 +27,13 @@ for (const link of menu.querySelectorAll("a[href]")) {
 }
 
 // モバイル用SNSメニュー内リンク選択時のpopoverクローズ
-const snsMenu = document.querySelector("#menu-share");
+// const snsMenu = document.querySelector("#menu-share");
 
-for (const link of snsMenu.querySelectorAll("a[href]")) {
-  link.addEventListener("click", () => {
-    snsMenu.hidePopover();
-  });
-}
+// for (const link of snsMenu.querySelectorAll("a[href]")) {
+//   link.addEventListener("click", () => {
+//     snsMenu.hidePopover();
+//   });
+// }
 
 
 
