@@ -1,0 +1,47 @@
+/* �R���p�N�gpopover���j���[ */
+/* Compact popover menu */
+
+.menu-share {
+  inset: calc(var(--site-header-height) + 8px) 24px auto auto;
+  display: block;
+  width: 320px;
+  min-height: 0;
+  max-height: calc(100dvh - var(--site-header-height) - 32px);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow:
+    0 16px 40px rgb(32 32 32 / 10%),
+    inset 0 0 0 1px var(--line);
+  opacity: 0;
+  translate: 0 -8px;
+
+  @media (width <= 568px) {
+    inset-inline-start: 24px;
+    width: auto;
+  }
+
+  &::backdrop {
+    background: transparent;
+  }
+
+  .menu-list {
+    gap: 4px;
+    max-height: inherit;
+
+    > a {
+      min-height: 0;
+      padding: 12px;
+      line-height: 1.25;
+    }
+  }
+
+  &:popover-open {
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style {
+      opacity: 0;
+      translate: 0 -8px;
+    }
+  }
+}
