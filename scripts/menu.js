@@ -1,12 +1,10 @@
-// ダイアログメニュー開閉
-// Dialog menu open-close
+// モバイル用メニュー開閉
 const menu = document.querySelector("#menu");
 const buttonOpen = document.querySelector("#button-open");
 const buttonClose = document.querySelector("#button-close");
 
 buttonOpen.addEventListener("click", () => {
   // dialogをtop layerへ表示
-  // Dialog display in the top layer
   menu.showModal();
 });
 
@@ -16,16 +14,23 @@ buttonClose.addEventListener("click", () => {
 
 menu.addEventListener("click", (event) => {
   // dialog本体クリックだけbackdrop扱い
-  // Dialog element click as backdrop click
   if (event.target === menu) {
     menu.close();
   }
 });
 
 // メニュー内リンクを押したら閉じる
-// Close after menu link click
 for (const link of menu.querySelectorAll("a[href]")) {
   link.addEventListener("click", () => {
     menu.close();
+  });
+}
+
+// モバイル用SNSメニュー内リンク選択時のpopoverクローズ
+const menu = document.querySelector("#menu-compact");
+
+for (const link of menu.querySelectorAll("a[href]")) {
+  link.addEventListener("click", () => {
+    menu.hidePopover();
   });
 }
