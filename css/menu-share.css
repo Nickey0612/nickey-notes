@@ -2,7 +2,8 @@
 /* Compact popover menu */
 
 .menu-share {
-  inset: calc(var(--site-header-height) + 8px) 24px auto auto;
+  inset: 0;
+  margin: auto;
   display: block;
   width: 320px;
   min-height: 0;
