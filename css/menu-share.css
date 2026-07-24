@@ -51,7 +51,7 @@
 /* SNS share button & dialog */
 .share__modal{
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: grid;
   align-items: flex-end;
@@ -83,4 +83,80 @@
 }
 .close_modal_btn{
   color: var(--first-color);
+}
+.list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1.125em;
+}
+.list__item{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  color: var(--first-color);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.icon_holder{
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social__logo{
+  width: 2em;
+  height: 2em;
+}
+[data-icon="twitter"]{
+  background-color: #ccc;
+}
+[data-icon="facebook"]{
+  background-color: #e8f1fe;
+}
+[data-icon="hatena"]{
+  background-color: #00a4de;
+}
+[data-icon="line"]{
+  background-color: #00c300;
+}
+.share__modal_link{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.1em;
+}
+.share__modal_link span{
+  font-weight: 500;
+  font-size: 0.9869em;
+  text-transform: capitalize;
+  color: #373d46;
+}
+.share__modal_input{
+  position: relative;
+}
+.share__modal_input input{
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 0.88em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+}
+.copy_icon{
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+  color: #373d46;
+  cursor: pointer;
+}
+.show-modal{
+  opacity: 1;
+  visibility: visible;
 }
