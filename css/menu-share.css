@@ -52,7 +52,8 @@
 .share__modal{
   background-color: #fff;
   position: fixed;
-  bottom: 0;
+  inset: 0;
+  margin: auto;
   display: grid;
   align-items: flex-end;
   overflow: auto;
