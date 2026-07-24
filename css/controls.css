@@ -23,27 +23,6 @@
   }
 
   /* 文字なしボタンの疑似要素アイコン */
-  /* &::before,
-  &::after {
-    position: absolute;
-    top:20px;
-    right: 10px;
-    width: 20px;
-    height: 2px;
-    border-radius: 20px;
-    background: #ddd;
-    content: "";
-  } */
-}
-
-/*
-=======================================================
-モバイル用メニューボタン
-=======================================================
-*/
-.button-menu {
-  top: 10px;
-  right: 5px;
   &::before,
   &::after {
     position: absolute;
@@ -55,7 +34,16 @@
     background: #ddd;
     content: "";
   }
+}
 
+/*
+=======================================================
+モバイル用メニューボタン
+=======================================================
+*/
+.button-menu {
+  top: 10px;
+  right: 5px;
   /* ::before本体とbox-shadowによる三本線 */
   &::before {
     width: 21px;
