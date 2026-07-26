@@ -13,7 +13,7 @@
   max-width: 400px;
 
   &::backdrop {
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   .menu-list {
@@ -134,23 +134,16 @@
   color: #373d46;
 }
 .share__modal_input{
-  position: relative;
+  display: flex;
 }
 .share__modal_input input{
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: #eee;
   padding: 0.88em;
   border-radius: 0.5em;
   border: none;
   outline: none;
   font-size: 0.8em;
-}
-.copy_icon{
-  position: absolute;
-  right: 1.5em;
-  top: 1em;
-  color: #373d46;
-  cursor: pointer;
 }
 .show-modal{
   opacity: 1;
