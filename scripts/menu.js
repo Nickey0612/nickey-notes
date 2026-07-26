@@ -63,3 +63,11 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
+
+
+
+// URLコピーボタン
+document.querySelector(".copy-button").addEventListener("click", function () {
+  const input = this.previousElementSibling;
+  navigator.clipboard.writeText(input.value);
+});
