@@ -80,6 +80,13 @@
 }
 .close_modal_btn{
   color: #373d46;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+.fa-xmark {
+  width: 42px;
+  height: 42px;
 }
 .list{
   display: grid;
