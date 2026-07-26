@@ -64,10 +64,23 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// URLコピー完了の通知
+const toast = document.getElementById("copy_toast");
+let toastTimer;
 
+function showCopyToast() {
+  clearTimeout(toastTimer);
+
+  toast.classList.add("show");
+
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
+}
 
 // URLコピーボタン
-document.querySelector(".copy-button").addEventListener("click", function () {
+document.querySelector(".copy_btn").addEventListener("click", function () {
   const input = this.previousElementSibling;
   navigator.clipboard.writeText(input.value);
+  showCopyToast();
 });
