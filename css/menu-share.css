@@ -72,7 +72,7 @@
   justify-content: space-between;
 }
 .share__modal__header span {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #373d46;
   text-transform: capitalize;
@@ -83,8 +83,9 @@
 }
 .list{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(4,1fr);
   grid-gap: 1.125em;
+  padding: 0 !important;
 }
 .list__item{
   display: flex;
@@ -94,22 +95,17 @@
   justify-content: center;
   text-transform: capitalize;
   color: #373d46;
-  font-size: 0.88rem;
   font-weight: 500;
   opacity: 0.9;
   cursor: pointer;
 }
 .icon_holder{
-  width: 4.5em;
-  height: 4.5em;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.social__logo{
-  width: 2em;
-  height: 2em;
 }
 [data-icon="twitter"]{
   background-color: #ccc;
