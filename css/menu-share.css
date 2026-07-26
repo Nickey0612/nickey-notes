@@ -4,17 +4,12 @@
 .menu-share {
   inset: 0;
   display: block;
-  width: 320px;
   min-height: 0;
+  width: auto;
   padding: 8px;
   border-radius: 8px;
   opacity: 0;
   translate: 0 -8px;
-
-  @media (width <= 568px) {
-    inset-inline-start: 24px;
-    width: auto;
-  }
 
   &::backdrop {
     background: transparent;
@@ -84,7 +79,8 @@
   background: transparent;
   border: none;
 }
-.fa-xmark {
+.fa-xmark,
+.fa-copy {
   width: 42px;
   height: 42px;
 }
