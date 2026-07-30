@@ -40,13 +40,3 @@
   }
 }
 
-.menu-list-large {
-  a,
-  summary {
-    font-size: 4rem;
-
-    @media (width <= 568px) {
-      font-size: 3rem;
-    }
-  }
-}
