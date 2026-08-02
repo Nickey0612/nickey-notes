@@ -21,19 +21,6 @@
       background-color: var(--brand-color);
     }
   }
-
-  /* 文字なしボタンの疑似要素アイコン */
-  &::before,
-  &::after {
-    position: absolute;
-    top:20px;
-    right: 10px;
-    width: 20px;
-    height: 2px;
-    border-radius: 20px;
-    background: #ddd;
-    content: "";
-  }
 }
 
 /*
@@ -45,16 +32,22 @@
   top: 10px;
   right: 5px;
   /* ::before本体とbox-shadowによる三本線 */
-  &::before {
-    width: 21px;
+  &::before,
+  &::after {
+    position: absolute;
+    top:20px;
+    right: 10px;
+    width: 20px;
     height: 2px;
     border-radius: 20px;
     background: #ddd;
+    content: "";
+  }
+  &::before {
     box-shadow:
       0 -6px 0 #ddd,
       0 6px 0 #ddd;
   }
-
   &::after {
     /* 三本線では不要な二本目疑似要素 */
     content: none;
