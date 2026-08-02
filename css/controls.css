@@ -99,7 +99,7 @@
   top: 60px;
   right: 5px;
 }
-.button_share svg {
+svg.open {
   width: 32px;
   height: 32px;
 }
