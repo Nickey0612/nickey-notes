@@ -66,16 +66,27 @@
       rotate: 90deg;
     }
   }
-
+  &::before,
+  &::after {
+    position: absolute;
+    top:20px;
+    right: 10px;
+    width: 20px;
+    height: 2px;
+    border-radius: 20px;
+    background: #ddd;
+  }
   /* ::beforeと::afterの交差による×印 */
   &::before {
     rotate: 45deg;
     content: "";
+    box-shadow: none;
   }
 
   &::after {
     rotate: -45deg;
     content: "";
+    box-shadow: none;
   }
 }
 
