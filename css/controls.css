@@ -1,7 +1,7 @@
 /* アイコンボタン類 */
 /*
 =======================================================
-右上メニューボタン
+右上メニューボタン共通
 =======================================================
 */
 .button-icon {
@@ -41,12 +41,12 @@
     height: 2px;
     border-radius: 20px;
     background: #ddd;
-    content: "";
   }
   &::before {
     box-shadow:
       0 -6px 0 #ddd,
       0 6px 0 #ddd;
+    content: "";
   }
   &::after {
     /* 三本線では不要な二本目疑似要素 */
@@ -70,10 +70,12 @@
   /* ::beforeと::afterの交差による×印 */
   &::before {
     rotate: 45deg;
+    content: "";
   }
 
   &::after {
     rotate: -45deg;
+    content: "";
   }
 }
 
@@ -85,4 +87,8 @@
 .button-share {
   top: 60px;
   right: 5px;
+}
+.button_share svg {
+  width: 32px;
+  height: 32px;
 }
