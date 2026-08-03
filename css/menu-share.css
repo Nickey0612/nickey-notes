@@ -52,7 +52,6 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   opacity: 0;
-  transition: 0.5s ease;
 }
 .share__modal_content{
   padding: 1.5em;
@@ -160,6 +159,7 @@
   position: fixed;
   left: 50%;
   bottom: 30px;
+  width: max-content;
   transform: translateX(-50%);
   background: #333;
   color: #fff;

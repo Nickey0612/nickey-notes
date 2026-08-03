@@ -36,9 +36,9 @@
   &::after {
     position: absolute;
     top:20px;
-    right: 10px;
     width: 20px;
     height: 2px;
+    transform: translateY(-50%) translateX(-50%);
     border-radius: 20px;
     background: #ddd;
   }
@@ -100,6 +100,8 @@
   right: 5px;
 }
 svg.open {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  opacity: inherit;
 }
