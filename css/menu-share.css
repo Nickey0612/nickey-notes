@@ -83,6 +83,9 @@
   width: 21px;
   height: 21px;
 }
+.share__modal__options {
+  height: 80px;
+}
 .list{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -108,18 +111,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-[data-icon="twitter"]{
-  background-color: #ccc;
-}
-[data-icon="facebook"]{
-  background-color: #e8f1fe;
-}
-[data-icon="hatena"]{
-  background-color: #00a4de;
-}
-[data-icon="line"]{
-  background-color: #00c300;
 }
 .share__modal_link{
   display: flex;
