@@ -38,8 +38,6 @@
   }
 }
 
-
-
 /* SNS share button & dialog */
 .share__modal{
   background-color: #fff;
@@ -54,10 +52,10 @@
   opacity: 0;
 }
 .share__modal_content{
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
-  row-gap: 2.6em;
+  row-gap: 2em;
 }
 .share__modal__header{
   display: flex;
@@ -86,44 +84,68 @@
 .share__modal__options {
   height: 80px;
 }
-.list{
-  display: grid;
+.list {
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: repeat(4,1fr);
-  grid-gap: 1.125em;
   padding: 0 !important;
 }
-.list__item{
-  display: flex;
+
+.list__item {
+  width: 77px;
   flex-direction: column;
   row-gap: 0.5em;
-  align-items: center;
   justify-content: center;
   text-transform: capitalize;
   color: #373d46;
-  font-weight: 500;
   opacity: 0.9;
   cursor: pointer;
 }
-.icon_holder{
+
+.sp-sns-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.sp-sns-btn svg {
+  width: 22px;
+  height: 22px;
+  margin: 10px;
+  display: inline-block
+}
+
+
+
+
+
+
+.icon_holder {
   display: grid;
   align-items: center;
   justify-content: center;
 }
-.share__modal_link{
+
+.share__modal_link {
   display: flex;
   flex-direction: column;
   row-gap: 1.1em;
 }
-.share__modal_link span{
+
+.share__modal_link span {
   font-weight: 500;
   font-size: 0.9869em;
   text-transform: capitalize;
   color: #373d46;
 }
-.share__modal_input{
+
+.share__modal_input {
   display: flex;
 }
-.share__modal_input input{
+
+.share__modal_input input {
   width: 100%;
   background-color: #eee;
   padding: 0.88em;
@@ -133,7 +155,8 @@
   font-size: 0.8em;
   text-overflow: ellipsis;
 }
-.show-modal{
+
+.show-modal {
   opacity: 1;
   visibility: visible;
 }
