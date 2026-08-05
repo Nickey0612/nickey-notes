@@ -14,14 +14,14 @@ for (const link of menu.querySelectorAll("a[href]")) {
   });
 }
 
-// モバイル用SNSメニュー内リンク選択時のpopoverクローズ
-// const snsMenu = document.querySelector("#mobile-share-menu");
-// snsMenu.addEventListener("click", (event) => {
-//   // dialog本体クリックだけbackdrop扱い
-//   if (event.target === snsMenu) {
-//     snsMenu.close();
-//   }
-// });
+// モバイル用SNSメニュー外を押したら閉じる
+const snsMenu = document.querySelector("#mobile-share-menu");
+snsMenu.addEventListener("click", (event) => {
+  // dialog本体クリックだけbackdrop扱い
+  if (event.target === snsMenu) {
+    snsMenu.close();
+  }
+});
 
 // モバイル用SNSメニュー内ボタン押下時の挙動
 document.querySelectorAll('[data-share="x"]').forEach(button => {
@@ -36,7 +36,7 @@ document.querySelectorAll('[data-share="x"]').forEach(button => {
   });
 });
 
-document.querySelectorAll('[data-share="fb"]').forEach(button => {
+document.querySelectorAll('[data-share="facebook"]').forEach(button => {
   button.addEventListener('click', () => {
     const url =
       "https://www.facebook.com/sharer/sharer.php?u=" +
