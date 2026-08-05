@@ -103,11 +103,14 @@
 }
 
 .sp-sns-btn {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
+  background: none;
+  border: none;
 }
 
 .sp-sns-btn svg {
@@ -117,16 +120,11 @@
   display: inline-block
 }
 
-
-
-
-
-
-.icon_holder {
+/* .icon_holder {
   display: grid;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .share__modal_link {
   display: flex;
