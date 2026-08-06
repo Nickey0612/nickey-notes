@@ -73,6 +73,7 @@
   border: none;
   height: 42px;
   width: 42px;
+  cursor: pointer;
 }
 .fa-xmark,
 .fa-copy {
@@ -98,7 +99,6 @@
   text-transform: capitalize;
   color: #373d46;
   opacity: 0.9;
-  cursor: pointer;
 }
 
 .sp-sns-btn {
@@ -107,9 +107,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: .4rem;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .sp-sns-btn svg {
@@ -122,7 +123,7 @@
 .share__modal_link {
   display: flex;
   flex-direction: column;
-  row-gap: 1.1em;
+  row-gap: .5rem;
 }
 
 .share__modal_link span {
@@ -137,13 +138,12 @@
 }
 
 .share__modal_input input {
-  width: 100%;
+  width: 85%;
   background-color: #bbb;
-  padding: 0.88em;
-  border-radius: 0.5em;
+  padding: .5rem;
+  border-radius: 8px;
   border: none;
   outline: none;
-  font-size: 0.8em;
   text-overflow: ellipsis;
 }
 
@@ -153,8 +153,10 @@
 }
 
 .copy_btn {
+  width: 15%;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .copy_toast {
