@@ -1,0 +1,35 @@
+:root {
+  --font-color: #454545;
+  --font-link: #BB3956;
+  --font-light: #999999;
+  --brand-color: #364956;
+  --brand-font: #ffffff;
+  --brand-subcolor: #646F7F;
+  --brand-subfont: #ffffff;
+  --list-line: #646F7F;
+  --list-mark: #646F7F;
+  --header-color: #1F5A70;
+  --other-topback: #748D97;
+  --other-back: #E4E5E3;
+  --other-border: #17141B
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-family: Inter, "noto sans jp", 游ゴシック, YuGothic, "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", Verdana, メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "ms pgothic", sans-serif;
+  background: var(--other-topback);
+  color: var(--font-color);
+
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  min-width: 960px
+}
+
