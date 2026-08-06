@@ -35,8 +35,7 @@ body {
   font-size: var(--fs-body);
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: .02em;
-  min-width: 960px
+  letter-spacing: .02em
 }
 
 .container {
