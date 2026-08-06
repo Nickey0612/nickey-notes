@@ -16,12 +16,6 @@
   border-radius: 5px;
   cursor: pointer;
   z-index: 1;
-
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: var(--brand-color);
-    }
-  }
 }
 
 /*
@@ -58,15 +52,6 @@
 .button-close {
   top: 10px;
   right: 5px;
-  transition:
-    background-color 0.2s,
-    rotate 0.2s ease;
-
-  @media (any-hover: hover) {
-    &:hover {
-      rotate: 90deg;
-    }
-  }
   &::before,
   &::after {
     position: absolute;
