@@ -22,7 +22,7 @@ body {
   font-family: Inter, "noto sans jp", 游ゴシック, YuGothic, "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", Verdana, メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "ms pgothic", sans-serif;
   background: var(--other-topback);
   color: var(--font-color);
-
+  margin: 0;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
