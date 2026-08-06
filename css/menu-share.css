@@ -62,9 +62,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.share__modal__header span {
-  font-size: 2.5rem;
-  font-weight: 600;
+.share__modal__header h2 {
   color: #373d46;
   text-transform: capitalize;
   opacity: 0.88;
