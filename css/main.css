@@ -11,11 +11,17 @@
   --header-color: #1F5A70;
   --other-topback: #748D97;
   --other-back: #E4E5E3;
-  --other-border: #17141B
+  --other-border: #17141B;
+
+  --fs-body: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --fs-h1: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  --fs-h2: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --fs-small: clamp(0.875rem, 0.85rem + 0.15vw, 0.95rem);
 }
 
 html {
-  font-size: 62.5%
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 body {
@@ -26,10 +32,25 @@ body {
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  font-size: 1.7rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: .02em;
   min-width: 960px
 }
 
+.container {
+  width: 100%
+}
+
+/* 二列カラムを維持出来る幅 */
+@media screen and (min-width: 996px) {
+  #header_bottom {
+    display: block;
+  }
+  .container {
+    margin: auto;
+    min-width: 960px;
+    max-width: 1180px
+  }
+}
