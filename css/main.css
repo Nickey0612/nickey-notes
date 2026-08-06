@@ -42,15 +42,3 @@ body {
 .container {
   width: 100%
 }
-
-/* 二列カラムを維持出来る幅 */
-@media screen and (min-width: 996px) {
-  #header_bottom {
-    display: block;
-  }
-  .container {
-    margin: auto;
-    min-width: 960px;
-    max-width: 1180px
-  }
-}
