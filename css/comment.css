@@ -1,6 +1,9 @@
+#top-ce {
+  border: solid #999 1px;
+}
+
 .comments {
   clear: both;
-  margin-top: 2em;
   margin-bottom: 0
 }
 
@@ -245,7 +248,7 @@
 }
 
 .comment-block .item-control a:hover {
-  background: tomato
+  background: #6c2735
 }
 
 .comment-delete::after {
